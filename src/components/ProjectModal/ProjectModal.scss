@@ -1,0 +1,61 @@
+.modal__project-container__information {
+  margin: 24px 16px 0 16px;
+
+  &__title {
+    color: #669bbc;
+    margin: 0 0 20px 0;
+  }
+
+  &__description,
+  &__details {
+    margin-bottom: 20px;
+  }
+
+  &__technologies {
+    &__title {
+      color: #780000;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    &__technos {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 16px;
+
+      i {
+        align-self: center;
+      }
+    }
+  }
+}
+
+.modal__project-container__information__link__project {
+  display: flex;
+  justify-content: end;
+  margin: 0 16px 40px 0;
+}
+
+.modal__project-container__information__link {
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.devicon-2x {
+  font-size: 2em;
+}
+
+.devicon-3x {
+  font-size: 3em;
+}
+
+.devicon-4x {
+  font-size: 4em;
+}

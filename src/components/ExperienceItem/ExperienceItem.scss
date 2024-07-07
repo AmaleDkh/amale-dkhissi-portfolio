@@ -1,0 +1,28 @@
+.experience-item {
+  align-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  &__year {
+    font-weight: bold;
+    font-size: 24px;
+    color: #669bbc;
+  }
+
+  &__year::after {
+    content: "";
+    display: inline-block;
+    width: 88px;
+    height: 2px;
+    background-color: black;
+    vertical-align: middle;
+    margin-left: 16px;
+  }
+
+  &__information__company {
+    font-weight: bold;
+  }
+}

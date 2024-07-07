@@ -1,0 +1,22 @@
+.section-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0;
+
+  &__title {
+    color: #780000;
+    position: relative;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  &__horizontal-line {
+    border-bottom: 2px solid black;
+    width: 100%;
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+}

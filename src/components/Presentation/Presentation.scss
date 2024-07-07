@@ -1,0 +1,22 @@
+.presentation-photo {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.presentation-container {
+  display: flex;
+  gap: 64px;
+  margin: 100px;
+
+  &__text {
+    align-content: center;
+
+    &__title {
+      color: #780000;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  &__photo {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}

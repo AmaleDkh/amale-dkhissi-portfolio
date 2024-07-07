@@ -1,0 +1,38 @@
+[
+  {
+    "year": "2024",
+    "description": "Formation Développeur web avec OpenClassrooms"
+  },
+  {
+    "year": "2023",
+    "description": "Choix d'une reconversion professionnelle"
+  },
+  {
+    "year": "2022",
+    "experience": {
+      "company": "L'Oréal",
+      "position": "Responsable projets communication & RSE"
+    }
+  },
+  {
+    "year": "2021",
+    "experience": {
+      "company": "Fondation L'Oréal",
+      "position": "Responsable projets communication institutionnelle"
+    }
+  },
+  {
+    "year": "2020",
+    "experience": {
+      "company": "CANAL+",
+      "position": "Chargée de communication événementielle & presse"
+    }
+  },
+  {
+    "year": "2018",
+    "experience": {
+      "company": "France Inter",
+      "position": "Chargée de communication, projets événementiels, développement de la marque"
+    }
+  }
+]

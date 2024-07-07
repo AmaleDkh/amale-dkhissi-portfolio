@@ -1,0 +1,86 @@
+[
+  {
+    "subject": "Front-end",
+    "technologies": [
+      { "name": "HTML", "icon": "devicon-html5-plain", "size": "devicon-2x" },
+      { "name": "CSS", "icon": "devicon-css3-plain", "size": "devicon-2x" },
+      {
+        "name": "JavaScript",
+        "icon": "devicon-javascript-plain",
+        "size": "devicon-2x"
+      },
+      { "name": "Sass", "icon": "devicon-sass-original", "size": "devicon-2x" },
+      {
+        "name": "React",
+        "icon": "devicon-react-original",
+        "size": "devicon-2x"
+      }
+    ]
+  },
+  {
+    "subject": "Back-end",
+    "technologies": [
+      {
+        "name": "Node.js",
+        "icon": "devicon-nodejs-plain-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "name": "Express",
+        "icon": "devicon-express-original",
+        "size": "devicon-2x"
+      }
+    ]
+  },
+  {
+    "subject": "Base de données",
+    "technologies": [
+      {
+        "name": "MongoDB",
+        "icon": "devicon-mongodb-plain-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "name": "MySQL",
+        "icon": "devicon-mysql-plain-wordmark",
+        "size": "devicon-3x"
+      }
+    ]
+  },
+  {
+    "subject": "Versioning",
+    "technologies": [
+      {
+        "name": "GitHub",
+        "icon": "devicon-github-original-wordmark",
+        "size": "devicon-2x"
+      }
+    ]
+  },
+  {
+    "subject": "Outils de design",
+    "technologies": [
+      { "name": "Figma", "icon": "devicon-figma-plain", "size": "devicon-2x" }
+    ]
+  },
+  {
+    "subject": "Autres outils",
+    "technologies": [
+      {
+        "name": "Notion",
+        "icon": "devicon-notion-plain",
+        "size": "devicon-2x"
+      },
+      {
+        "name": "Swagger",
+        "icon": "devicon-swagger-plain",
+        "size": "devicon-2x"
+      },
+      {
+        "name": "Postman",
+        "icon": "devicon-postman-plain",
+        "size": "devicon-2x"
+      }
+    ]
+  }
+]

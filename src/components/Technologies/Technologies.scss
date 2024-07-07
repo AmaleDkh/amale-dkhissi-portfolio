@@ -1,0 +1,22 @@
+.technologies-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: auto;
+
+  &__category {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__subject {
+      color: #669bbc;
+    }
+
+    &__item {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
