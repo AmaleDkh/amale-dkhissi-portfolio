@@ -17,6 +17,8 @@ function Footer() {
         <Link
           to="https://www.linkedin.com/in/amaledkhissi/"
           className="footer__links__link"
+          target="_blank"
+          aria-label="Ouvrir mon LinkedIn"
         >
           <FontAwesomeIcon
             icon={faLinkedin}
@@ -26,6 +28,8 @@ function Footer() {
         <Link
           to="https://github.com/AmaleDkh?tab=repositories"
           className="footer__links__link"
+          target="_blank"
+          aria-label="Ouvrir mon GitHub"
         >
           <FontAwesomeIcon
             icon={faGithub}
@@ -36,6 +40,7 @@ function Footer() {
           <FontAwesomeIcon
             icon={faEnvelopeOpen}
             className="footer__links__link__icon"
+            aria-label="M'envoyer un mail"
           />
         </a>
       </div>
