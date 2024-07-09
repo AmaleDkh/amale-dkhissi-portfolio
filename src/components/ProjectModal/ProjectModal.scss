@@ -28,24 +28,28 @@
       }
     }
   }
-}
 
-.modal__project-container__information__link__project {
-  display: flex;
-  justify-content: end;
-  margin: 0 16px 40px 0;
-}
+  &__link {
+    display: flex;
+    justify-content: end;
+    margin: 0 16px 40px 0;
 
-.modal__project-container__information__link {
-  text-decoration: none;
-  background-color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+    &__project {
+      text-decoration: none;
+      background-color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
 
-  svg {
-    margin-right: 8px;
+      svg {
+        margin-right: 8px;
+      }
+    }
   }
+}
+
+.ReactModal__Overlay img {
+  width: 100%;
 }
 
 .devicon-2x {

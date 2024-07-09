@@ -1,7 +1,10 @@
 [
   {
     "year": "2024",
-    "description": "Formation Développeur web avec OpenClassrooms"
+    "experience": {
+      "company": "OpenClassrooms",
+      "position": "Formation Développeur web"
+    }
   },
   {
     "year": "2023",

@@ -73,10 +73,10 @@ function ProjectModal({
               : null}
           </div>
         </div>
-        <div className="modal__project-container__information__link__project">
+        <div className="modal__project-container__information__link">
           <button
             onClick={openSourceLink}
-            className="modal__project-container__information__link"
+            className="modal__project-container__information__link__project"
           >
             <FontAwesomeIcon icon={faArrowRight} />
             Découvrir le projet sur GitHub
