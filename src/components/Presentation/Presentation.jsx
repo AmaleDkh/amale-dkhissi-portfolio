@@ -18,18 +18,17 @@ function Presentation() {
           Hello ! Moi c'est Amale.
         </h1>
         <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae
-          lorem turpis. Cras diam quam, aliquam sit amet elit in, faucibus
-          feugiat tellus. Pellentesque vehicula porta eros vel feugiat. Etiam
-          pretium eget nisi non malesuada. Proin vitae euismod massa. Integer
-          vel vehicula turpis, ac ornare metus. Sed nunc mi, rutrum euismod
-          vehicula eget, tincidunt eget lectus.
+          Le développement a toujours suscité mon intérêt. Il y a un an et demi,
+          j'ai décidé de me lancer et d'apprendre en autodidacte. Plus
+          récemment, j'ai franchi une nouvelle étape en poursuivant ma formation
+          avec OpenClassrooms, et je suis ravie de partager mon parcours et mes
+          projets avec vous.
         </div>
         <PresentationButtons />
       </div>
       <Avatar
         src={Photo}
-        alt=""
+        alt="Photo de présentation"
         sx={{ width: 350, height: 350 }}
         className="presentation-container__photo"
       />
