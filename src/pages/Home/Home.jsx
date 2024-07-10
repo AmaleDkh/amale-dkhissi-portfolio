@@ -7,7 +7,7 @@ import Skills from "../../components/Skills/Skills";
 import Contact from "../../components/Contact/Contact";
 
 // Style
-import "../Home/Home.css";
+import "../Home/Home.scss";
 
 function Home() {
   return (
