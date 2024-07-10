@@ -1,7 +1,13 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+
 body {
   background-color: #fdf0d5;
 }
 
 main {
   margin: 0 100px;
+
+  @include respond-to(mobile) {
+    margin: 0 20px;
+  }
 }
