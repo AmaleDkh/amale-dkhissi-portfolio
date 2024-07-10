@@ -8,18 +8,11 @@ import projectsList from "../../assets/data/projectsList.json";
 // Style
 import "./ProjectsList.scss";
 
-// Masonry
-import Masonry from "react-masonry-css";
-
 function ProjectsList() {
   return (
     <div id="projects">
       <SectionTitle title="Mes projets" />
-      <Masonry
-        breakpointCols={3}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
+      <div className="projects-container">
         {projectsList.map((project, projectIndex) => (
           <Project
             key={projectIndex}
@@ -31,7 +24,7 @@ function ProjectsList() {
             image={project.image}
           />
         ))}
-      </Masonry>
+      </div>
     </div>
   );
 }
