@@ -4,9 +4,6 @@ import PresentationButtons from "../PresentationButtons/PresentationButtons";
 // Style
 import "./Presentation.scss";
 
-// Material UI
-import Avatar from "@mui/material/Avatar";
-
 // Image
 import Photo from "../../assets/images/amale-dkhissi.png";
 
@@ -26,12 +23,12 @@ function Presentation() {
         </div>
         <PresentationButtons />
       </div>
-      <Avatar
-        src={Photo}
-        alt="Photo de présentation"
-        sx={{ width: 350, height: 350 }}
-        className="presentation-container__photo"
-      />
+      <div className="presentation-container__photo-container">
+        <img
+          src={Photo}
+          className="presentation-container__photo-container__photo"
+        ></img>
+      </div>
     </div>
   );
 }

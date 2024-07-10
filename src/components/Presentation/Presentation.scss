@@ -1,11 +1,17 @@
-.presentation-photo {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
+@import "../../assets//styles//mixins/breakpoints.scss";
 
 .presentation-container {
   display: flex;
   gap: 64px;
   margin: 100px;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to(mobile) {
+    margin: 56px 0 0 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
   &__text {
     align-content: center;
@@ -16,7 +22,22 @@
     }
   }
 
-  &__photo {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  &__photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__photo {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+      @include respond-to(mobile) {
+        width: 250px;
+        height: 250px;
+      }
+    }
   }
 }
