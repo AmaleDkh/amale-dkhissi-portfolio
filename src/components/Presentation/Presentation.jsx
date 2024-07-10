@@ -18,7 +18,7 @@ function Presentation() {
           Le développement a toujours suscité mon intérêt. Il y a un an et demi,
           j'ai décidé de me lancer et d'apprendre en autodidacte. Plus
           récemment, j'ai franchi une nouvelle étape en poursuivant ma formation
-          avec OpenClassrooms, et je suis ravie de partager mon parcours et mes
+          avec OpenClassrooms. Je suis ravie de partager mon parcours et mes
           projets avec vous.
         </div>
         <PresentationButtons />
