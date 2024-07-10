@@ -8,7 +8,10 @@
   },
   {
     "year": "2023",
-    "description": "Choix d'une reconversion professionnelle"
+    "experience": {
+      "company": "Réflexion",
+      "position": "Choix d'une reconversion professionnelle"
+    }
   },
   {
     "year": "2022",
