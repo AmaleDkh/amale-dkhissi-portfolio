@@ -1,9 +1,15 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+
 .technologies-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   grid-auto-rows: minmax(100px, auto);
   margin: auto;
+
+  @include respond-to(mobile) {
+    grid-template-columns: none;
+  }
 
   &__category {
     display: flex;
