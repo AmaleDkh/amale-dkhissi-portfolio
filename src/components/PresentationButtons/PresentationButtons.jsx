@@ -39,6 +39,7 @@ function PresentationButtons() {
         <a
           href={CV}
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="Download CV"
           className="presentation-links__buttons-container__button"
         >
