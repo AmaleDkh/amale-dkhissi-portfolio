@@ -1,7 +1,7 @@
 [
   {
     "title": "Booki - Agence de voyage",
-    "image": "/project1-image.png",
+    "image": "/project1-image.webp",
     "description": "Intégration de l'interface responsive de la page d'accueil d'un site de voyage pour desktop, tablette et mobile.",
     "details": "Le site web de Booki présente une version desktop, une version tablette et une version mobile. L’objectif était d’intégrer les versions responsives, de faire en sorte que les contenus s’adaptent sur tous les appareils et toutes les tailles d’écran. Pour cela, je me suis servie de l’outil Figma et j'ai écrit mon propre code. C’est un site dont l’interface utilisateur présente plusieurs blocs avec des cards. Pour gérer cela, je me suis principalement servie de Flexbox. De plus, de nombreuses propriétés CSS étaient répétées. J’ai donc fait en sorte de regrouper entre elles toutes les classes qui pouvaient l’être.",
     "technologies": [
@@ -20,7 +20,7 @@
   },
   {
     "title": "Sophie Bluel - Architecte d'intérieur",
-    "image": "/project2-image.png",
+    "image": "/project2-image.webp",
     "description": "Développement de l'interface front-end d'un site portfolio pour une architecte d'intérieur.",
     "details": "Le site web de Sophie Bluel présente tous les travaux réalisés par l’architecte. Les objectifs étaient de permettre à l'architecte de se connecter à son compte et de pouvoir ajouter ou supprimer des projets. Une API avait été développée. Pour gérer cela, j’ai fait en sorte de gérer les événements utilisateurs et de manipuler les éléments du DOM avec JavaScript.",
     "technologies": [
@@ -34,7 +34,7 @@
   },
   {
     "title": "Nina Carducci - Photographe professionnelle",
-    "image": "/project3-image.png",
+    "image": "/project3-image.webp",
     "description": "Amélioration de la performance et de l'accessibilité du site d'une photographe professionnelle pour optimiser son référencement.",
     "details": "Le site web de Nina Carducci présente les photos prises par la photographe. L’objectif de ce projet était d’améliorer la performance et l’accessibilité du site web. Pour définir les axes d’amélioration, j’ai effectué un audit à l’aide des outils Lighthouse (pour la performance) et Wave (pour l’accessibilité). Pour améliorer la performance du site, j’ai effectué plusieurs modifications : Optimisation des images, Optimisation des fichiers de code, Optimisation du SEO technique, Optimisation du SEO local, Optimisation des réseaux sociaux. Pour améliorer l’accessibilité du site, j’ai également effectué quelques modifications : Ajout de la langue, Ajout de descriptions aux images, Ajout des informations aux labels du formulaire de contact, Changement de la couleur de fond des boutons de filtre.",
     "technologies": [
@@ -48,7 +48,7 @@
   },
   {
     "title": "Kasa - Location immobilière",
-    "image": "/project4-image.png",
+    "image": "/project4-image.webp",
     "description": "Développement de l'interface front-end d'une application de location immobilière.",
     "details": "Le site web de Kasa est une Single Page Application qui permet de visualiser tous les logements proposés en location disponibles et de voir les informations de chaque logement. Pour développer ce site web, je me suis servie de React. J’ai fait en sorte de découper l’interface utilisateur en plusieurs composants réutilisables. Le système de routage a été mis en place avec React Router. Pour le design, j’ai utilisé Sass. Cela a permis de mieux structurer le code pour s’y retrouver plus facilement.",
     "technologies": [
@@ -67,7 +67,7 @@
   },
   {
     "title": "Mon Vieux Grimoire - Notation de livres",
-    "image": "/project5-image.png",
+    "image": "/project5-image.webp",
     "description": "Développement du back-end d'un site de notation de livres.",
     "details": "Le site web Mon Vieux Grimoire est un site de référencement et de notation de livres. Pour développer le back-end, je me suis servie d’Express pour créer un serveur et de MongoDB pour créer une base de données. Ces 2 éléments ont ensuite été connectés. Plusieurs routes étaient à créer. J’ai donc créé des modèles de données et implémenté des opérations CRUD pour la gestion des livres et des notations. J’ai également fait en sorte d’assurer la sécurité des données et leur stockage sécurisé. Chaque livre peut présenter une image, j’ai donc utilisé la librairie multer pour gérer le téléchargement des images. Le site web présente une version pour utilisateur connecté et une version pour utilisateur non connecté. J’ai donc implémenté un système d’authentification sécurisé. Pour ce projet, j’ai utilisé l’ODM Mongoose pour modéliser les données MongoDB et suivi une architecture MVC pour structurer l’application.",
     "technologies": [
@@ -91,7 +91,7 @@
   },
   {
     "title": "Qwenta - Menu Maker",
-    "image": "/project6-image.png",
+    "image": "/project6-image.webp",
     "description": "Développement des spécifications techniques et planification du développement d'un site web.",
     "details": "L’entreprise Qwenta a souhaité diversifier ses activités et créer un outil “Menu Maker” qui permettra à ses clients restaurateurs d’avoir un compte à soi sur lequel ils pourront créer et diffuser des menus. L’objectif était de développer les spécifications techniques et planifier le développement du projet. Pour cela, j’ai effectué une veille technologique pour trouver les technologies les plus pertinentes, j’ai identifié les besoins fonctionnels et décomposé les fonctionnalités en tâches spécifiques pour rédiger les spécifications techniques et j’ai développé un tableau Kanban avec Notion pour suivre le déroulement du projet de manière structurée et efficace.",
     "source": "https://github.com/AmaleDkh/booki-website-homepage.github.io.git"

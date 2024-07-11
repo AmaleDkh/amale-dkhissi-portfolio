@@ -5,7 +5,7 @@ import PresentationButtons from "../PresentationButtons/PresentationButtons";
 import "./Presentation.scss";
 
 // Image
-import Photo from "../../assets/images/amale-dkhissi.png";
+import Photo from "../../assets/images/amale-dkhissi.webp";
 
 function Presentation() {
   return (
