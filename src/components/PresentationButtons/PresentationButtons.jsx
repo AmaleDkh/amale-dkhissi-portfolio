@@ -1,6 +1,5 @@
-// Material UI
-import { Button } from "@mui/base/Button";
-import Stack from "@mui/material/Stack";
+// React elements
+import { useState, useEffect } from "react";
 
 // Style
 import "./PresentationButtons.scss";
@@ -16,23 +15,36 @@ function PresentationButtons() {
     }
   };
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1200);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="presentation-links">
-      <Stack spacing={2} direction="row">
-        <Button
-          className="presentation-links__button"
+      <div className="presentation-links__buttons-container">
+        <button
           onClick={() => scrollToSection("projects")}
+          aria-label="Scroll to Projects"
+          className="presentation-links__buttons-container__button"
         >
-          Découvrir mes derniers projets
-        </Button>
-        <Button
-          className="presentation-links__button"
+          {isMobile ? "Mes projets" : "Découvrir mes projets"}
+        </button>
+        <a
           href={CV}
           target="_blank"
+          aria-label="Download CV"
+          className="presentation-links__buttons-container__button"
         >
-          Télécharger mon CV
-        </Button>
-      </Stack>
+          {isMobile ? "Mon CV" : "Télécharger mon CV"}
+        </a>
+      </div>
     </div>
   );
 }

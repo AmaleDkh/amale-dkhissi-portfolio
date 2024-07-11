@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
 
-  @include respond-to(mobile) {
+  @include respond-to-large {
     margin: 56px 0 0 0;
     flex-direction: column-reverse;
     align-items: center;
@@ -28,13 +28,13 @@
     align-items: center;
 
     &__photo {
-      width: 350px;
-      height: 350px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 
-      @include respond-to(mobile) {
+      @include respond-to-medium {
         width: 250px;
         height: 250px;
       }
