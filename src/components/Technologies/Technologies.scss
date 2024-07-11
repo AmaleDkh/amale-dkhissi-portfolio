@@ -7,7 +7,7 @@
   grid-auto-rows: minmax(100px, auto);
   margin: auto;
 
-  @include respond-to(mobile) {
+  @include respond-to-medium {
     grid-template-columns: none;
   }
 

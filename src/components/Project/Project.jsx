@@ -6,6 +6,7 @@ import ProjectModal from "../ProjectModal/ProjectModal";
 
 // Style
 import "./Project.scss";
+import "../../assets/styles/Devicon.scss";
 
 // Font Awesome icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
