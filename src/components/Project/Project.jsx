@@ -25,7 +25,7 @@ function Project({ title, description, details, technologies, source, image }) {
 
   return (
     <div className="project-container">
-      <img src={image} alt="" />
+      <img src={image} alt="Photo de couverture du projet" />
       <div className="project-container__information">
         <h2 className="project-container__information__title">{title}</h2>
         <div className="project-container__information__description">

@@ -48,7 +48,11 @@ function ProjectModal({
             <span className="modal__close" onClick={closeModal}>
               &times;
             </span>
-            <img src={image} alt="" className="modal__image" />
+            <img
+              src={image}
+              alt="Photo de couverture du projet"
+              className="modal__image"
+            />
             <div className="modal__information">
               <h2 className="modal__title">{title}</h2>
               <div className="modal__description">{description}</div>
