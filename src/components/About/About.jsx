@@ -4,7 +4,7 @@ import Experiences from "../Experiences/Experiences";
 
 function About() {
   return (
-    <div className="about" id="about">
+    <section className="about" id="about">
       <SectionTitle title="À propos de moi" />
       <div className="about-text">
         Mes 6 ans d’expérience en gestion de projets de communication m’ont
@@ -14,7 +14,7 @@ function About() {
         de facilitatrice au sein d’une équipe de développement.
       </div>
       <Experiences />
-    </div>
+    </section>
   );
 }
 

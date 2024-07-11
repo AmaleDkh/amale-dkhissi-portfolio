@@ -9,7 +9,7 @@ import Photo from "../../assets/images/amale-dkhissi.webp";
 
 function Presentation() {
   return (
-    <div className="presentation-container">
+    <section className="presentation-container">
       <div className="presentation-container__text">
         <h1 className="presentation-container__text__title">
           Hello ! Moi c'est Amale.
@@ -30,7 +30,7 @@ function Presentation() {
           alt="Photo professionnelle"
         ></img>
       </div>
-    </div>
+    </section>
   );
 }
 

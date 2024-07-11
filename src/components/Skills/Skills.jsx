@@ -4,10 +4,10 @@ import Technologies from "./../Technologies/Technologies";
 
 function Skills() {
   return (
-    <div id="skills">
+    <section id="skills">
       <SectionTitle title="Mes compétences" />
       <Technologies />
-    </div>
+    </section>
   );
 }
 

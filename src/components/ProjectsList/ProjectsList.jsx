@@ -10,7 +10,7 @@ import "./ProjectsList.scss";
 
 function ProjectsList() {
   return (
-    <div id="projects">
+    <section id="projects">
       <SectionTitle title="Mes projets" />
       <div className="projects-container">
         {projectsList.map((project, projectIndex) => (
@@ -25,7 +25,7 @@ function ProjectsList() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

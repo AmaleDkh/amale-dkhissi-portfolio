@@ -29,7 +29,7 @@ function Contact() {
   };
 
   return (
-    <div id="contact" className="contact">
+    <section id="contact" className="contact">
       <SectionTitle title="Contact" />
       <form onSubmit={handleSubmit} className="contact__form">
         <div className="contact__form__container">
@@ -89,7 +89,7 @@ function Contact() {
           value="Envoyer"
         />
       </form>
-    </div>
+    </section>
   );
 }
 
