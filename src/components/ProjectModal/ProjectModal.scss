@@ -1,3 +1,4 @@
+@import "../../assets/styles/Colors.scss";
 @import "../../assets//styles//mixins/breakpoints.scss";
 
 .modal {
@@ -44,7 +45,7 @@
   }
 
   &__title {
-    color: #669bbc;
+    color: $light-blue-color;
     margin-bottom: 10px;
   }
 
@@ -54,7 +55,7 @@
   }
 
   &__technologies__title {
-    color: #780000;
+    color: $burgundy-color;
     font-weight: bold;
     margin-bottom: 10px;
   }

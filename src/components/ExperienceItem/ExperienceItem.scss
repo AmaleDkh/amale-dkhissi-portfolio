@@ -1,3 +1,5 @@
+@import "../../assets/styles/Colors.scss";
+
 .experience-item {
   align-content: center;
   text-align: center;
@@ -10,7 +12,7 @@
   &__year {
     font-weight: bold;
     font-size: 24px;
-    color: #669bbc;
+    color: $light-blue-color;
   }
 
   &__year::after {

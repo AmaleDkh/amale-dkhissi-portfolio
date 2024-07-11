@@ -1,4 +1,5 @@
 @import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
 
 .technologies-list {
   display: grid;
@@ -17,7 +18,7 @@
     flex-direction: column;
 
     &__subject {
-      color: #669bbc;
+      color: $light-blue-color;
     }
 
     &__item {

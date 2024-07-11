@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   gap: 16px;
 
-  @include respond-to-medium {
+  @include respond-to-large {
     flex-direction: column;
   }
 

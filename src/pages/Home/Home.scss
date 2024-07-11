@@ -1,7 +1,8 @@
 @import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
 
 body {
-  background-color: #fdf0d5;
+  background-color: $beige-color;
 }
 
 main {
