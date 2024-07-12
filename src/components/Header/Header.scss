@@ -84,7 +84,6 @@
 
     &.open {
       display: block;
-      background-color: $beige-color;
     }
 
     ul {
@@ -94,6 +93,8 @@
 
       li {
         margin: 10px 0;
+        font-weight: bold;
+        cursor: pointer;
       }
     }
   }

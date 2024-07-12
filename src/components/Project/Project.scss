@@ -17,31 +17,9 @@
   &__information {
     margin: 24px 16px 0 16px;
 
-    @include respond-to-medium {
-      height: 180px;
-    }
-
     &__title {
       color: $light-blue-color;
       margin: 0 0 20px 0;
-    }
-
-    &__technologies {
-      &__title {
-        color: $burgundy-color;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
-
-      &__technos {
-        margin-bottom: 12px;
-        display: flex;
-        gap: 16px;
-
-        i {
-          align-self: center;
-        }
-      }
     }
 
     &__description {
@@ -58,7 +36,8 @@
         background-color: white;
         border: none;
         font-size: 16px;
-        color: black;
+        font-weight: bold;
+        color: $light-blue-color;
         cursor: pointer;
 
         svg {

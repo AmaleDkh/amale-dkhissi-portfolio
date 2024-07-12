@@ -16,7 +16,7 @@
 
   &__content {
     background-color: white;
-    width: 50%;
+    width: 80%;
     max-width: 600px;
     padding: 20px;
     position: relative;
@@ -25,7 +25,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     @include respond-to-medium {
-      width: 80%;
       height: 60%;
     }
   }
@@ -41,17 +40,15 @@
   &__image {
     width: 100%;
     border-radius: 8px;
-    margin-bottom: 16px;
   }
 
   &__title {
     color: $light-blue-color;
-    margin-bottom: 10px;
   }
 
   &__description,
   &__details {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   &__technologies__title {
@@ -71,7 +68,7 @@
   }
 
   &__link {
-    margin-top: 20px;
+    margin-top: 16px;
     display: flex;
     justify-content: end;
 
@@ -79,11 +76,12 @@
       background-color: white;
       border: none;
       font-size: 16px;
+      font-weight: bold;
       cursor: pointer;
       display: flex;
       align-items: center;
       padding: 8px 12px;
-      color: #333;
+      color: $light-blue-color;
       text-decoration: none;
 
       svg {
