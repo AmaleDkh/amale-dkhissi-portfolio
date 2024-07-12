@@ -24,6 +24,7 @@ function Footer() {
             icon={faLinkedin}
             className="footer__links__link__icon"
           />
+          <span className="sr-only">LinkedIn</span>
         </Link>
         <Link
           to="https://github.com/AmaleDkh?tab=repositories"
@@ -35,6 +36,7 @@ function Footer() {
             icon={faGithub}
             className="footer__links__link__icon"
           />
+          <span className="sr-only">GitHub</span>
         </Link>
         <a href="mailto:amdkhissi@gmail.com" className="footer__links__link">
           <FontAwesomeIcon
@@ -42,6 +44,7 @@ function Footer() {
             className="footer__links__link__icon"
             aria-label="M'envoyer un mail"
           />
+          <span className="sr-only">Email</span>
         </a>
       </div>
     </footer>

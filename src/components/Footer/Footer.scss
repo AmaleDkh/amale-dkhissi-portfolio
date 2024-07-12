@@ -1,3 +1,4 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
 
 .footer {
@@ -6,6 +7,16 @@
   align-items: center;
   padding: 40px 100px;
   background-color: $dark-blue-color;
+
+  @include respond-to-medium {
+    padding: 32px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @include respond-to-medium-large {
+    padding: 32px;
+  }
 
   &__name {
     font-weight: bold;
@@ -22,4 +33,16 @@
       }
     }
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

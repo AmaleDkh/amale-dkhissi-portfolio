@@ -1,7 +1,7 @@
 // Style
 import "./ExperienceItem.scss";
 
-function ExperienceItem({ year, description, experience }) {
+function ExperienceItem({ year, experience }) {
   return (
     <div className="experience-item">
       <div className="experience-item__year">{year}</div>
