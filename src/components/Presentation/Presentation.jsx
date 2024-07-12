@@ -27,7 +27,7 @@ function Presentation() {
         <img
           src={Photo}
           className="presentation-container__photo-container__photo"
-          alt="Photo professionnelle"
+          alt="Portrait professionnel"
         ></img>
       </div>
     </section>

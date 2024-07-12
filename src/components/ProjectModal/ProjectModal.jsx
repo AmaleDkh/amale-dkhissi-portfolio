@@ -50,9 +50,8 @@ function ProjectModal({
             </span>
             <img
               src={image}
-              alt="Photo de couverture du projet"
+              alt="Couverture du projet"
               className="modal__image"
-              loading="lazy"
             />
             <div className="modal__information">
               <h2 className="modal__title">{title}</h2>
