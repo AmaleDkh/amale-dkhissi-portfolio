@@ -3,15 +3,17 @@
 
 .modal {
   &__background {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
   }
 
   &__content {
@@ -20,7 +22,6 @@
     max-width: 600px;
     padding: 20px;
     position: relative;
-    overflow: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -93,6 +94,5 @@
 
 .body__modal-open {
   overflow: hidden;
-  position: fixed;
   width: 100%;
 }
