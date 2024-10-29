@@ -27,11 +27,12 @@ function Presentation() {
           .
         </h1>
         <div className="presentation-container__text__presentation">
-          Le développement a toujours suscité mon intérêt. Il y a un an et demi,
-          j'ai décidé de me lancer et d'apprendre en autodidacte. Plus
-          récemment, j'ai franchi une nouvelle étape en poursuivant ma formation
-          avec OpenClassrooms. Je suis ravie de partager mon parcours et mes
-          projets avec vous.
+          Mon enthousiasme pour le développement web m’a incitée à explorer
+          cette discipline passionnante. Guidée par un réel intérêt pour
+          l'innovation, j’ambitionne de réaliser des solutions qui transforment
+          les idées en réalité et améliorent les expériences utilisateurs.
+          Chaque projet représente pour moi une occasion d'apprendre et de
+          grandir dans cet univers en constante évolution.
         </div>
       </div>
     </section>
