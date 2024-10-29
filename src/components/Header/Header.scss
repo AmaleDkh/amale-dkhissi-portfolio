@@ -5,11 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 100px;
-  background-color: $dark-blue-color;
-  position: sticky;
+  padding: 24px 100px;
   top: 0;
   z-index: 1000;
+  background-color: $beige-color;
 
   @include respond-to-medium {
     padding: 32px;
@@ -20,24 +19,31 @@
   }
 
   &__title {
-    color: $beige-color;
     font-weight: bold;
+    font-size: 24px;
+    color: $orange-color;
+    color: $dark-blue-color;
   }
 
   &__nav {
     display: flex;
-    gap: 20px;
+    gap: 24px;
 
     @include respond-to-medium {
       display: none;
     }
 
     div {
-      color: $beige-color;
-      background-color: $dark-blue-color;
       text-decoration: none;
-      font-weight: bold;
       cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      color: $dark-blue-color;
+      align-self: center;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
@@ -77,7 +83,7 @@
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: #fff;
+
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 4px;

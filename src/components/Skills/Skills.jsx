@@ -2,10 +2,13 @@
 import SectionTitle from "./../SectionTitle/SectionTitle";
 import Technologies from "./../Technologies/Technologies";
 
+// Style
+import "./Skills.scss";
+
 function Skills() {
   return (
-    <section id="skills">
-      <SectionTitle title="Mes compétences" />
+    <section id="skills" className="skills">
+      <SectionTitle title="MES COMPÉTENCES" />
       <Technologies />
     </section>
   );

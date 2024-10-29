@@ -1,56 +1,52 @@
 // React element
-import { useState } from "react";
-
-// Component
-import ProjectModal from "../ProjectModal/ProjectModal";
+import { Link } from "react-router-dom";
 
 // Style
 import "./Project.scss";
 import "../../assets/styles/Devicon.scss";
 
-// Font Awesome icon
+import "devicon/devicon.min.css";
+
+// Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function Project({ title, description, details, technologies, source, image }) {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-
+function Project({ title, description, image, technologies, source }) {
   return (
     <div className="project-container">
       <img src={image} alt="Couverture du projet" loading="lazy" />
       <div className="project-container__information">
-        <h2 className="project-container__information__title">{title}</h2>
-        <div className="project-container__information__description">
+        <h3 className="project-container__information__title">{title}</h3>
+        <p className="project-container__information__description">
           {description}
+        </p>
+      </div>
+
+      <div className="project-container__icons">
+        <div className="project-container__icons__technologies">
+          {technologies &&
+            technologies.map((tech, techIndex) => (
+              <span
+                key={techIndex}
+                className={` devicon ${tech.icon} ${tech.size}`}
+                title={tech.technology}
+              ></span>
+            ))}
         </div>
-      </div>
-      <div className="project-container__information__link">
-        <button
-          onClick={openModal}
-          className="project-container__information__link__project"
+
+        <Link
+          to={source}
+          className={`social-media-container__link`}
+          target="_blank"
+          aria-label="Ouvrir mon GitHub"
         >
-          <FontAwesomeIcon icon={faArrowRight} />
-          Découvrir le projet
-        </button>
+          <FontAwesomeIcon
+            icon={faGithub}
+            className={`social-media-container__link__icon`}
+          />
+          <span className="sr-only">GitHub</span>
+        </Link>
       </div>
-      <ProjectModal
-        modalIsOpen={modalIsOpen}
-        closeModal={closeModal}
-        title={title}
-        description={description}
-        details={details}
-        technologies={technologies}
-        source={source}
-        image={image}
-      />
     </div>
   );
 }

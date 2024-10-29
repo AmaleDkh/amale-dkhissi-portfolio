@@ -2,12 +2,11 @@
 @import "../../assets/styles/Colors.scss";
 
 body {
-  background-color: $beige-color;
+  background-color: $dark-blue-color;
+  color: white;
 }
 
 main {
-  margin: 0 100px;
-
   @include respond-to-large {
     margin: 0 20px;
   }

@@ -1,5 +1,8 @@
-// React element
+// React elements
 import { useState } from "react";
+
+// Component
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 // Style
 import "./Header.scss";
@@ -25,7 +28,7 @@ function Header() {
         <div onClick={() => scrollToSection("about")}>À propos</div>
         <div onClick={() => scrollToSection("projects")}>Projets</div>
         <div onClick={() => scrollToSection("skills")}>Compétences</div>
-        <div onClick={() => scrollToSection("contact")}>Contact</div>
+        <SocialMedia version="dark" />
       </nav>
 
       <div className="menu-hamburger">
@@ -39,44 +42,43 @@ function Header() {
           <span></span>
           <span></span>
         </button>
-        {isOpen && (
-          <nav className={`menu-hamburger__nav ${isOpen ? "open" : ""}`}>
-            <ul>
-              <li
-                onClick={() => {
-                  scrollToSection("about");
-                  setIsOpen(false);
-                }}
-              >
-                À propos
-              </li>
-              <li
-                onClick={() => {
-                  scrollToSection("projects");
-                  setIsOpen(false);
-                }}
-              >
-                Projets
-              </li>
-              <li
-                onClick={() => {
-                  scrollToSection("skills");
-                  setIsOpen(false);
-                }}
-              >
-                Compétences
-              </li>
-              <li
-                onClick={() => {
-                  scrollToSection("contact");
-                  setIsOpen(false);
-                }}
-              >
-                Contact
-              </li>
-            </ul>
-          </nav>
-        )}
+
+        <nav className={`menu-hamburger__nav ${isOpen ? "open" : ""}`}>
+          <ul>
+            <li
+              onClick={() => {
+                scrollToSection("about");
+                setIsOpen(false);
+              }}
+            >
+              À propos
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection("projects");
+                setIsOpen(false);
+              }}
+            >
+              Projets
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection("skills");
+                setIsOpen(false);
+              }}
+            >
+              Compétences
+            </li>
+            <li
+              onClick={() => {
+                scrollToSection("contact");
+                setIsOpen(false);
+              }}
+            >
+              Contact
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
   );

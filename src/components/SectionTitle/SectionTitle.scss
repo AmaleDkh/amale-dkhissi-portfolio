@@ -1,24 +1,15 @@
 @import "../../assets/styles/Colors.scss";
 
 .section-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   gap: 16px;
-  margin: 56px 0;
+  margin: 0 240px 64px;
 
   &__title {
-    color: $burgundy-color;
+    color: $orange-color;
     position: relative;
     white-space: nowrap;
+    font-size: 48px;
+    font-weight: 500;
     margin: 0;
-  }
-
-  &__horizontal-line {
-    border-bottom: 2px solid black;
-    width: 100%;
-    flex-grow: 1;
-    margin-left: 20px;
   }
 }

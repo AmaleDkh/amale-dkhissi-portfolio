@@ -1,12 +1,6 @@
 @import "../../assets//styles//mixins/breakpoints.scss";
 
 .experiences-list {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  margin-top: 48px;
-
   @include respond-to-medium {
     grid-template-columns: none;
   }

@@ -2,28 +2,45 @@
 @import "../../assets/styles/Colors.scss";
 
 .technologies-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
-  grid-auto-rows: minmax(100px, auto);
-  margin: auto;
+  display: flex;
+  gap: 120px;
+  margin-bottom: 88px;
+  margin: 0 240px;
+  justify-content: center;
 
   @include respond-to-medium {
     grid-template-columns: none;
   }
 
-  &__category {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  &__subject {
+    color: white;
+    background-color: $light-blue-color;
+    padding: 4px 14px;
+    border-radius: 90px;
+    font-weight: 500;
+  }
 
-    &__subject {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    width: 224px;
+
+    &__icon {
+      color: $beige-color;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 32px;
       color: $light-blue-color;
     }
 
-    &__item {
-      display: flex;
-      gap: 16px;
+    &__technologies {
+      text-align: center;
+      font-size: 24px;
     }
   }
 }

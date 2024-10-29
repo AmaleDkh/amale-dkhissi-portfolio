@@ -1,0 +1,31 @@
+@import "../../assets/styles/Colors.scss";
+
+.social-media-accounts {
+  background-color: $light-blue-color;
+  padding: 64px 240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 72px;
+
+  &__title {
+    font-size: 24px;
+    font-family: "Playfair Display";
+    font-style: italic;
+    color: $beige-color;
+  }
+
+  &__icons-container {
+    display: flex;
+    gap: 56px;
+
+    &__icon {
+      background-color: white;
+      padding: 24px;
+      border-radius: 50%;
+      color: $dark-blue-color;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

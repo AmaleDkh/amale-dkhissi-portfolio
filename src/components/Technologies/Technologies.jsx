@@ -1,26 +1,34 @@
 // Component
 import TechnologyItem from "../TechnologyItem/TechnologyItem";
 
-// Data
-import technologiesList from "../../assets/data/technologiesList.json";
+// Font Awesome icons
+import {
+  faLaptopCode,
+  faDatabase,
+  faLightbulb,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Style
 import "./../Technologies/Technologies.scss";
 
-// Devicon
-import "devicon/devicon.min.css";
-
 function Technologies() {
   return (
     <div className="technologies-list">
-      {technologiesList.map((category, categoryIndex) => (
-        <div key={categoryIndex} className="technologies-list__category">
-          <h3 className="technologies-list__category__subject">
-            {category.subject}
-          </h3>
-          <TechnologyItem technologies={category.technologies} />
-        </div>
-      ))}
+      <TechnologyItem
+        icon={faLaptopCode}
+        title="DEV. FRONT-END"
+        technologies="React, JavaScript, TypeScript, HTML, CSS, Sass"
+      />
+      <TechnologyItem
+        icon={faDatabase}
+        title="DEV. BACK-END"
+        technologies="Node.js, Express, MongoDB, SQL"
+      />
+      <TechnologyItem
+        icon={faLightbulb}
+        title="AUTRES OUTILS"
+        technologies="GitHub, Postman, Figma, Swagger"
+      />
     </div>
   );
 }

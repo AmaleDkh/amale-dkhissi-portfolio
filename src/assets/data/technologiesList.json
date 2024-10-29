@@ -2,19 +2,19 @@
   {
     "subject": "Front-end",
     "technologies": [
-      { "name": "HTML", "icon": "devicon-html5-plain", "size": "devicon-2x" },
-      { "name": "CSS", "icon": "devicon-css3-plain", "size": "devicon-2x" },
-      {
-        "name": "JavaScript",
-        "icon": "devicon-javascript-plain",
-        "size": "devicon-2x"
-      },
-      { "name": "Sass", "icon": "devicon-sass-original", "size": "devicon-2x" },
       {
         "name": "React",
         "icon": "devicon-react-original",
-        "size": "devicon-2x"
-      }
+        "size": "devicon-3x"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "devicon-javascript-plain",
+        "size": "devicon-3x"
+      },
+      { "name": "HTML", "icon": "devicon-html5-plain", "size": "devicon-3x" },
+      { "name": "CSS", "icon": "devicon-css3-plain", "size": "devicon-3x" },
+      { "name": "Sass", "icon": "devicon-sass-original", "size": "devicon-3x" }
     ]
   },
   {
@@ -23,12 +23,12 @@
       {
         "name": "Node.js",
         "icon": "devicon-nodejs-plain-wordmark",
-        "size": "devicon-3x"
+        "size": "devicon-4x"
       },
       {
         "name": "Express",
         "icon": "devicon-express-original",
-        "size": "devicon-2x"
+        "size": "devicon-3x"
       }
     ]
   },
@@ -38,12 +38,12 @@
       {
         "name": "MongoDB",
         "icon": "devicon-mongodb-plain-wordmark",
-        "size": "devicon-3x"
+        "size": "devicon-4x"
       },
       {
         "name": "MySQL",
         "icon": "devicon-mysql-plain-wordmark",
-        "size": "devicon-3x"
+        "size": "devicon-4x"
       }
     ]
   },
@@ -53,33 +53,34 @@
       {
         "name": "GitHub",
         "icon": "devicon-github-original-wordmark",
-        "size": "devicon-2x"
+        "size": "devicon-3x"
       }
     ]
   },
   {
     "subject": "Outils de design",
     "technologies": [
-      { "name": "Figma", "icon": "devicon-figma-plain", "size": "devicon-2x" }
+      { "name": "Figma", "icon": "devicon-figma-plain", "size": "devicon-3x" }
     ]
   },
   {
     "subject": "Autres outils",
     "technologies": [
       {
-        "name": "Notion",
-        "icon": "devicon-notion-plain",
-        "size": "devicon-2x"
+        "name": "Postman",
+        "icon": "devicon-postman-plain",
+        "size": "devicon-3x"
       },
       {
         "name": "Swagger",
         "icon": "devicon-swagger-plain",
-        "size": "devicon-2x"
+        "size": "devicon-3x"
       },
+
       {
-        "name": "Postman",
-        "icon": "devicon-postman-plain",
-        "size": "devicon-2x"
+        "name": "Notion",
+        "icon": "devicon-notion-plain",
+        "size": "devicon-3x"
       }
     ]
   }

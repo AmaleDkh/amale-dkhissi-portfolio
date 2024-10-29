@@ -1,50 +1,38 @@
 [
   {
-    "title": "Booki - Agence de voyage",
-    "image": "/project1-image.webp",
-    "description": "Intégration de l'interface responsive de la page d'accueil d'un site de voyage pour desktop, tablette et mobile.",
-    "details": "Le site web de Booki offre des versions pour desktop, tablette et mobile. L'objectif était de créer un design responsive, garantissant une adaptation fluide des contenus sur tous les appareils et toutes les tailles d'écran. En utilisant Figma pour les maquettes et en codant moi-même l'interface, j'ai structuré le site avec des blocs et des cartes, en utilisant principalement Flexbox pour la mise en page. Il y avait également de nombreuses répétitions de propriétés CSS. Pour gérer cela, j'ai optimisé le code en regroupant les classes similaires. Cette approche a non seulement réduit la redondance, mais a également facilité la maintenance du code.",
+    "title": "Qwenta - Menu Maker",
+    "image": "/project6-image.webp",
+    "description": "Développement des spécifications techniques et planification du développement d'un site web.",
+    "details": "L’entreprise Qwenta a décidé de diversifier ses activités en créant un outil “Menu Maker” permettant à ses clients restaurateurs de disposer d’un compte personnel pour créer et diffuser des menus. L’objectif était de développer les spécifications techniques et de planifier le projet. Pour cela, j’ai réalisé une veille technologique afin de sélectionner les technologies les plus adaptées, identifié les besoins fonctionnels et décomposé les fonctionnalités en tâches spécifiques. J’ai également élaboré un tableau Kanban sur Notion pour suivre le déroulement du projet de manière structurée et efficace.",
     "technologies": [
       {
-        "technology": "HTML",
-        "icon": "devicon-html5-plain",
+        "technology": "React",
+        "icon": "devicon-react-original",
         "size": "devicon-2x"
       },
       {
-        "technology": "CSS",
-        "icon": "devicon-css3-plain",
+        "technology": "Node.js",
+        "icon": "devicon-nodejs-plain-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "technology": "Express",
+        "icon": "devicon-express-original",
+        "size": "devicon-2x"
+      },
+      {
+        "technology": "MongoDB",
+        "icon": "devicon-mongodb-plain-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "technology": "Sass",
+        "icon": "devicon-sass-original",
         "size": "devicon-2x"
       }
     ],
+
     "source": "https://github.com/AmaleDkh/booki-website-homepage.github.io.git"
-  },
-  {
-    "title": "Sophie Bluel - Architecte d'intérieur",
-    "image": "/project2-image.webp",
-    "description": "Développement de l'interface front-end d'un site portfolio pour une architecte d'intérieur.",
-    "details": "Le site web de Sophie Bluel présente tous les travaux réalisés par l’architecte. Les objectifs étaient de permettre à l'architecte de se connecter à son compte et de pouvoir ajouter ou supprimer des projets. Pour cela, une API avait été développée. J'ai donc géré les événements utilisateurs et manipulé les éléments du DOM avec JavaScript, permettant une interaction fluide et une gestion efficace des projets.",
-    "technologies": [
-      {
-        "technology": "JavaScript",
-        "icon": "devicon-javascript-plain",
-        "size": "devicon-2x"
-      }
-    ],
-    "source": "https://github.com/AmaleDkh/portfolio-architect-sophie-bluel.git"
-  },
-  {
-    "title": "Nina Carducci - Photographe professionnelle",
-    "image": "/project3-image.webp",
-    "description": "Amélioration de la performance et de l'accessibilité du site d'une photographe professionnelle pour optimiser son référencement.",
-    "details": "Le site web de Nina Carducci présente les photos prises par la photographe. L’objectif du projet était d’améliorer la performance et l’accessibilité du site. Pour cela, j'ai effectué un audit avec Lighthouse (performance) et Wave (accessibilité). Pour optimiser la performance, j'ai amélioré les images, les fichiers de code, le SEO technique et local, et les réseaux sociaux. Pour l'accessibilité, j'ai ajouté la langue du site, des descriptions aux images, des informations aux labels du formulaire de contact, et changé la couleur qui ne convenait pas.",
-    "technologies": [
-      {
-        "technology": "JavaScript",
-        "icon": "devicon-javascript-plain",
-        "size": "devicon-2x"
-      }
-    ],
-    "source": "https://github.com/AmaleDkh/nina-carducci-photograph-website.git"
   },
   {
     "title": "Kasa - Location immobilière",
@@ -68,7 +56,7 @@
   {
     "title": "Mon Vieux Grimoire - Notation de livres",
     "image": "/project5-image.webp",
-    "description": "Développement du back-end d'un site de notation de livres.",
+    "description": "Développement du back-end d'un site de notation et de critiques de livres.",
     "details": "Le site web Mon Vieux Grimoire est une plateforme de référencement et de notation de livres. Pour le back-end, j'ai utilisé Express pour créer un serveur et MongoDB pour la base de données, connectant ainsi ces deux éléments. J'ai développé des modèles de données et implémenté des opérations CRUD pour la gestion des livres et des notations, en assurant la sécurité et le stockage sécurisé des données. Pour gérer les images de chaque livre, j'ai utilisé la librairie multer. Le site propose une version pour les utilisateurs connectés et non connectés, ce qui m'a conduit à implémenter un système d'authentification sécurisé. J'ai utilisé l'ODM Mongoose pour modéliser les données MongoDB et suivi une architecture MVC pour structurer l'application.",
     "technologies": [
       {
@@ -90,10 +78,31 @@
     "source": "https://github.com/AmaleDkh/mon-vieux-grimoire-website.git"
   },
   {
-    "title": "Qwenta - Menu Maker",
-    "image": "/project6-image.webp",
-    "description": "Développement des spécifications techniques et planification du développement d'un site web.",
-    "details": "L’entreprise Qwenta a décidé de diversifier ses activités en créant un outil “Menu Maker” permettant à ses clients restaurateurs de disposer d’un compte personnel pour créer et diffuser des menus. L’objectif était de développer les spécifications techniques et de planifier le projet. Pour cela, j’ai réalisé une veille technologique afin de sélectionner les technologies les plus adaptées, identifié les besoins fonctionnels et décomposé les fonctionnalités en tâches spécifiques. J’ai également élaboré un tableau Kanban sur Notion pour suivre le déroulement du projet de manière structurée et efficace.",
-    "source": "https://github.com/AmaleDkh/booki-website-homepage.github.io.git"
+    "title": "Sophie Bluel - Architecte d'intérieur",
+    "image": "/project2-image.webp",
+    "description": "Développement de l'interface front-end d'un site portfolio pour une architecte d'intérieur.",
+    "details": "Le site web de Sophie Bluel présente tous les travaux réalisés par l’architecte. Les objectifs étaient de permettre à l'architecte de se connecter à son compte et de pouvoir ajouter ou supprimer des projets. Pour cela, une API avait été développée. J'ai donc géré les événements utilisateurs et manipulé les éléments du DOM avec JavaScript, permettant une interaction fluide et une gestion efficace des projets.",
+    "technologies": [
+      {
+        "technology": "JavaScript",
+        "icon": "devicon-javascript-plain",
+        "size": "devicon-2x"
+      }
+    ],
+    "source": "https://github.com/AmaleDkh/portfolio-architect-sophie-bluel.git"
+  },
+  {
+    "title": "Nina Carducci - Photographe",
+    "image": "/project3-image.webp",
+    "description": "Amélioration de la performance et de l'accessibilité du site d'une photographe pour optimiser son référencement.",
+    "details": "Le site web de Nina Carducci présente les photos prises par la photographe. L’objectif du projet était d’améliorer la performance et l’accessibilité du site. Pour cela, j'ai effectué un audit avec Lighthouse (performance) et Wave (accessibilité). Pour optimiser la performance, j'ai amélioré les images, les fichiers de code, le SEO technique et local, et les réseaux sociaux. Pour l'accessibilité, j'ai ajouté la langue du site, des descriptions aux images, des informations aux labels du formulaire de contact, et changé la couleur qui ne convenait pas.",
+    "technologies": [
+      {
+        "technology": "JavaScript",
+        "icon": "devicon-javascript-plain",
+        "size": "devicon-2x"
+      }
+    ],
+    "source": "https://github.com/AmaleDkh/nina-carducci-photograph-website.git"
   }
 ]

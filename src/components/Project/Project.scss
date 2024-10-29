@@ -1,49 +1,68 @@
 @import "../../assets/styles/mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
+@import "../../assets/styles/Fonts.scss";
 
 .project-container {
-  margin: 0 20px 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  width: 384px;
+  height: 384px;
+  background-color: $light-blue-color;
+  color: black;
 
   @include respond-to-medium {
     height: 100%;
   }
 
   &__information {
-    margin: 24px 16px 0 16px;
+    margin: 16px 24px 0 24px;
 
     &__title {
-      color: $light-blue-color;
-      margin: 0 0 20px 0;
+      color: $beige-color;
+      margin: 0 0 24px 0;
+      font-family: "Playfair Display";
+      font-style: italic;
     }
 
     &__description {
-      margin-bottom: 20px;
+      align-content: center;
+      color: white;
+      margin: 0;
     }
 
     &__link {
       display: flex;
       justify-content: end;
-      margin: 0 16px 40px 0;
+      margin: 0 16px 24px 0;
 
       &__project {
         text-decoration: none;
-        background-color: white;
         border: none;
         font-size: 16px;
         font-weight: bold;
-        color: $light-blue-color;
         cursor: pointer;
+        background-color: $light-blue-color;
+        color: $beige-color;
 
         svg {
           margin-right: 8px;
         }
       }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px 24px 24px;
+
+    &__technologies {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
   }
 

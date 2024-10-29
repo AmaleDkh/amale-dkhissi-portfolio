@@ -12,8 +12,14 @@ import "./index.css";
 // Report Web Vitals
 import reportWebVitals from "./reportWebVitals";
 
+// Component
+// import CustomCursor from "./components/CustomCursor/CustomCursor";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <>
+    <RouterProvider router={router} />
+    {/* <CustomCursor /> */}
+  </>
 );
 
 reportWebVitals();

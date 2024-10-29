@@ -2,31 +2,29 @@
 
 .experience-item {
   align-content: center;
-  text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: 32px;
+  margin-bottom: 24px;
 
   &__year {
-    font-weight: bold;
-    font-size: 24px;
+    font-weight: 800;
+    font-size: 32px;
     color: $light-blue-color;
+    border-radius: 90px;
+    margin-bottom: 8px;
+    width: 64px;
+    text-align: center;
   }
 
-  &__year::after {
-    content: "";
-    display: inline-block;
-    width: 88px;
-    height: 2px;
-    background-color: black;
-    vertical-align: middle;
-    margin-left: 16px;
+  &__information {
+    max-width: 75%;
   }
 
   &__information__company {
     font-weight: bold;
-    margin-bottom: 16px;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: $orange-color;
   }
 }

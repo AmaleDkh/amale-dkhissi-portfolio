@@ -1,0 +1,16 @@
+@import "../../assets/styles/Colors.scss";
+
+.horizontal-line {
+  &__right {
+    border: 1px solid white;
+    width: 142px;
+    margin-top: 16px;
+  }
+
+  &__centered {
+    border: 1px solid $dark-blue-color;
+    width: 142px;
+    margin-top: 16px;
+    margin: 16px auto 0 auto;
+  }
+}
