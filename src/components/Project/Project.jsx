@@ -1,5 +1,6 @@
 // React element
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 // Style
 import "./Project.scss";
@@ -11,9 +12,23 @@ import "devicon/devicon.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function Project({ title, description, image, technologies, source }) {
+function Project({
+  title,
+  description,
+  image,
+  technologies,
+  source,
+  projectIndex,
+  isVisible,
+}) {
+  const projectRef = useRef(null);
+
   return (
-    <div className="project-container">
+    <div
+      ref={projectRef}
+      className={`project-container ${isVisible ? "visible" : "hidden"}`}
+      style={{ transitionDelay: `${projectIndex * 0.2}s` }}
+    >
       <img src={image} alt="Couverture du projet" loading="lazy" />
       <div className="project-container__information">
         <h3 className="project-container__information__title">{title}</h3>

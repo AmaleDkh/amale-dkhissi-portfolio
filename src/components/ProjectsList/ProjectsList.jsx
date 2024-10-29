@@ -1,3 +1,6 @@
+// React elements
+import { useState, useEffect, useCallback } from "react";
+
 // Components
 import Project from "../Project/Project";
 import HorizontalLine from "../HorizontalLine/HorizontalLine";
@@ -9,6 +12,34 @@ import projectsList from "../../assets/data/projectsList.json";
 import "./ProjectsList.scss";
 
 function ProjectsList() {
+  const [visibleProjects, setVisibleProjects] = useState([]);
+
+  const handleScroll = useCallback(() => {
+    const container = document.querySelector(".projects__container");
+    const projects = Array.from(container.children);
+
+    projects.forEach((project, index) => {
+      const rect = project.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (
+        rect.top <= windowHeight &&
+        rect.bottom >= 0 &&
+        !visibleProjects.includes(index)
+      ) {
+        setVisibleProjects((prev) => [...prev, index]);
+      }
+    });
+  }, [visibleProjects]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
     <section id="projects" className="projects">
       <div className="projects__title-container">
@@ -27,6 +58,8 @@ function ProjectsList() {
             technologies={project.technologies}
             source={project.source}
             image={project.image}
+            projectIndex={projectIndex}
+            isVisible={visibleProjects.includes(projectIndex)}
           />
         ))}
       </div>

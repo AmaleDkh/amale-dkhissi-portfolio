@@ -1,3 +1,6 @@
+// React elements
+import { useState, useEffect, useRef, useCallback } from "react";
+
 // Component
 import TechnologyItem from "../TechnologyItem/TechnologyItem";
 
@@ -12,23 +15,64 @@ import {
 import "./../Technologies/Technologies.scss";
 
 function Technologies() {
+  const techRefs = useRef([]);
+  const [visibleTechs, setVisibleTechs] = useState([]);
+
+  const handleScroll = useCallback(() => {
+    techRefs.current.forEach((techRef, index) => {
+      if (techRef) {
+        const rect = techRef.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          if (!visibleTechs.includes(index)) {
+            setVisibleTechs((prev) => [...prev, index]);
+          }
+        }
+      }
+    });
+  }, [visibleTechs]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  const technologiesCategory = [
+    {
+      icon: faLaptopCode,
+      title: "DEV. FRONT-END",
+      technologiesList: "React, JavaScript, TypeScript, HTML, CSS, Sass",
+    },
+    {
+      icon: faDatabase,
+      title: "DEV. BACK-END",
+      technologiesList: "Node.js, Express, MongoDB, SQL",
+    },
+    {
+      icon: faLightbulb,
+      title: "AUTRES OUTILS",
+      technologiesList: "GitHub, Postman, Figma, Swagger",
+    },
+  ];
+
   return (
     <div className="technologies-list">
-      <TechnologyItem
-        icon={faLaptopCode}
-        title="DEV. FRONT-END"
-        technologies="React, JavaScript, TypeScript, HTML, CSS, Sass"
-      />
-      <TechnologyItem
-        icon={faDatabase}
-        title="DEV. BACK-END"
-        technologies="Node.js, Express, MongoDB, SQL"
-      />
-      <TechnologyItem
-        icon={faLightbulb}
-        title="AUTRES OUTILS"
-        technologies="GitHub, Postman, Figma, Swagger"
-      />
+      {technologiesCategory.map((category, index) => (
+        <div
+          key={index}
+          ref={(el) => (techRefs.current[index] = el)}
+          className={`technologies-list__category ${visibleTechs.includes(index) ? "visible" : "hidden"}`}
+          style={{ transitionDelay: `${index * 0.2}s` }}
+        >
+          <TechnologyItem
+            icon={category.icon}
+            title={category.title}
+            technologies={category.technologiesList}
+          />
+        </div>
+      ))}
     </div>
   );
 }
