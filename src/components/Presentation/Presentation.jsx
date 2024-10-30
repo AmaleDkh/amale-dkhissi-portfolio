@@ -1,3 +1,6 @@
+// React elements
+import { useState, useEffect } from "react";
+
 // Style
 import "./Presentation.scss";
 
@@ -5,17 +8,37 @@ import "./Presentation.scss";
 import Photo from "../../assets/images/amale-dkhissi.webp";
 
 function Presentation() {
+  const [isImageVisible, setIsImageVisible] = useState(false);
+  const [isTextVisible, setIsTextVisible] = useState(false);
+
+  useEffect(() => {
+    const imageTimer = setTimeout(() => {
+      setIsImageVisible(true);
+    }, 100);
+
+    const textTimer = setTimeout(() => {
+      setIsTextVisible(true);
+    }, 400);
+
+    return () => {
+      clearTimeout(imageTimer);
+      clearTimeout(textTimer);
+    };
+  }, []);
+
   return (
     <section className="presentation-container">
       <div className="presentation-container__photo-container">
         <img
           src={Photo}
-          className="presentation-container__photo-container__photo"
           alt="Portrait professionnel"
+          className={`presentation-container__photo-container__photo ${isImageVisible ? "visible" : ""}`}
         ></img>
       </div>
-      <div className="presentation-container__text">
-        <h1 className="presentation-container__text__title">
+      <div
+        className={`presentation-container__text ${isTextVisible ? "visible" : ""}`}
+      >
+        <h1>
           Hello ! <br></br> Moi c'est{" "}
           <span className="presentation-container__text__title__highlight">
             Amale

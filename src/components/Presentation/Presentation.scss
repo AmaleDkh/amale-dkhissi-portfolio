@@ -18,6 +18,11 @@
 
   &__text {
     align-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.5s ease 0.5s,
+      transform 0.5s ease;
 
     &__title {
       color: $beige-color;
@@ -32,6 +37,11 @@
     &__presentation {
       color: white;
     }
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__photo-container {
@@ -41,6 +51,16 @@
       border-radius: 50%;
       object-fit: cover;
       overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.5s ease 0.5s,
+        transform 0.5s ease;
+
+      &.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 }

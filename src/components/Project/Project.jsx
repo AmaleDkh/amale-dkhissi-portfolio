@@ -6,11 +6,12 @@ import { useRef } from "react";
 import "./Project.scss";
 import "../../assets/styles/Devicon.scss";
 
-import "devicon/devicon.min.css";
-
 // Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+// Devicon icons
+import "devicon/devicon.min.css";
 
 function Project({
   title,
