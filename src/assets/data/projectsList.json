@@ -1,9 +1,14 @@
 [
   {
-    "title": "Qwenta - Menu Maker",
+    "title": {
+      "french": "Qwenta - Menu Maker",
+      "english": "Qwenta - Menu Maker"
+    },
     "image": "/project6-image.webp",
-    "description": "Développement d'une application de gestion de menus pour des restaurateurs.",
-    "details": "L’entreprise Qwenta a décidé de diversifier ses activités en créant un outil “Menu Maker” permettant à ses clients restaurateurs de disposer d’un compte personnel pour créer et diffuser des menus. L’objectif était de développer les spécifications techniques et de planifier le projet. Pour cela, j’ai réalisé une veille technologique afin de sélectionner les technologies les plus adaptées, identifié les besoins fonctionnels et décomposé les fonctionnalités en tâches spécifiques. J’ai également élaboré un tableau Kanban sur Notion pour suivre le déroulement du projet de manière structurée et efficace.",
+    "description": {
+      "french": "Développement d'une application de gestion de menus pour des restaurateurs.",
+      "english": "Development of a menu maker application for restaurateurs owners."
+    },
     "technologies": [
       {
         "technology": "React",
@@ -35,10 +40,15 @@
     "source": "https://github.com/AmaleDkh/booki-website-homepage.github.io.git"
   },
   {
-    "title": "Kasa - Location immobilière",
+    "title": {
+      "french": "Kasa - Location immobilière",
+      "english": "Kasa - Real estate rental"
+    },
     "image": "/project4-image.webp",
-    "description": "Développement de l'interface front-end d'une application de location immobilière.",
-    "details": "Le site web de Kasa est une application monopage permettant de visualiser tous les logements disponibles à la location et de consulter les informations détaillées de chaque logement. Développé avec React, le projet a été structuré en composants réutilisables pour une gestion plus efficace de l'interface utilisateur. Le système de routage a été implémenté avec React Router. Pour le design, j'ai utilisé Sass, ce qui a permis une meilleure organisation et lisibilité du code.",
+    "description": {
+      "french": "Développement de l'interface front-end d'une application de location immobilière.",
+      "english": "Development of the front-end interface for a real estate rental application."
+    },
     "technologies": [
       {
         "technology": "React",
@@ -54,10 +64,15 @@
     "source": "https://github.com/AmaleDkh/kasa-application.git"
   },
   {
-    "title": "Mon Vieux Grimoire - Notation de livres",
+    "title": {
+      "french": "Mon Vieux Grimoire - Notation de livres",
+      "english": "Mon Vieux Grimoire - Book rating"
+    },
     "image": "/project5-image.webp",
-    "description": "Développement du back-end d'un site de notation et de critiques de livres.",
-    "details": "Le site web Mon Vieux Grimoire est une plateforme de référencement et de notation de livres. Pour le back-end, j'ai utilisé Express pour créer un serveur et MongoDB pour la base de données, connectant ainsi ces deux éléments. J'ai développé des modèles de données et implémenté des opérations CRUD pour la gestion des livres et des notations, en assurant la sécurité et le stockage sécurisé des données. Pour gérer les images de chaque livre, j'ai utilisé la librairie multer. Le site propose une version pour les utilisateurs connectés et non connectés, ce qui m'a conduit à implémenter un système d'authentification sécurisé. J'ai utilisé l'ODM Mongoose pour modéliser les données MongoDB et suivi une architecture MVC pour structurer l'application.",
+    "description": {
+      "french": "Développement du back-end d'un site de notation et de critiques de livres.",
+      "english": "Development of the back-end for a book rating and review site."
+    },
     "technologies": [
       {
         "technology": "Node.js",
@@ -78,10 +93,16 @@
     "source": "https://github.com/AmaleDkh/mon-vieux-grimoire-website.git"
   },
   {
-    "title": "Sophie Bluel - Architecte d'intérieur",
+    "title": {
+      "french": "Sophie Bluel - Architecte d'intérieur",
+      "english": "Sophie Bluel - Interior architect"
+    },
     "image": "/project2-image.webp",
-    "description": "Développement de l'interface front-end d'un site portfolio pour une architecte d'intérieur.",
-    "details": "Le site web de Sophie Bluel présente tous les travaux réalisés par l’architecte. Les objectifs étaient de permettre à l'architecte de se connecter à son compte et de pouvoir ajouter ou supprimer des projets. Pour cela, une API avait été développée. J'ai donc géré les événements utilisateurs et manipulé les éléments du DOM avec JavaScript, permettant une interaction fluide et une gestion efficace des projets.",
+    "description": {
+      "french": "Développement de l'interface front-end d'un site portfolio pour une architecte d'intérieur.",
+      "english": "Development of the front-end interface of a portfolio site for an interior architect."
+    },
+
     "technologies": [
       {
         "technology": "JavaScript",
@@ -92,10 +113,15 @@
     "source": "https://github.com/AmaleDkh/portfolio-architect-sophie-bluel.git"
   },
   {
-    "title": "Nina Carducci - Photographe",
+    "title": {
+      "french": "Nina Carducci - Photographe",
+      "english": "Nina Carducci - Photographer"
+    },
     "image": "/project3-image.webp",
-    "description": "Amélioration de la performance et de l'accessibilité du site d'une photographe pour optimiser son référencement.",
-    "details": "Le site web de Nina Carducci présente les photos prises par la photographe. L’objectif du projet était d’améliorer la performance et l’accessibilité du site. Pour cela, j'ai effectué un audit avec Lighthouse (performance) et Wave (accessibilité). Pour optimiser la performance, j'ai amélioré les images, les fichiers de code, le SEO technique et local, et les réseaux sociaux. Pour l'accessibilité, j'ai ajouté la langue du site, des descriptions aux images, des informations aux labels du formulaire de contact, et changé la couleur qui ne convenait pas.",
+    "description": {
+      "french": "Amélioration de la performance et de l'accessibilité du site d'une photographe pour optimiser son référencement.",
+      "english": "Improving the performance and accessibility of a photographer's website to optimize its SEO."
+    },
     "technologies": [
       {
         "technology": "JavaScript",

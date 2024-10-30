@@ -13,10 +13,13 @@ import {
 
 // Style
 import "./../Technologies/Technologies.scss";
+import { useLanguage } from "../../context/LanguageContext";
 
 function Technologies() {
   const techRefs = useRef([]);
   const [visibleTechs, setVisibleTechs] = useState([]);
+
+  const { language } = useLanguage();
 
   const handleScroll = useCallback(() => {
     techRefs.current.forEach((techRef, index) => {
@@ -52,7 +55,7 @@ function Technologies() {
     },
     {
       icon: faLightbulb,
-      title: "AUTRES OUTILS",
+      title: language === "FR" ? "AUTRES OUTILS" : "OTHER TOOLS",
       technologiesList: "GitHub, Postman, Figma, Swagger",
     },
   ];

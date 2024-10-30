@@ -1,6 +1,9 @@
 // React elements
 import { useState } from "react";
 
+// Context
+import { useLanguage } from "../../context/LanguageContext";
+
 // Component
 import SocialMedia from "../SocialMedia/SocialMedia";
 
@@ -13,7 +16,11 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("FR");
+
   const languages = ["FR", "ANG"];
+
+  const { language, changeLanguage } = useLanguage();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -26,15 +33,33 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  const handleLanguageChange = () => {
+    if (language === "FR") {
+      changeLanguage("ANG");
+      setCurrentLanguage("ANG");
+    } else {
+      changeLanguage("FR");
+      setCurrentLanguage("FR");
+    }
+  };
+
   return (
     <header className="header">
       <div className="header__title">Amale Dkhissi</div>
 
       <div className="header__links">
         <nav className="header__links__nav">
-          <div onClick={() => scrollToSection("about")}>À propos</div>
-          <div onClick={() => scrollToSection("projects")}>Projets</div>
-          <div onClick={() => scrollToSection("skills")}>Compétences</div>
+          <div onClick={() => scrollToSection("about")}>
+            {language === "FR" ? "À propos" : "About"}
+          </div>
+          <div onClick={() => scrollToSection("projects")}>
+            {" "}
+            {language === "FR" ? "Projets" : "Projects"}
+          </div>
+          <div onClick={() => scrollToSection("skills")}>
+            {" "}
+            {language === "FR" ? "Compétences" : "Skills"}
+          </div>
         </nav>
 
         <SocialMedia version="dark" />
@@ -44,12 +69,15 @@ function Header() {
           onClick={toggleMenu}
         >
           <div className="header__links__languages__current-language">
-            <div>{languages[0]}</div>
+            <div>{currentLanguage}</div>
             <FontAwesomeIcon icon={faAngleDown} />
           </div>
           {isOpen === true && (
-            <div className="header__links__languages__new-language">
-              {languages[1]}
+            <div
+              className="header__links__languages__new-language"
+              onClick={handleLanguageChange}
+            >
+              {currentLanguage === "FR" ? "ANG" : "FR"}
             </div>
           )}
         </div>

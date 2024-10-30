@@ -1,4 +1,8 @@
+// React elements
 import { useState, useEffect, useCallback } from "react";
+
+// Context
+import { useLanguage } from "../../context/LanguageContext";
 
 // Style
 import "./SocialMediaAccountsSection.scss";
@@ -8,6 +12,8 @@ import SocialMedia from "../SocialMedia/SocialMedia";
 
 function SocialMediaAccounts() {
   const [isSectionVisible, setIsSectionVisible] = useState(false);
+
+  const { language } = useLanguage();
 
   const handleScroll = useCallback(() => {
     const section = document.querySelector(".social-media-accounts");
@@ -32,7 +38,9 @@ function SocialMediaAccounts() {
       className={`social-media-accounts ${isSectionVisible ? "visible" : "hidden"}`}
     >
       <div className="social-media-accounts__title">
-        Et si nous faisions connaissance ?
+        {language === "FR"
+          ? "Et si nous faisions connaissance ?"
+          : "Let's get to know each other!"}
       </div>
       <SocialMedia version="light" />
     </section>

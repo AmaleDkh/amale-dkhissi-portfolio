@@ -1,6 +1,9 @@
-// React element
+// React elements
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+
+// Context
+import { useLanguage } from "../../context/LanguageContext";
 
 // Style
 import "./Project.scss";
@@ -24,6 +27,8 @@ function Project({
 }) {
   const projectRef = useRef(null);
 
+  const { language } = useLanguage();
+
   return (
     <div
       ref={projectRef}
@@ -32,9 +37,11 @@ function Project({
     >
       <img src={image} alt="Couverture du projet" loading="lazy" />
       <div className="project-container__information">
-        <h3 className="project-container__information__title">{title}</h3>
+        <h3 className="project-container__information__title">
+          {language === "FR" ? title.french : title.english}
+        </h3>
         <p className="project-container__information__description">
-          {description}
+          {language === "FR" ? description.french : description.english}
         </p>
 
         <div className="project-container__information__icons">

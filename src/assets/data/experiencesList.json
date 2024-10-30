@@ -3,42 +3,60 @@
     "year": "2024",
     "experience": {
       "company": "OpenClassrooms",
-      "position": "Formation Développeur web"
+      "position": {
+        "french": "Formation Développeur web",
+        "english": "Web Development Degree"
+      }
     }
   },
   {
     "year": "2023",
     "experience": {
       "company": "Réflexion",
-      "position": "Choix d'une reconversion professionnelle"
+      "position": {
+        "french": "Choix d'une reconversion professionnelle",
+        "english": "Choosing professional reconversion"
+      }
     }
   },
   {
     "year": "2022",
     "experience": {
       "company": "L'Oréal",
-      "position": "Responsable projets communication & RSE"
+      "position": {
+        "french": "Responsable projets communication & RSE",
+        "english": "Communication & CSR Project Manager"
+      }
     }
   },
   {
     "year": "2021",
     "experience": {
       "company": "Fondation L'Oréal",
-      "position": "Responsable projets communication institutionnelle"
+      "position": {
+        "french": "Responsable projets communication institutionnelle",
+        "english": "Corporate Communication Manager"
+      }
     }
   },
   {
     "year": "2020",
     "experience": {
       "company": "CANAL+",
-      "position": "Chargée de communication événementielle & presse"
+      "position": {
+        "french": "Chargée de communication événementielle & presse",
+        "english": "Event Communication & Press Officer"
+      }
     }
   },
   {
     "year": "2018",
     "experience": {
       "company": "France Inter",
-      "position": "Chargée de communication, projets événementiels, développement de la marque"
+      "position": {
+        "french": "Chargée de communication, projets événementiels, développement de la marque",
+        "english": "Communication, Event & Brand Development Officer"
+      }
     }
   }
 ]

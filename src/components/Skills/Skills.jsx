@@ -1,3 +1,6 @@
+// Context
+import { useLanguage } from "../../context/LanguageContext";
+
 // Components
 import SectionTitle from "./../SectionTitle/SectionTitle";
 import Technologies from "./../Technologies/Technologies";
@@ -6,9 +9,13 @@ import Technologies from "./../Technologies/Technologies";
 import "./Skills.scss";
 
 function Skills() {
+  const { language } = useLanguage();
+
   return (
     <section id="skills" className="skills">
-      <SectionTitle title="MES COMPÉTENCES" />
+      <SectionTitle
+        title={language === "FR" ? "MES COMPÉTENCES" : "MY SKILLS"}
+      />
       <Technologies />
     </section>
   );

@@ -1,6 +1,9 @@
 // React elements
 import { useState, useEffect, useCallback } from "react";
 
+// Context
+import { useLanguage } from "../../context/LanguageContext";
+
 // Components
 import Project from "../Project/Project";
 import HorizontalLine from "../HorizontalLine/HorizontalLine";
@@ -13,6 +16,8 @@ import "./ProjectsList.scss";
 
 function ProjectsList() {
   const [visibleProjects, setVisibleProjects] = useState([]);
+
+  const { language } = useLanguage();
 
   const handleScroll = useCallback(() => {
     const container = document.querySelector(".projects__container");
@@ -44,7 +49,7 @@ function ProjectsList() {
     <section id="projects" className="projects">
       <div className="projects__title-container">
         <h2 className="projects__title-container__title">
-          DÉCOUVREZ MES PROJETS
+          {language === "FR" ? "DÉCOUVREZ MES PROJETS" : "DISCOVER MY PROJECTS"}
         </h2>
         <HorizontalLine className="horizontal-line__centered" />
       </div>
