@@ -5,10 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 100px;
+  padding: 32px 100px;
   top: 0;
   z-index: 1000;
   background-color: $beige-color;
+  color: $dark-blue-color;
 
   @include respond-to-medium {
     padding: 32px;
@@ -21,28 +22,47 @@
   &__title {
     font-weight: bold;
     font-size: 24px;
-    color: $orange-color;
-    color: $dark-blue-color;
   }
 
-  &__nav {
+  &__links {
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: 40px;
 
-    @include respond-to-medium {
-      display: none;
+    &__nav {
+      display: flex;
+      gap: 24px;
+
+      @include respond-to-medium {
+        display: none;
+      }
+
+      div {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+
+        align-self: center;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
 
-    div {
-      text-decoration: none;
+    &__languages {
       cursor: pointer;
-      font-size: 16px;
-      font-weight: 500;
-      color: $dark-blue-color;
-      align-self: center;
+      position: relative;
 
-      &:hover {
-        opacity: 0.8;
+      &__current-language {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      &__new-language {
+        position: absolute;
       }
     }
   }

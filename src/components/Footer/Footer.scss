@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 100px;
+  padding: 32px 100px;
   background-color: $beige-color;
 
   @include respond-to-medium {

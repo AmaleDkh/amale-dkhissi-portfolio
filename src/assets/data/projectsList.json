@@ -2,7 +2,7 @@
   {
     "title": "Qwenta - Menu Maker",
     "image": "/project6-image.webp",
-    "description": "Développement des spécifications techniques et planification du développement d'un site web.",
+    "description": "Développement d'une application de gestion de menus pour des restaurateurs.",
     "details": "L’entreprise Qwenta a décidé de diversifier ses activités en créant un outil “Menu Maker” permettant à ses clients restaurateurs de disposer d’un compte personnel pour créer et diffuser des menus. L’objectif était de développer les spécifications techniques et de planifier le projet. Pour cela, j’ai réalisé une veille technologique afin de sélectionner les technologies les plus adaptées, identifié les besoins fonctionnels et décomposé les fonctionnalités en tâches spécifiques. J’ai également élaboré un tableau Kanban sur Notion pour suivre le déroulement du projet de manière structurée et efficace.",
     "technologies": [
       {

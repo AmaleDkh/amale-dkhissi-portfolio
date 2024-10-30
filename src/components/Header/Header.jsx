@@ -7,15 +7,20 @@ import SocialMedia from "../SocialMedia/SocialMedia";
 // Style
 import "./Header.scss";
 
+// Font Awesome icon
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const languages = ["FR", "ANG"];
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -24,12 +29,31 @@ function Header() {
   return (
     <header className="header">
       <div className="header__title">Amale Dkhissi</div>
-      <nav className="header__nav">
-        <div onClick={() => scrollToSection("about")}>À propos</div>
-        <div onClick={() => scrollToSection("projects")}>Projets</div>
-        <div onClick={() => scrollToSection("skills")}>Compétences</div>
+
+      <div className="header__links">
+        <nav className="header__links__nav">
+          <div onClick={() => scrollToSection("about")}>À propos</div>
+          <div onClick={() => scrollToSection("projects")}>Projets</div>
+          <div onClick={() => scrollToSection("skills")}>Compétences</div>
+        </nav>
+
         <SocialMedia version="dark" />
-      </nav>
+
+        <div
+          className={`header__links__languages ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className="header__links__languages__current-language">
+            <div>{languages[0]}</div>
+            <FontAwesomeIcon icon={faAngleDown} />
+          </div>
+          {isOpen === true && (
+            <div className="header__links__languages__new-language">
+              {languages[1]}
+            </div>
+          )}
+        </div>
+      </div>
 
       <div className="menu-hamburger">
         <button
