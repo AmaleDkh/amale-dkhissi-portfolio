@@ -8,6 +8,7 @@ import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Experiences from "../Experiences/Experiences";
 import VerticalLine from "../VerticalLine/VerticalLine";
+import HorizontalLine from "../HorizontalLine/HorizontalLine";
 
 // Style
 import "./About.scss";
@@ -31,7 +32,7 @@ function About() {
             setIsIntroVisible(true);
             setTimeout(() => {
               setIsExperiencesVisible(true);
-            }, 200);
+            }, 100);
           }
         }
       }
@@ -87,6 +88,7 @@ function About() {
         <div
           className={`experiences-container ${isExperiencesVisible ? "visible" : ""}`}
         >
+          <HorizontalLine className="horizontal-line__centered-beige-version" />
           <Experiences />
         </div>
       </div>

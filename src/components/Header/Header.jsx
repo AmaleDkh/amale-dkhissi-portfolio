@@ -15,10 +15,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+  const [isLanguageSelectorOpen, setIsLanguageSelectorOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState("FR");
-
-  const languages = ["FR", "ANG"];
 
   const { language, changeLanguage } = useLanguage();
 
@@ -29,8 +28,12 @@ function Header() {
     }
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const toggleHamburgerMenu = () => {
+    setIsHamburgerMenuOpen(!isHamburgerMenuOpen);
+  };
+
+  const toggleLanguageSelector = () => {
+    setIsLanguageSelectorOpen(!isLanguageSelectorOpen);
   };
 
   const handleLanguageChange = () => {
@@ -53,11 +56,9 @@ function Header() {
             {language === "FR" ? "À propos" : "About"}
           </div>
           <div onClick={() => scrollToSection("projects")}>
-            {" "}
             {language === "FR" ? "Projets" : "Projects"}
           </div>
           <div onClick={() => scrollToSection("skills")}>
-            {" "}
             {language === "FR" ? "Compétences" : "Skills"}
           </div>
         </nav>
@@ -65,14 +66,14 @@ function Header() {
         <SocialMedia version="dark" />
 
         <div
-          className={`header__links__languages ${isOpen ? "open" : ""}`}
-          onClick={toggleMenu}
+          className={`header__links__languages ${isLanguageSelectorOpen ? "open" : ""}`}
+          onClick={toggleLanguageSelector}
         >
           <div className="header__links__languages__current-language">
             <div>{currentLanguage}</div>
             <FontAwesomeIcon icon={faAngleDown} />
           </div>
-          {isOpen === true && (
+          {isLanguageSelectorOpen === true && (
             <div
               className="header__links__languages__new-language"
               onClick={handleLanguageChange}
@@ -81,53 +82,47 @@ function Header() {
             </div>
           )}
         </div>
-      </div>
 
-      <div className="menu-hamburger">
-        <button
-          className={`menu-hamburger__button ${isOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation menu"
+        <div className="menu-hamburger">
+          <button
+            className={`menu-hamburger__button ${isHamburgerMenuOpen ? "open" : ""}`}
+            onClick={toggleHamburgerMenu}
+            aria-expanded={isHamburgerMenuOpen}
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <nav
+          className={`menu-hamburger__nav ${isHamburgerMenuOpen ? "open" : ""}`}
         >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav className={`menu-hamburger__nav ${isOpen ? "open" : ""}`}>
           <ul>
             <li
               onClick={() => {
                 scrollToSection("about");
-                setIsOpen(false);
+                setIsHamburgerMenuOpen(false);
               }}
             >
-              À propos
+              {language === "FR" ? "À propos" : "About"}
             </li>
             <li
               onClick={() => {
                 scrollToSection("projects");
-                setIsOpen(false);
+                setIsHamburgerMenuOpen(false);
               }}
             >
-              Projets
+              {language === "FR" ? "Projets" : "Projects"}
             </li>
             <li
               onClick={() => {
                 scrollToSection("skills");
-                setIsOpen(false);
+                setIsHamburgerMenuOpen(false);
               }}
             >
-              Compétences
-            </li>
-            <li
-              onClick={() => {
-                scrollToSection("contact");
-                setIsOpen(false);
-              }}
-            >
-              Contact
+              {language === "FR" ? "Compétences" : "Skills"}
             </li>
           </ul>
         </nav>

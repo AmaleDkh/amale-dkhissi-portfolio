@@ -1,16 +1,27 @@
+@import "../../assets/styles/mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
 
 .horizontal-line {
-  &__right {
-    border: 1px solid white;
-    width: 142px;
-    margin-top: 16px;
-  }
+  display: none;
 
-  &__centered {
-    border: 1px solid $dark-blue-color;
-    width: 142px;
-    margin-top: 16px;
-    margin: 16px auto 0 auto;
+  @include respond-to-large {
+    display: block;
+    &__right {
+      border: 1px solid white;
+      width: 142px;
+      margin-top: 16px;
+    }
+
+    &__centered {
+      border: 1px solid $dark-blue-color;
+      width: 142px;
+      margin: 16px auto 0 auto;
+    }
+
+    &__centered-beige-version {
+      border: 1px solid $beige-color;
+      width: 142px;
+      margin: auto auto 48px auto;
+    }
   }
 }

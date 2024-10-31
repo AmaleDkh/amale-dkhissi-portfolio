@@ -1,3 +1,9 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+
 .skills {
   margin-bottom: 80px;
+
+  @include respond-to-large {
+    margin: 0 96px 80px 96px;
+  }
 }

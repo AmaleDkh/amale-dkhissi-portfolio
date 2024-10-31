@@ -10,8 +10,6 @@
 
   @include respond-to-medium {
     padding: 32px;
-    flex-direction: column;
-    gap: 16px;
   }
 
   @include respond-to-medium-large {

@@ -27,6 +27,12 @@
     transform: translateY(0);
   }
 
+  @include respond-to-large {
+    width: 100%;
+    margin: 0 96px;
+    width: auto;
+  }
+
   @include respond-to-medium {
     height: 100%;
   }
@@ -37,6 +43,10 @@
     flex-direction: column;
     height: 350px;
     justify-content: space-between;
+
+    @include respond-to-large {
+      height: 144px;
+    }
 
     &__title {
       color: $beige-color;

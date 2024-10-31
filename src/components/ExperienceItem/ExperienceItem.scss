@@ -1,3 +1,4 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
 
 .experience-item {
@@ -19,6 +20,10 @@
 
   &__information {
     max-width: 75%;
+
+    @include respond-to-large {
+      max-width: 80%;
+    }
   }
 
   &__information__company {

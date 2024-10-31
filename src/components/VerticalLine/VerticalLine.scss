@@ -1,7 +1,13 @@
+@import "../../assets/styles/mixins/breakpoints.scss";
+
 .vertical-line {
   border-left: 2px solid white;
   height: 240px;
   width: 0;
   display: flex;
   align-self: center;
+
+  @include respond-to-large {
+    display: none;
+  }
 }
