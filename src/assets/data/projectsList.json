@@ -1,10 +1,40 @@
 [
   {
     "title": {
+      "french": "Marie Sanchez - Psychologue",
+      "english": "Marie Sanchez - Psychologist"
+    },
+    "image": "/project6-image.webp",
+    "description": {
+      "french": "Développement d'un site personnalisé pour une Psychologue-Clinicienne, mettant en valeur ses services.",
+      "english": "Development of a personalized website for a Psychologist-Clinician, highlighting her services."
+    },
+    "technologies": [
+      {
+        "technology": "React",
+        "icon": "devicon-react-original",
+        "size": "devicon-2x"
+      },
+      {
+        "technology": "Nextjs",
+        "icon": "devicon-nextjs-original-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "technology": "Sass",
+        "icon": "devicon-sass-original",
+        "size": "devicon-2x"
+      }
+    ],
+
+    "source": "https://github.com/AmaleDkh/marie-sanchez-website.git"
+  },
+  {
+    "title": {
       "french": "Qwenta - Menu Maker",
       "english": "Qwenta - Menu Maker"
     },
-    "image": "/project6-image.webp",
+    "image": "/project5-image.webp",
     "description": {
       "french": "Développement d'une application de gestion de menus pour des restaurateurs.",
       "english": "Development of a menu maker application for restaurateurs owners."
@@ -37,38 +67,14 @@
       }
     ],
 
-    "source": "https://github.com/AmaleDkh/booki-website-homepage.github.io.git"
-  },
-  {
-    "title": {
-      "french": "Kasa - Location immobilière",
-      "english": "Kasa - Real estate rental"
-    },
-    "image": "/project4-image.webp",
-    "description": {
-      "french": "Développement de l'interface front-end d'une application de location immobilière.",
-      "english": "Development of the front-end interface for a real estate rental application."
-    },
-    "technologies": [
-      {
-        "technology": "React",
-        "icon": "devicon-react-original",
-        "size": "devicon-2x"
-      },
-      {
-        "technology": "Sass",
-        "icon": "devicon-sass-original",
-        "size": "devicon-2x"
-      }
-    ],
-    "source": "https://github.com/AmaleDkh/kasa-application.git"
+    "source": "https://github.com/AmaleDkh/menu-maker-application.git"
   },
   {
     "title": {
       "french": "Mon Vieux Grimoire - Notation de livres",
       "english": "Mon Vieux Grimoire - Book rating"
     },
-    "image": "/project5-image.webp",
+    "image": "/project4-image.webp",
     "description": {
       "french": "Développement du back-end d'un site de notation et de critiques de livres.",
       "english": "Development of the back-end for a book rating and review site."
@@ -94,6 +100,31 @@
   },
   {
     "title": {
+      "french": "Kasa - Location immobilière",
+      "english": "Kasa - Real estate rental"
+    },
+    "image": "/project3-image.webp",
+    "description": {
+      "french": "Développement de l'interface front-end d'une application de location immobilière.",
+      "english": "Development of the front-end interface for a real estate rental application."
+    },
+    "technologies": [
+      {
+        "technology": "React",
+        "icon": "devicon-react-original",
+        "size": "devicon-2x"
+      },
+      {
+        "technology": "Sass",
+        "icon": "devicon-sass-original",
+        "size": "devicon-2x"
+      }
+    ],
+    "source": "https://github.com/AmaleDkh/kasa-application.git"
+  },
+
+  {
+    "title": {
       "french": "Sophie Bluel - Architecte d'intérieur",
       "english": "Sophie Bluel - Interior architect"
     },
@@ -117,7 +148,7 @@
       "french": "Nina Carducci - Photographe",
       "english": "Nina Carducci - Photographer"
     },
-    "image": "/project3-image.webp",
+    "image": "/project1-image.webp",
     "description": {
       "french": "Amélioration de la performance et de l'accessibilité du site d'une photographe pour optimiser son référencement.",
       "english": "Improving the performance and accessibility of a photographer's website to optimize its SEO."
