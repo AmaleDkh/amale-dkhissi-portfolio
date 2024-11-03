@@ -1,5 +1,8 @@
-// React elements
+// React element
 import { Link } from "react-router-dom";
+
+// Context
+import { useLanguage } from "../../context/LanguageContext";
 
 // Font Awesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +12,13 @@ import { faEnvelopeOpen, faFile } from "@fortawesome/free-solid-svg-icons";
 // Style
 import "./SocialMedia.scss";
 
+// Files
+import resumeFr from "../../assets/files/amale-dkhissi-resume-fr.pdf";
+import resumeEng from "../../assets/files/amale-dkhissi-resume-eng.pdf";
+
 function SocialMedia({ version }) {
+  const { language } = useLanguage();
+
   return (
     <div className={`social-media-container__${version}`}>
       <Link
@@ -49,10 +58,18 @@ function SocialMedia({ version }) {
       </Link>
 
       {version === "light" && (
-        <FontAwesomeIcon
-          icon={faFile}
-          className="social-media-accounts__icons-container__icon"
-        />
+        <Link
+          to={language === "FR" ? resumeFr : resumeEng}
+          className={`social-media-container__${version}__link`}
+          target="_blank"
+          aria-label="Ouvrir mon GitHub"
+        >
+          <FontAwesomeIcon
+            icon={faFile}
+            className="social-media-accounts__icons-container__icon"
+          />
+          <span className="sr-only">GitHub</span>
+        </Link>
       )}
     </div>
   );
