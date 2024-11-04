@@ -57,7 +57,7 @@ function About() {
             className={`about__texts__introduction ${isIntroVisible ? "visible" : ""}`}
           >
             <div className="about__texts__principal-information">
-              Amale Dkhissi, développeuse web.
+              Amale Dkhissi, Développeuse web.
             </div>
             <div>
               Forte de 7 ans d'expérience en communication, j'ai perfectionné ma
@@ -88,7 +88,7 @@ function About() {
         <div
           className={`experiences-container ${isExperiencesVisible ? "visible" : ""}`}
         >
-          <HorizontalLine className="horizontal-line__centered-beige-version" />
+          {/* <HorizontalLine className="horizontal-line__centered-beige-version" /> */}
           <Experiences />
         </div>
       </div>

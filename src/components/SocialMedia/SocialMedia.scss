@@ -37,6 +37,10 @@
     align-items: center;
     gap: 56px;
 
+    @include respond-to-small {
+      gap: 32px;
+    }
+
     &__title {
       font-size: 24px;
       font-family: "Playfair Display";
@@ -47,15 +51,34 @@
     &__link {
       display: flex;
       gap: 56px;
+      display: inline-block;
+      background-color: white;
+      padding: 24px;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      @include respond-to-small {
+        padding: 16px;
+      }
 
       &__icon {
         background-color: white;
-        padding: 24px;
-        border-radius: 50%;
         color: $dark-blue-color;
         width: 24px;
         height: 24px;
       }
+    }
+  }
+
+  &__dark {
+    @include respond-to-small {
+      display: none;
     }
   }
 }

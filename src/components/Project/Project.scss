@@ -37,6 +37,10 @@
     height: 100%;
   }
 
+  @include respond-to-small {
+    margin: 0;
+  }
+
   &__information {
     margin: 16px 24px 24px 24px;
     display: flex;

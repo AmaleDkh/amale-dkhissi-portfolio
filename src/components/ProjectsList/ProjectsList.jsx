@@ -16,6 +16,7 @@ import "./ProjectsList.scss";
 
 function ProjectsList() {
   const [visibleProjects, setVisibleProjects] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
 
   const { language } = useLanguage();
 
@@ -37,11 +38,17 @@ function ProjectsList() {
     });
   }, [visibleProjects]);
 
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 576);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, [handleScroll]);
 
@@ -49,7 +56,13 @@ function ProjectsList() {
     <section id="projects" className="projects">
       <div className="projects__title-container">
         <h2 className="projects__title-container__title">
-          {language === "FR" ? "DÉCOUVREZ MES PROJETS" : "DISCOVER MY PROJECTS"}
+          {!isMobile
+            ? language === "FR"
+              ? "DÉCOUVREZ MES PROJETS"
+              : "DISCOVER MY PROJECTS"
+            : language === "FR"
+              ? "PROJETS"
+              : "PROJECTS"}
         </h2>
         <HorizontalLine className="horizontal-line__centered" />
       </div>

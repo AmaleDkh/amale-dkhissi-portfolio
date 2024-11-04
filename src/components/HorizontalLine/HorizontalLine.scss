@@ -2,9 +2,28 @@
 @import "../../assets/styles/Colors.scss";
 
 .horizontal-line {
-  display: none;
+  // display: none;
 
-  @include respond-to-large {
+  display: block;
+  &__right {
+    border: 1px solid white;
+    width: 142px;
+    margin-top: 16px;
+  }
+
+  &__centered {
+    border: 1px solid $dark-blue-color;
+    width: 142px;
+    margin: 16px auto 0 auto;
+  }
+
+  &__centered-beige-version {
+    border: 1px solid $beige-color;
+    width: 142px;
+    margin: auto auto 48px auto;
+  }
+
+  @include respond-to-extra-large {
     display: block;
     &__right {
       border: 1px solid white;

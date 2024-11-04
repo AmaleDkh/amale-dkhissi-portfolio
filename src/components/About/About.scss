@@ -9,10 +9,18 @@
     margin: 80px 96px;
   }
 
+  @include respond-to-small {
+    margin: 80px 40px;
+  }
+
   &__texts {
     display: grid;
     grid-template-columns: 7fr 1fr 7fr;
     margin: 0 240px;
+
+    @include respond-to-extra-large {
+      margin: 0 104px;
+    }
 
     @include respond-to-large {
       display: flex;
@@ -27,6 +35,10 @@
       font-family: "Playfair Display";
       font-style: italic;
       color: $beige-color;
+
+      @include respond-to-small {
+        width: 64%;
+      }
     }
 
     &__introduction {

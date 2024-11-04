@@ -4,19 +4,25 @@
 .technologies-list {
   display: flex;
   gap: 120px;
-  margin-bottom: 88px;
-  margin: 0 240px;
+  margin: 0 240px 88px 240px;
   justify-content: center;
 
+  @include respond-to-extra-large {
+    gap: 56px;
+    margin: 0 104px;
+  }
+
   @include respond-to-large {
-    display: flex;
     flex-direction: column;
-    gap: 40px;
     margin: 0;
   }
 
   @include respond-to-medium {
     grid-template-columns: none;
+  }
+
+  @include respond-to-small {
+    flex-direction: column;
   }
 
   &__subject {

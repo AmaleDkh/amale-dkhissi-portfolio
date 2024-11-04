@@ -1,4 +1,4 @@
-// React elements
+// React element
 import { useState } from "react";
 
 // Context

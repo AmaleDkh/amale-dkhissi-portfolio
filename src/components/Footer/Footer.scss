@@ -16,6 +16,11 @@
     padding: 32px;
   }
 
+  @include respond-to-small {
+    flex-direction: column;
+    gap: 16px;
+  }
+
   &__name {
     font-weight: bold;
     font-size: 24px;

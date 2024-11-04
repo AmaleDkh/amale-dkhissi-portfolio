@@ -6,4 +6,8 @@
   @include respond-to-large {
     margin: 0 96px 80px 96px;
   }
+
+  @include respond-to-small {
+    margin: 0 40px 80px 40px;
+  }
 }

@@ -10,11 +10,19 @@
   background-color: $dark-blue-color;
   margin: 164px 240px;
 
+  @include respond-to-extra-large {
+    margin: 164px 104px;
+  }
+
   @include respond-to-large {
     margin: 56px 96px 0 96px;
     flex-direction: column;
     align-items: center;
     gap: 32px;
+  }
+
+  @include respond-to-small {
+    margin: 80px 40px 0 40px;
   }
 
   &__text {
@@ -29,6 +37,10 @@
       color: $beige-color;
       font-size: 48px;
       margin: 0 0 40px 0;
+
+      @include respond-to-small {
+        margin-top: 0;
+      }
 
       &__highlight {
         color: $orange-color;
@@ -57,6 +69,11 @@
       transition:
         opacity 0.5s ease 0.5s,
         transform 0.5s ease;
+
+      @include respond-to-small {
+        width: 280px;
+        height: 280px;
+      }
 
       &.visible {
         opacity: 1;

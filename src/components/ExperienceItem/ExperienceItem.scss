@@ -24,6 +24,10 @@
     @include respond-to-large {
       max-width: 80%;
     }
+
+    @include respond-to-small {
+      max-width: 64%;
+    }
   }
 
   &__information__company {

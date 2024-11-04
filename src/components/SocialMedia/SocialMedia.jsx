@@ -31,6 +31,7 @@ function SocialMedia({ version }) {
           icon={faLinkedinIn}
           className={`social-media-container__${version}__link__icon`}
         />
+
         <span className="sr-only">LinkedIn</span>
       </Link>
       <a

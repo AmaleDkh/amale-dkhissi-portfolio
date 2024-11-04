@@ -1,3 +1,9 @@
+@mixin respond-to-small {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
 @mixin respond-to-medium {
   @media (max-width: 767px) {
     @content;
