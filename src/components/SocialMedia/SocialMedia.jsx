@@ -16,11 +16,11 @@ import "./SocialMedia.scss";
 import resumeFr from "../../assets/files/amale-dkhissi-resume-fr.pdf";
 import resumeEng from "../../assets/files/amale-dkhissi-resume-eng.pdf";
 
-function SocialMedia({ version }) {
+function SocialMedia({ version, className }) {
   const { language } = useLanguage();
 
   return (
-    <div className={`social-media-container__${version}`}>
+    <div className={`social-media-container__${version} ${className}`}>
       <Link
         to="https://www.linkedin.com/in/amaledkhissi/"
         className={`social-media-container__${version}__link`}
