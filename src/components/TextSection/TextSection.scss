@@ -1,0 +1,32 @@
+@import "../../assets/styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
+
+.text-section {
+  text-align: center;
+  padding: 80px 104px;
+  color: black;
+  background-color: $light-beige-color;
+
+  @include respond-to-extra-large {
+    padding: 40px;
+  }
+
+  @include respond-to-medium {
+    padding: 40px 16px;
+  }
+
+  img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    top: 400px;
+    right: 0;
+  }
+
+  &__content {
+    &__text {
+      margin: 0;
+    }
+  }
+}

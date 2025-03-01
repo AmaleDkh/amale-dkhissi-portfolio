@@ -1,0 +1,56 @@
+@import "../../assets/styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
+
+.about {
+  &__introduction {
+    @include respond-to-extra-extra-large {
+      margin-bottom: 120px;
+    }
+
+    @include respond-to-extra-large {
+      margin-bottom: 64px;
+    }
+
+    @include respond-to-medium {
+      margin-bottom: 0;
+    }
+  }
+
+  &__development-web-section {
+    padding: 128px 120px;
+
+    text-align: center;
+
+    @include respond-to-extra-large {
+      padding: 104px;
+    }
+
+    @include respond-to-medium {
+      padding: 104px 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.about-page {
+  &__title {
+    margin: 96px 120px 0 120px;
+
+    @include respond-to-extra-large {
+      margin: 64px 64px 0 64px;
+    }
+
+    @include respond-to-medium {
+      margin: 40px 16px 0 16px;
+    }
+  }
+}
+
+.horizontal-line__about-version {
+  border: 0.5px solid black;
+  width: 80px;
+  margin: 0 auto 32px auto;
+}

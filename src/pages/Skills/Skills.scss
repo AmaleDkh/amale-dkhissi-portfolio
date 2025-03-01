@@ -1,0 +1,13 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+
+.skills-page-container {
+  margin: 96px 0;
+
+  @include respond-to-extra-large {
+    margin: 64px 0;
+  }
+
+  @include respond-to-medium {
+    margin: 40px 0;
+  }
+}

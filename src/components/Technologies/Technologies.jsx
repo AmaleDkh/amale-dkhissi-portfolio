@@ -1,5 +1,6 @@
 // React elements
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useRef } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 // Component
 import TechnologyItem from "../TechnologyItem/TechnologyItem";
@@ -13,34 +14,12 @@ import {
 
 // Style
 import "./../Technologies/Technologies.scss";
-import { useLanguage } from "../../context/LanguageContext";
 
-function Technologies() {
+function Technologies({ mobileVersion }) {
   const techRefs = useRef([]);
   const [visibleTechs, setVisibleTechs] = useState([]);
 
   const { language } = useLanguage();
-
-  const handleScroll = useCallback(() => {
-    techRefs.current.forEach((techRef, index) => {
-      if (techRef) {
-        const rect = techRef.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          if (!visibleTechs.includes(index)) {
-            setVisibleTechs((prev) => [...prev, index]);
-          }
-        }
-      }
-    });
-  }, [visibleTechs]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
 
   const technologiesCategory = [
     {
@@ -51,7 +30,7 @@ function Technologies() {
     {
       icon: faDatabase,
       title: "DEV. BACK-END",
-      technologiesList: "Node.js, Express, MongoDB, SQL",
+      technologiesList: "Node.js, Express, PHP, Laravel, MongoDB, SQL",
     },
     {
       icon: faLightbulb,
@@ -61,12 +40,14 @@ function Technologies() {
   ];
 
   return (
-    <div className="technologies-list">
+    <div className={`technologies-list ${mobileVersion}`}>
       {technologiesCategory.map((category, index) => (
         <div
           key={index}
           ref={(el) => (techRefs.current[index] = el)}
-          className={`technologies-list__category ${visibleTechs.includes(index) ? "visible" : "hidden"}`}
+          className={`technologies-list__category ${
+            visibleTechs.includes(index) ? "visible" : "hidden"
+          }`}
           style={{ transitionDelay: `${index * 0.2}s` }}
         >
           <TechnologyItem

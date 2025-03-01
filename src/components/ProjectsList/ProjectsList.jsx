@@ -1,12 +1,10 @@
 // React elements
-import { useState, useEffect, useCallback } from "react";
-
-// Context
-import { useLanguage } from "../../context/LanguageContext";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 // Components
 import Project from "../Project/Project";
-import HorizontalLine from "../HorizontalLine/HorizontalLine";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 // Data
 import projectsList from "../../assets/data/projectsList.json";
@@ -16,69 +14,132 @@ import "./ProjectsList.scss";
 
 function ProjectsList() {
   const [visibleProjects, setVisibleProjects] = useState([]);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
+  const [index, setIndex] = useState(1);
 
-  const { language } = useLanguage();
-
-  const handleScroll = useCallback(() => {
-    const container = document.querySelector(".projects__container");
-    const projects = Array.from(container.children);
-
-    projects.forEach((project, index) => {
-      const rect = project.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (
-        rect.top <= windowHeight &&
-        rect.bottom >= 0 &&
-        !visibleProjects.includes(index)
-      ) {
-        setVisibleProjects((prev) => [...prev, index]);
-      }
-    });
-  }, [visibleProjects]);
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 576);
+  const showPreviousProject = () => {
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? projectsList.length - 1 : prevIndex - 1
+    );
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
+  const showNextProject = () => {
+    setIndex((nextIndex) =>
+      nextIndex === projectsList.length - 1 ? 0 : nextIndex + 1
+    );
+  };
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [handleScroll]);
+  const location = useLocation();
 
   return (
     <section id="projects" className="projects">
       <div className="projects__title-container">
-        <h2 className="projects__title-container__title">
-          {!isMobile
-            ? language === "FR"
-              ? "DÉCOUVREZ MES PROJETS"
-              : "DISCOVER MY PROJECTS"
-            : language === "FR"
-              ? "PROJETS"
-              : "PROJECTS"}
-        </h2>
-        <HorizontalLine className="horizontal-line__centered" />
-      </div>
-      <div className="projects__container">
-        {projectsList.map((project, projectIndex) => (
-          <Project
-            key={projectIndex}
-            title={project.title}
-            description={project.description}
-            details={project.details}
-            technologies={project.technologies}
-            source={project.source}
-            image={project.image}
-            projectIndex={projectIndex}
-            isVisible={visibleProjects.includes(projectIndex)}
+        {location.pathname === "/" && (
+          <SectionTitle
+            title="Un aperçu de mes projets"
+            mobileVersion="version-with-text-align"
           />
+        )}
+      </div>
+
+      <div className="projects__container projects__container--mobile-version">
+        <div onClick={showPreviousProject} className="projects-list__icon-left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6 arrow-left"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5 8.25 12l7.5-7.5"
+            />
+          </svg>
+        </div>
+
+        <Link
+          to={`project/${projectsList[index].id}`}
+          className="projects__container--desktop-version__link"
+        >
+          <Project
+            key={index}
+            title={projectsList[index].title}
+            description={projectsList[index].description}
+            details={projectsList[index].details}
+            technologies={projectsList[index].technologies}
+            source={projectsList[index].source}
+            alt={`Couverture du projet : ${projectsList[index].title}`}
+            image={projectsList[index].image}
+          />
+        </Link>
+
+        <div onClick={showNextProject} className="projects-list__icon-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6 arrow-right"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div className="projects__container projects__container--desktop-version">
+        {projectsList.slice(0, 2).map((project, projectIndex) => (
+          <Link
+            to={`project/${project.id}`}
+            className="projects__container--desktop-version__link"
+            key={project.id}
+          >
+            <Project
+              title={project.title}
+              description={project.description}
+              details={project.details}
+              technologies={project.technologies}
+              source={project.source}
+              alt={`Couverture du projet : ${project.title}`}
+              image={project.image}
+              projectIndex={projectIndex}
+              isVisible={visibleProjects.includes(projectIndex)}
+              position={
+                projectIndex % 2 === 0 ? "project--right" : "project--left"
+              }
+            />
+          </Link>
+        ))}
+      </div>
+
+      <div className="projects__container projects__container--desktop-version">
+        {projectsList.slice(2, 4).map((project, projectIndex) => (
+          <Link
+            to={`project/${project.id}`}
+            className="projects__container--desktop-version__link"
+            key={project.id}
+          >
+            <Project
+              title={project.title}
+              description={project.description}
+              details={project.details}
+              technologies={project.technologies}
+              source={project.source}
+              alt={`Couverture du projet : ${project.title}`}
+              image={project.image}
+              projectIndex={projectIndex}
+              isVisible={visibleProjects.includes(projectIndex)}
+              position={
+                projectIndex % 2 === 0 ? "project--right" : "project--left"
+              }
+            />
+          </Link>
         ))}
       </div>
     </section>

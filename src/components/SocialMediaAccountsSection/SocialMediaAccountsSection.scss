@@ -2,49 +2,44 @@
 @import "../../assets/styles/Colors.scss";
 
 .social-media-accounts {
-  background-color: $light-blue-color;
-  padding: 64px 240px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 72px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-
-  @include respond-to-extra-large {
-    padding: 64px 104px;
-  }
+  justify-content: space-between;
 
   @include respond-to-large {
-    padding: 64px 96px;
     flex-direction: column;
-    gap: 32px;
-    margin-top: 56px;
+    gap: 80px;
   }
 
   @include respond-to-small {
-    padding: 64px 40px;
-    margin-top: 80px;
+    margin: 64px 56px;
   }
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
+  &__question {
+    margin: 0 0 24px 0;
+    font-weight: 500;
+
+    @include respond-to-small {
+      margin: 0;
+    }
   }
 
-  &.hidden {
-    opacity: 0;
-    transform: translateY(50px);
+  &__answer {
+    margin: 0;
+  }
+
+  &__question,
+  &__answer {
+    font-size: 24px;
+
+    @include respond-to-medium {
+      font-size: 16px;
+    }
   }
 
   &__title {
     font-size: 24px;
-    font-family: "Playfair Display";
     font-style: italic;
-    color: $beige-color;
   }
 
   &__icons-container {
@@ -52,8 +47,7 @@
     gap: 56px;
 
     &__icon {
-      background-color: white;
-      color: $dark-blue-color;
+      color: white;
       width: 24px;
       height: 24px;
       transition: transform 0.3s ease;
@@ -62,5 +56,54 @@
         padding: 16px;
       }
     }
+  }
+
+  &__text {
+    width: -webkit-fill-available;
+
+    @include respond-to-extra-large {
+      margin: 0 64px;
+    }
+
+    @include respond-to-medium {
+      margin: 0 24px;
+    }
+  }
+}
+
+.social-media-account-large-margin {
+  margin: 0 0 80px 0;
+}
+
+.home-page-version {
+  margin: 128px 0 128px 120px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+
+  @include respond-to-extra-extra-large {
+    margin: 128px 0 128px 104px;
+  }
+
+  @include respond-to-extra-large {
+    margin: 104px 0 0 0;
+    flex-direction: column;
+  }
+}
+
+.contact-page-version {
+  margin: 128px 0;
+  padding: 0;
+
+  @include respond-to-extra-extra-large {
+    margin: 128px 104px;
+  }
+
+  @include respond-to-medium {
+    margin: 104px 80px;
+  }
+
+  @include respond-to-small {
+    margin: 104px 48px;
   }
 }

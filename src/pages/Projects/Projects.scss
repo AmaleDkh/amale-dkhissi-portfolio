@@ -1,0 +1,41 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
+@import "../../assets/styles/Fonts.scss";
+
+.projects-page-container {
+  margin-top: 96px;
+
+  @include respond-to-extra-large {
+    margin-top: 64px;
+  }
+
+  @include respond-to-medium {
+    margin-top: 40px;
+  }
+}
+
+.page-projects {
+  @include respond-to-extra-extra-large {
+    padding: 0;
+  }
+
+  @include respond-to-extra-large {
+    padding: 0 64px 64px 64px;
+    margin: 0;
+  }
+
+  @include respond-to-medium {
+    padding: 0 16px;
+    margin: 0 0 40px 0;
+  }
+}
+
+.projects__container--page-version {
+  @include respond-to-extra-large {
+    padding: 0 64px 0 64px;
+  }
+
+  @include respond-to-medium {
+    padding: 0 16px;
+  }
+}

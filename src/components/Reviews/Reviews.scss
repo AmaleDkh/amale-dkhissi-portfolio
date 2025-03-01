@@ -1,0 +1,79 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Fonts.scss";
+@import "../../assets/styles/Colors.scss";
+
+.reviews-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 160px;
+  background-color: $dark-blue-color;
+  padding: 80px 104px;
+  margin: 96px 104px;
+  color: $light-light-beige-color;
+
+  @include respond-to-extra-large {
+    flex-direction: column;
+    margin: 64px 40px;
+    padding: 64px 40px;
+    gap: 56px;
+  }
+
+  @include respond-to-medium {
+    padding: 40px 16px;
+    margin: 40px 16px;
+    gap: 32px;
+  }
+
+  &__block {
+    text-align: center;
+
+    @include respond-to-extra-large {
+      width: fit-content;
+    }
+
+    @include respond-to-large {
+      width: auto;
+    }
+
+    &__name {
+      font-weight: 400;
+      color: $light-light-beige-color;
+    }
+  }
+
+  &__content {
+    @include respond-to-medium {
+      text-align: center;
+    }
+
+    &__title {
+      color: $light-light-beige-color;
+      margin-bottom: 0;
+
+      @include respond-to-medium {
+        width: max-content;
+      }
+    }
+
+    &__first-paragraph,
+    &__second-paragraph {
+      @include respond-to-medium {
+        font-size: 16px;
+      }
+    }
+
+    &__first-paragraph {
+      margin: 0 0 24px 0;
+      font-weight: 500;
+    }
+
+    &__second-paragraph {
+      margin: 0;
+    }
+
+    @include respond-to-medium {
+      margin: 0 24px 0 24px;
+    }
+  }
+}

@@ -5,29 +5,96 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 100px;
-  background-color: $beige-color;
+  margin: 0 104px 16px 104px;
+  color: black;
+
+  @include respond-to-extra-large {
+    margin: 0 40px 16px 40px;
+  }
+
+  @include respond-to-large {
+    flex-direction: column;
+    gap: 40px;
+  }
 
   @include respond-to-medium {
-    padding: 32px;
+    margin: 0 16px 16px 16px;
   }
 
-  @include respond-to-medium-large {
-    padding: 32px;
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include respond-to-extra-large {
+      align-items: center;
+      gap: 40px;
+    }
+
+    @include respond-to-small {
+      align-items: flex-start;
+      flex-direction: column;
+      width: fit-content;
+      text-align: center;
+    }
   }
 
-  @include respond-to-small {
-    flex-direction: column;
-    gap: 16px;
+  &__main-information {
+    @include respond-to-small {
+      display: none;
+    }
+
+    &__date {
+      margin-top: 8px;
+    }
   }
 
-  &__name {
-    font-weight: bold;
-    font-size: 24px;
-    color: $dark-blue-color;
-  }
+  &__links {
+    display: flex;
+    gap: 160px;
 
-  &__mention {
-    color: $dark-blue-color;
+    @include respond-to-extra-large {
+      gap: 80px;
+    }
+
+    @include respond-to-small {
+      gap: 32px;
+      flex-direction: column;
+    }
+
+    &__website-menu {
+      h3 {
+        margin-top: 0;
+      }
+
+      &__nav {
+        &__list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          cursor: pointer;
+
+          &__link {
+            margin-bottom: 8px;
+
+            a {
+              text-decoration: none;
+              color: black;
+
+              &:hover {
+                opacity: 0.8;
+                color: $green-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__social-media {
+      h3 {
+        margin-top: 0;
+      }
+    }
   }
 }

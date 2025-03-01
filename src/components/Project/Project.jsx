@@ -1,5 +1,4 @@
-// React elements
-import { Link } from "react-router-dom";
+// React element
 import { useRef } from "react";
 
 // Context
@@ -8,10 +7,6 @@ import { useLanguage } from "../../context/LanguageContext";
 // Style
 import "./Project.scss";
 import "../../assets/styles/Devicon.scss";
-
-// Font Awesome icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Devicon icons
 import "devicon/devicon.min.css";
@@ -22,8 +17,10 @@ function Project({
   image,
   technologies,
   source,
+  alt,
   projectIndex,
   isVisible,
+  position,
 }) {
   const projectRef = useRef(null);
 
@@ -32,42 +29,21 @@ function Project({
   return (
     <div
       ref={projectRef}
-      className={`project-container ${isVisible ? "visible" : "hidden"}`}
-      style={{ transitionDelay: `${projectIndex * 0.2}s` }}
+      className={`project-container  ${
+        isVisible ? "visible" : "hidden"
+      } ${position}`}
+      style={{ transitionDelay: `${projectIndex * 0.2}` }}
     >
-      <img src={image} alt="Couverture du projet" loading="lazy" />
+      <img src={image} alt={alt} loading="lazy" />
+
       <div className="project-container__information">
-        <h3 className="project-container__information__title">
+        <p className="project-container__information__title">
           {language === "FR" ? title.french : title.english}
-        </h3>
-        <p className="project-container__information__description">
-          {language === "FR" ? description.french : description.english}
         </p>
-
-        <div className="project-container__information__icons">
-          <div className="project-container__information__icons__technologies">
-            {technologies &&
-              technologies.map((tech, techIndex) => (
-                <span
-                  key={techIndex}
-                  className={` devicon ${tech.icon} ${tech.size}`}
-                  title={tech.technology}
-                ></span>
-              ))}
-          </div>
-
-          <Link
-            to={source}
-            className={`social-media-container__link`}
-            target="_blank"
-            aria-label="Ouvrir mon GitHub"
-          >
-            <FontAwesomeIcon
-              icon={faGithub}
-              className={`social-media-container__link__icon`}
-            />
-            <span className="sr-only">GitHub</span>
-          </Link>
+        <div className="project-container__information__discover-option">
+          <p className="project-container__information__discover-option__text">
+            Découvrir le projet
+          </p>
         </div>
       </div>
     </div>

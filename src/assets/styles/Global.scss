@@ -1,0 +1,123 @@
+@import "./mixins/breakpoints.scss";
+@import "./Colors.scss";
+@import "./Fonts.scss";
+
+body {
+  background-color: $light-light-beige-color;
+}
+
+* {
+  font-weight: 300;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  color: $dark-blue-color;
+  font-size: 56px;
+  margin: 0 0 40px 0;
+
+  @include respond-to-medium {
+    font-size: 32px;
+    margin: 0 0 32px 0;
+  }
+
+  @include respond-to-small {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  color: $blue-color;
+  font-size: 48px;
+  margin: 0 0 40px 0;
+
+  @include respond-to-medium {
+    font-size: 32px;
+    margin: 0 0 32px 0;
+  }
+
+  @include respond-to-small {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  color: $green-color;
+  margin: 0 0 24px 0;
+
+  @include respond-to-medium {
+    font-size: 24px;
+    margin: 0 0 16px 0;
+  }
+}
+
+main {
+  margin-top: 154px;
+
+  @include respond-to-extra-large {
+    margin-top: 104px;
+  }
+}
+
+.homepage-button {
+  width: fit-content;
+  margin: 56px auto 0 auto;
+
+  @include respond-to-medium {
+    margin: 32px auto 0 auto;
+  }
+}
+
+.words-with-font-weight {
+  font-weight: 600;
+}
+
+.services-list {
+  padding: 80px 0;
+  background-color: $light-beige-color;
+
+  @include respond-to-extra-large {
+    padding: 64px 0;
+  }
+
+  @include respond-to-medium {
+    padding: 40px 0;
+  }
+}
+
+.values-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: $dark-blue-color;
+  padding: 96px 104px;
+  color: $light-light-beige-color;
+
+  @include respond-to-extra-large {
+    padding: 80px 64px;
+    gap: 56px;
+  }
+
+  @include respond-to-large {
+    display: none;
+  }
+
+  @include respond-to-medium {
+    padding: 40px 16px;
+    gap: 32px;
+  }
+}

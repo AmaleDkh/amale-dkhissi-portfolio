@@ -1,67 +1,85 @@
-// React element
-import { useState } from "react";
+// React elements
+import { useEffect, useState } from "react";
 
 // Context
 import { useLanguage } from "../../context/LanguageContext";
 
 // Components
 import SocialMedia from "../SocialMedia/SocialMedia";
-import LanguageSelector from "../LanguageSelector/LanguageSelector";
-
-// Font Awesome icon
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import Name from "../Name/Name";
+import Button from "../Button/Button";
 
 // Style
 import "./Header.scss";
 
 function Header() {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("FR");
 
-  const { language, changeLanguage } = useLanguage();
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const { language } = useLanguage();
 
   const toggleHamburgerMenu = () => {
     setIsHamburgerMenuOpen(!isHamburgerMenuOpen);
   };
 
+  useEffect(() => {
+    if (isHamburgerMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isHamburgerMenuOpen]);
+
   return (
-    <header className="header">
+    <header
+      className={`header  ${
+        isHamburgerMenuOpen ? "header-mobile-version" : ""
+      }`}
+    >
       {!isHamburgerMenuOpen && (
         <>
-          <div className="header__title">Amale Dkhissi</div>
+          <Name version="black" />
 
           <div className="header__links-block">
             <nav className="header__links__nav">
-              <div onClick={() => scrollToSection("about")}>
-                {language === "FR" ? "À propos" : "About"}
-              </div>
-              <div onClick={() => scrollToSection("projects")}>
-                {language === "FR" ? "Projets" : "Projects"}
-              </div>
-              <div onClick={() => scrollToSection("skills")}>
-                {language === "FR" ? "Compétences" : "Skills"}
-              </div>
+              <ul>
+                <li>
+                  <a href="/projects">
+                    {language === "FR" ? "PORTFOLIO" : "PROJECTS"}
+                  </a>
+                </li>
+                <li>
+                  <a href="/services">
+                    {language === "FR" ? "SERVICES" : "SERVICES"}
+                  </a>
+                </li>
+                <li>
+                  <a href="/about">
+                    {language === "FR" ? "À PROPOS" : "ABOUT"}
+                  </a>
+                </li>
+                <li>
+                  <a href="/skills">
+                    {language === "FR" ? "COMPÉTENCES" : "SKILLS"}
+                  </a>
+                </li>
+              </ul>
             </nav>
 
-            <SocialMedia version="dark" className="close" />
-
-            <LanguageSelector
-              currentLanguage={currentLanguage}
-              setCurrentLanguage={setCurrentLanguage}
-              className="close"
+            <Button
+              text="Discutons de votre projet"
+              link="/contact"
+              mobileVersion="button-mobile-version"
             />
 
             <div className="menu-hamburger">
               <button
-                className={`menu-hamburger__button ${isHamburgerMenuOpen ? "open" : ""}`}
+                className={`menu-hamburger__button ${
+                  isHamburgerMenuOpen ? "open" : ""
+                }`}
                 onClick={toggleHamburgerMenu}
                 aria-expanded={isHamburgerMenuOpen}
                 aria-label="Toggle navigation menu"
@@ -78,46 +96,63 @@ function Header() {
       <div
         className={`menu-hamburger__nav ${isHamburgerMenuOpen ? "open" : ""}`}
       >
-        <FontAwesomeIcon
-          icon={faXmark}
+        <svg
           onClick={() => setIsHamburgerMenuOpen(false)}
-        />
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
 
-        <div className="menu-hamburger__nav__block">
+        <div className="menu-hamburger__nav__block ">
           <nav>
             <ul>
               <li
                 onClick={() => {
-                  scrollToSection("about");
                   setIsHamburgerMenuOpen(false);
                 }}
               >
-                {language === "FR" ? "À propos" : "About"}
+                <a href="/projects">
+                  {language === "FR" ? "PORTFOLIO" : "PROJECTS"}
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollToSection("projects");
                   setIsHamburgerMenuOpen(false);
                 }}
               >
-                {language === "FR" ? "Projets" : "Projects"}
+                <a href="/services">
+                  {language === "FR" ? "SERVICES" : "SERVICES"}
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollToSection("skills");
                   setIsHamburgerMenuOpen(false);
                 }}
               >
-                {language === "FR" ? "Compétences" : "Skills"}
+                <a href="/about">{language === "FR" ? "À PROPOS" : "ABOUT"}</a>
+              </li>
+              <li
+                onClick={() => {
+                  setIsHamburgerMenuOpen(false);
+                }}
+              >
+                <a href="/skills">
+                  {language === "FR" ? "COMPÉTENCES" : "SKILLS"}
+                </a>
               </li>
             </ul>
           </nav>
 
           <div className="menu-hamburger__nav__links">
-            <LanguageSelector
-              currentLanguage={currentLanguage}
-              setCurrentLanguage={setCurrentLanguage}
-            />
             <SocialMedia version="dark" />
           </div>
         </div>

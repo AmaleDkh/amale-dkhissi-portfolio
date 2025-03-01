@@ -1,39 +1,17 @@
 @import "../../assets//styles//mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
+@import "../../assets/styles/Fonts.scss";
 
 .experience-item {
-  align-content: center;
-  display: flex;
-  align-items: center;
   gap: 32px;
-  margin-bottom: 24px;
 
   &__year {
-    font-weight: 800;
-    font-size: 32px;
-    color: $light-blue-color;
+    font-weight: 500;
     border-radius: 90px;
-    margin-bottom: 8px;
-    width: 64px;
-    text-align: center;
-  }
+    margin-bottom: 16px;
 
-  &__information {
-    max-width: 75%;
-
-    @include respond-to-large {
-      max-width: 80%;
+    @include respond-to-medium {
+      margin-bottom: 8px;
     }
-
-    @include respond-to-small {
-      max-width: 64%;
-    }
-  }
-
-  &__information__company {
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 8px;
-    color: $orange-color;
   }
 }

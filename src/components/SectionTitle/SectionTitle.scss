@@ -3,26 +3,59 @@
 
 .section-title {
   gap: 16px;
-  margin: 0 240px 64px;
+  text-align: start;
 
   @include respond-to-extra-large {
-    margin: 0 104px 64px;
+    text-align: center;
+  }
+}
+
+.small-margin {
+  margin: 0 0 32px 0;
+
+  @include respond-to-small {
+    text-align: center;
+  }
+}
+
+.skills-version {
+  margin: 0 240px 64px;
+}
+
+.version-with-text-align {
+  text-align: center;
+}
+
+.contact-section-mobile-version {
+  text-align: center;
+}
+
+.version-with-margin-top {
+  @include respond-to-extra-large {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
-  @include respond-to-large {
-    margin: 0 0 80px 0;
+  @include respond-to-medium {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.version-with-margin-left {
+  @include respond-to-extra-large {
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
-  @include respond-to-large {
-    margin: 0 0 56px 0;
+  @include respond-to-medium {
+    margin-left: 16px;
+    margin-right: 16px;
   }
+}
 
-  &__title {
-    color: $orange-color;
-    position: relative;
-    white-space: nowrap;
-    font-size: 48px;
-    font-weight: 500;
-    margin: 0;
+.home-page__title-section {
+  h2 {
+    text-align: center;
   }
 }

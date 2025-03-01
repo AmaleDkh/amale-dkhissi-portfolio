@@ -5,23 +5,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 100px;
   top: 0;
   z-index: 1000;
-  background-color: $beige-color;
-  color: $dark-blue-color;
+  padding: 16px 104px;
+  position: fixed;
+  width: -webkit-fill-available;
+  background-color: $light-light-beige-color;
+
+  @include respond-to-extra-large {
+    padding: 16px 40px;
+  }
+
+  @include respond-to-large {
+    flex-direction: row;
+    position: absolute;
+  }
 
   @include respond-to-medium {
-    padding: 32px;
-  }
-
-  @include respond-to-medium-large {
-    padding: 32px;
-  }
-
-  &__title {
-    font-weight: bold;
-    font-size: 24px;
+    padding: 16px;
   }
 
   &__links {
@@ -35,22 +36,36 @@
 
     &__nav {
       display: flex;
-      gap: 24px;
+      gap: 40px;
 
-      @include respond-to-medium {
+      @include respond-to-large {
         display: none;
       }
 
-      div {
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: 500;
+      ul {
+        display: flex;
+        gap: 40px;
 
-        align-self: center;
+        li {
+          list-style-type: none;
 
-        &:hover {
-          opacity: 0.8;
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 300;
+            align-self: center;
+            color: black;
+
+            &:hover {
+              opacity: 0.8;
+              color: $green-color;
+            }
+          }
+        }
+
+        @include respond-to-extra-large {
+          gap: 24px;
         }
       }
     }
@@ -81,7 +96,7 @@
 .menu-hamburger {
   display: none;
 
-  @include respond-to-medium {
+  @include respond-to-large {
     display: block;
   }
 
@@ -103,33 +118,30 @@
     span {
       display: block;
       width: 100%;
-      height: 3px;
-      background-color: $dark-blue-color;
-      margin: 4px 0;
-      transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+      height: 1.5px;
+      background-color: black;
+      margin: 6px 0;
     }
   }
 
   &__nav {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 24px;
     right: 0;
     border-radius: 4px;
-    background-color: $beige-color;
-    color: $dark-blue-color;
+    background-color: white;
     text-align: center;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 3;
 
     &.open {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 40px;
+      background-color: $light-beige-color;
     }
 
     ul {
@@ -141,20 +153,30 @@
       gap: 40px;
 
       li {
-        font-weight: bold;
         cursor: pointer;
-        font-size: 32px;
+        font-size: 24px;
+        font-weight: 500;
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            opacity: 0.8;
+            color: $green-color;
+          }
+        }
       }
     }
 
     &__links {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       gap: 40px;
     }
 
     &__block {
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -163,10 +185,26 @@
   }
 }
 
-.fa-xmark {
+.header-mobile-version {
+  background-color: $light-beige-color;
+
+  @include respond-to-large {
+    height: 100%;
+  }
+}
+
+.size-6 {
   align-self: flex-end;
   margin-right: 40px;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
+
+  @include respond-to-large {
+    margin-right: 64px;
+  }
+
+  @include respond-to-medium {
+    margin-right: 16px;
+  }
 }

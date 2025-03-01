@@ -1,0 +1,26 @@
+@import "../../assets/styles//mixins/breakpoints.scss";
+
+.name {
+  a {
+    font-family: "Spectral";
+    font-size: 40px;
+    margin-bottom: 8px;
+    text-decoration: none;
+
+    @include respond-to-extra-large {
+      font-size: 24px;
+    }
+  }
+
+  &.black {
+    a {
+      color: black;
+    }
+  }
+
+  &.white {
+    a {
+      color: white;
+    }
+  }
+}

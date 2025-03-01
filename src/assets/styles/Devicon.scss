@@ -1,17 +1,12 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
 
-.devicon {
-  color: $beige-color;
+.fa-5x {
+  @include respond-to-extra-large {
+    font-size: 4em;
+  }
 }
 
-.devicon-2x {
+.devicon-small-version {
   font-size: 2em;
-}
-
-.devicon-3x {
-  font-size: 3em;
-}
-
-.devicon-4x {
-  font-size: 4em;
 }

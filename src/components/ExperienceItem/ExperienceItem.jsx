@@ -1,8 +1,8 @@
-// Style
-import "./ExperienceItem.scss";
-
 // Context
 import { useLanguage } from "../../context/LanguageContext";
+
+// Style
+import "./ExperienceItem.scss";
 
 function ExperienceItem({ year, experience }) {
   const { language } = useLanguage();
@@ -16,16 +16,15 @@ function ExperienceItem({ year, experience }) {
 
   return (
     <div className="experience-item">
-      <div className="experience-item__year">{year}</div>
+      <div className="experience-item__year">
+        {" "}
+        {companyName()} | {year}
+      </div>
       <div className="experience-item__information">
-        <div className="experience-item__information__company">
-          {companyName()}
-        </div>
-        <div>
-          {language === "FR"
-            ? experience.position.french
-            : experience.position.english}
-        </div>
+        {language === "FR"
+          ? experience.position.french
+          : experience.position.english}
+        <div className="experience-item__information__company"></div>
       </div>
     </div>
   );

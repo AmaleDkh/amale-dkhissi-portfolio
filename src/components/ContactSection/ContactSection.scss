@@ -1,0 +1,47 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $light-beige-color;
+  padding: 80px 104px;
+
+  @include respond-to-extra-large {
+    padding: 40px;
+  }
+
+  @include respond-to-medium {
+    padding: 40px 16px;
+  }
+
+  &__question {
+    text-align: center;
+  }
+
+  &__answer {
+    margin: 0 0 56px 0;
+    text-align: center;
+
+    @include respond-to-extra-large {
+      margin: 0 0 40px 0;
+    }
+  }
+}
+
+.margin-bottom-version {
+  margin-bottom: 96px;
+
+  @include respond-to-extra-large {
+    margin: 0 0 64px 0;
+  }
+
+  @include respond-to-medium {
+    margin: 0 0 40px 0;
+  }
+}
+
+.contact-margin-top {
+  margin-top: 0;
+}

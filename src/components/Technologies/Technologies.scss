@@ -4,12 +4,13 @@
 .technologies-list {
   display: flex;
   gap: 120px;
-  margin: 0 240px 88px 240px;
+  margin: 112px 240px;
   justify-content: center;
 
   @include respond-to-extra-large {
-    gap: 56px;
+    gap: 40px;
     margin: 0 104px;
+    justify-content: space-between;
   }
 
   @include respond-to-large {
@@ -27,7 +28,6 @@
 
   &__subject {
     color: white;
-    background-color: $light-blue-color;
     padding: 4px 14px;
     border-radius: 90px;
     font-weight: 500;
@@ -38,45 +38,50 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 16px;
+    gap: 40px;
     width: 224px;
+
+    @include respond-to-extra-large {
+      gap: 32px;
+    }
 
     @include respond-to-large {
       justify-content: center;
       width: 100%;
     }
 
+    @include respond-to-medium {
+      gap: 24px;
+    }
+
     &__icon {
-      color: $beige-color;
+      color: $light-blue-color;
     }
 
     &__title {
-      font-weight: bold;
-      font-size: 32px;
-      color: $light-blue-color;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 16px;
+
+      @include respond-to-medium {
+        margin-bottom: 8px;
+      }
     }
 
     &__technologies {
       text-align: center;
-      font-size: 24px;
     }
   }
+}
 
-  &__category {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:
-      opacity 0.5s ease-out,
-      transform 0.5s ease-out;
+.mobile-version {
+  margin: 0;
+
+  @include respond-to-extra-large {
+    margin: 0 0 64px 0;
   }
 
-  .hidden {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .visible {
-    opacity: 1;
-    transform: translateY(0);
+  @include respond-to-medium {
+    margin: 0;
   }
 }

@@ -1,0 +1,88 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets//styles/Colors.scss";
+
+.image-block {
+  width: 100%;
+  height: 632px;
+  position: relative;
+
+  @include respond-to-small {
+    height: 480px;
+  }
+
+  @include respond-to-small {
+    .mobile-version {
+      height: 400px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 632px;
+    object-fit: cover;
+
+    @include respond-to-small {
+      height: 480px;
+    }
+
+    @include respond-to-small {
+      .mobile-version {
+        height: 400px;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__texts {
+    color: white;
+    position: absolute;
+    top: 32%;
+    left: 104px;
+    z-index: 2;
+
+    @include respond-to-extra-large {
+      font-size: 24px;
+      left: 64px;
+    }
+
+    @include respond-to-large {
+      top: 34%;
+    }
+
+    @include respond-to-medium {
+      left: 24px;
+    }
+
+    @include respond-to-small {
+      top: 32%;
+      font-size: 24px;
+    }
+
+    &__paragraph {
+      font-size: 24px;
+      margin: 40px 0 0 0;
+
+      @include respond-to-medium {
+        font-size: 16px;
+      }
+
+      @include respond-to-small {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.horizontal-line {
+  border: 0.5px solid white;
+  width: 142px;
+}

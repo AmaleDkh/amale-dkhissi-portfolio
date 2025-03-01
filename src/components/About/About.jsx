@@ -8,7 +8,6 @@ import { useLanguage } from "../../context/LanguageContext";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Experiences from "../Experiences/Experiences";
 import VerticalLine from "../VerticalLine/VerticalLine";
-import HorizontalLine from "../HorizontalLine/HorizontalLine";
 
 // Style
 import "./About.scss";
@@ -50,7 +49,10 @@ function About() {
 
   return (
     <section ref={aboutRef} className="about" id="about">
-      <SectionTitle title={language === "FR" ? "À PROPOS" : "ABOUT ME"} />
+      <SectionTitle
+        title={language === "FR" ? "À PROPOS." : "ABOUT ME"}
+        margin="large-margin"
+      />
       <div className="about__texts">
         {language === "FR" ? (
           <div
@@ -88,7 +90,6 @@ function About() {
         <div
           className={`experiences-container ${isExperiencesVisible ? "visible" : ""}`}
         >
-          {/* <HorizontalLine className="horizontal-line__centered-beige-version" /> */}
           <Experiences />
         </div>
       </div>

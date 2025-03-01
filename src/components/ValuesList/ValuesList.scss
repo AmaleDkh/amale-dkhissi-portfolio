@@ -1,0 +1,166 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Fonts.scss";
+@import "../../assets/styles/Colors.scss";
+
+.values-list {
+  text-align: center;
+
+  &__title {
+    color: $light-light-beige-color;
+
+    @include respond-to-extra-large {
+      text-align: left;
+    }
+  }
+
+  @include respond-to-extra-large {
+    padding: 0;
+  }
+
+  &__blocks {
+    display: flex;
+    gap: 160px;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to-extra-extra-large {
+      gap: 80px;
+    }
+
+    @include respond-to-extra-large {
+      flex-direction: column;
+    }
+
+    @include respond-to-small {
+      gap: 32px;
+    }
+
+    &__block-title {
+      text-align: center;
+      flex: 1;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+
+      @include respond-to-extra-large {
+        text-align: start;
+      }
+    }
+  }
+
+  &__block {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      margin: 0;
+
+      &__first-paragraph {
+        margin: 0 0 24px;
+
+        @include respond-to-extra-large {
+          margin: 0;
+        }
+      }
+
+      &__second-paragraph {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.values-list {
+  &__blocks--first-version {
+    display: flex;
+    gap: 160px;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to-extra-extra-large {
+      gap: 80px;
+    }
+
+    @include respond-to-extra-large {
+      flex-direction: column;
+      display: none;
+    }
+
+    @include respond-to-small {
+      gap: 32px;
+    }
+
+    &__block-title {
+      text-align: center;
+      flex: 1;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__blocks {
+    @include respond-to-extra-large {
+      display: none;
+    }
+  }
+
+  &__blocks--second-version {
+    display: none;
+
+    @include respond-to-extra-large {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @include respond-to-medium {
+      gap: 32px;
+    }
+  }
+
+  &__block {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to-extra-large {
+      text-align: left;
+    }
+
+    &__title {
+      color: $light-light-beige-color;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+}
+
+.horizontal-line__services-version {
+  border: 0.5px solid black;
+  width: 80px;
+  margin: 0 auto 40px auto;
+
+  @include respond-to-extra-large {
+    margin: 0 0 32px 0;
+  }
+
+  @include respond-to-medium {
+    margin: 0 0 24px 0;
+  }
+}
+
+.values-list__page-version {
+  background-color: $light-beige-color;
+  margin: 0 0 128px 0;
+
+  @include respond-to-medium {
+    padding: 0 24px 24px 24px;
+  }
+}

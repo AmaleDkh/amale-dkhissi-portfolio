@@ -1,10 +1,47 @@
 [
   {
+    "id": "1",
     "title": {
-      "french": "Marie Sanchez - Psychologue",
+      "french": "Véronique Guillemin - Relaxologue & Psychopraticienne",
+      "english": ""
+    },
+    "image": "/MyComputer2.webp",
+    "description": {
+      "french": "Développement d'un site personnalisé pour une Relaxologue-Psychopraticienne, mettant en valeur ses services.",
+      "english": ""
+    },
+    "technologies": [
+      {
+        "technology": "React",
+        "icon": "devicon-react-original",
+        "size": "devicon-2x"
+      },
+      {
+        "technology": "Nextjs",
+        "icon": "devicon-nextjs-original-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "technology": "WordPress",
+        "icon": "devicon-wordpress-plain",
+        "size": "devicon-2x"
+      },
+      {
+        "technology": "Sass",
+        "icon": "devicon-sass-original",
+        "size": "devicon-2x"
+      }
+    ],
+
+    "source": "https://github.com/AmaleDkh/veronique-guillemin-website.git"
+  },
+  {
+    "id": "2",
+    "title": {
+      "french": "Marie Sanchez - Psychologue & Clinicienne",
       "english": "Marie Sanchez - Psychologist"
     },
-    "image": "/project6-image.webp",
+    "image": "/MyComputer8.webp",
     "description": {
       "french": "Développement d'un site personnalisé pour une Psychologue-Clinicienne, mettant en valeur ses services.",
       "english": "Development of a personalized website for a Psychologist-Clinician, highlighting her services."
@@ -30,14 +67,15 @@
     "source": "https://github.com/AmaleDkh/marie-sanchez-website.git"
   },
   {
+    "id": "3",
     "title": {
-      "french": "Qwenta - Menu Maker",
-      "english": "Qwenta - Menu Maker"
+      "french": "Julie Chaillou - Vidéaste",
+      "english": "Marie Sanchez - Video maker"
     },
-    "image": "/project5-image.webp",
+    "image": "/MyComputer1.webp",
     "description": {
-      "french": "Développement d'une application de gestion de menus pour des restaurateurs.",
-      "english": "Development of a menu maker application for restaurateurs owners."
+      "french": "Développement d'un portfolio en ligne pour une vidéaste, optimisé pour la présentation visuelle de ses œuvres.",
+      "english": "Development of an online portfolio for a video artist, optimized for the visual presentation of her work."
     },
     "technologies": [
       {
@@ -46,19 +84,9 @@
         "size": "devicon-2x"
       },
       {
-        "technology": "Node.js",
-        "icon": "devicon-nodejs-plain-wordmark",
-        "size": "devicon-3x"
-      },
-      {
-        "technology": "Express",
-        "icon": "devicon-express-original",
+        "technology": "WordPress",
+        "icon": "devicon-wordpress-plain",
         "size": "devicon-2x"
-      },
-      {
-        "technology": "MongoDB",
-        "icon": "devicon-mongodb-plain-wordmark",
-        "size": "devicon-3x"
       },
       {
         "technology": "Sass",
@@ -67,46 +95,18 @@
       }
     ],
 
-    "source": "https://github.com/AmaleDkh/menu-maker-application.git"
+    "source": "https://github.com/AmaleDkh/julie-chaillou-portfolio.git"
   },
   {
+    "id": "4",
     "title": {
-      "french": "Mon Vieux Grimoire - Notation de livres",
-      "english": "Mon Vieux Grimoire - Book rating"
+      "french": "Channe Len - Praticienne en voyance, méditation et soins énergétiques",
+      "english": ""
     },
-    "image": "/project4-image.webp",
+    "image": "/MyComputer6.webp",
     "description": {
-      "french": "Développement du back-end d'un site de notation et de critiques de livres.",
-      "english": "Development of the back-end for a book rating and review site."
-    },
-    "technologies": [
-      {
-        "technology": "Node.js",
-        "icon": "devicon-nodejs-plain-wordmark",
-        "size": "devicon-3x"
-      },
-      {
-        "technology": "Express",
-        "icon": "devicon-express-original",
-        "size": "devicon-2x"
-      },
-      {
-        "technology": "MongoDB",
-        "icon": "devicon-mongodb-plain-wordmark",
-        "size": "devicon-3x"
-      }
-    ],
-    "source": "https://github.com/AmaleDkh/mon-vieux-grimoire-website.git"
-  },
-  {
-    "title": {
-      "french": "Kasa - Location immobilière",
-      "english": "Kasa - Real estate rental"
-    },
-    "image": "/project3-image.webp",
-    "description": {
-      "french": "Développement de l'interface front-end d'une application de location immobilière.",
-      "english": "Development of the front-end interface for a real estate rental application."
+      "french": "Développement d'un site personnalisé pour une Praticienne en voyance, méditation et soins énergétiques, mettant en valeur ses services.",
+      "english": ""
     },
     "technologies": [
       {
@@ -115,51 +115,22 @@
         "size": "devicon-2x"
       },
       {
+        "technology": "Nextjs",
+        "icon": "devicon-nextjs-original-wordmark",
+        "size": "devicon-3x"
+      },
+      {
+        "technology": "WordPress",
+        "icon": "devicon-wordpress-plain",
+        "size": "devicon-2x"
+      },
+      {
         "technology": "Sass",
         "icon": "devicon-sass-original",
         "size": "devicon-2x"
       }
     ],
-    "source": "https://github.com/AmaleDkh/kasa-application.git"
-  },
 
-  {
-    "title": {
-      "french": "Sophie Bluel - Architecte d'intérieur",
-      "english": "Sophie Bluel - Interior architect"
-    },
-    "image": "/project2-image.webp",
-    "description": {
-      "french": "Développement de l'interface front-end d'un site portfolio pour une architecte d'intérieur.",
-      "english": "Development of the front-end interface of a portfolio site for an interior architect."
-    },
-
-    "technologies": [
-      {
-        "technology": "JavaScript",
-        "icon": "devicon-javascript-plain",
-        "size": "devicon-2x"
-      }
-    ],
-    "source": "https://github.com/AmaleDkh/portfolio-architect-sophie-bluel.git"
-  },
-  {
-    "title": {
-      "french": "Nina Carducci - Photographe",
-      "english": "Nina Carducci - Photographer"
-    },
-    "image": "/project1-image.webp",
-    "description": {
-      "french": "Amélioration de la performance et de l'accessibilité du site d'une photographe pour optimiser son référencement.",
-      "english": "Improving the performance and accessibility of a photographer's website to optimize its SEO."
-    },
-    "technologies": [
-      {
-        "technology": "JavaScript",
-        "icon": "devicon-javascript-plain",
-        "size": "devicon-2x"
-      }
-    ],
-    "source": "https://github.com/AmaleDkh/nina-carducci-photograph-website.git"
+    "source": "https://github.com/AmaleDkh/channe-voyance-website.git"
   }
 ]

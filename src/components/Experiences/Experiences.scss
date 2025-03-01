@@ -1,25 +1,84 @@
-@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles//mixins/breakpoints.scss";
+@import "../../assets/styles/Colors.scss";
 
 .experiences-list {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  background-color: $dark-blue-color;
+  padding: 0 104px 0 0;
+  color: $light-light-beige-color;
+
+  @include respond-to-extra-large {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    gap: 64px;
+    padding: 0;
+  }
+
+  @include respond-to-large {
+    flex-direction: column;
+    gap: 40px;
+  }
+
   @include respond-to-medium {
-    grid-template-columns: none;
+    margin: 0;
+    flex-direction: column;
+    gap: 40px;
   }
 
-  @include respond-to-medium-large {
-    grid-template-columns: repeat(3, 1fr);
+  &__image-container {
+    width: 600px;
+
+    @include respond-to-extra-large {
+      width: 100%;
+    }
+
+    &__image {
+      width: 600px;
+      object-fit: cover;
+
+      @include respond-to-extra-large {
+        width: 100%;
+      }
+
+      @include respond-to-large {
+        height: 600px;
+      }
+
+      @include respond-to-medium {
+        height: 500px;
+      }
+    }
   }
-}
 
-.experiences-container {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-  transition-delay: 0.5s;
+  &__texts {
+    text-align: center;
+    width: -webkit-fill-available;
 
-  &.visible {
-    opacity: 1;
-    transform: translateY(0);
+    &__title {
+      color: $light-light-beige-color;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      @include respond-to-medium {
+        gap: 24px;
+      }
+    }
+
+    @include respond-to-extra-large {
+      margin: 0 40px 40px 40px;
+    }
+
+    @include respond-to-medium {
+      margin: 0 16px 48px 16px;
+    }
   }
 }

@@ -1,0 +1,29 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+
+.introduction {
+  margin: 0 120px 104px 120px;
+}
+
+.version-with-margin {
+  @include respond-to-extra-extra-large {
+    margin: 0 104px;
+  }
+
+  @include respond-to-extra-large {
+    margin: 0 64px;
+  }
+
+  @include respond-to-medium {
+    margin: 0 24px;
+  }
+}
+
+.version-with-margin-bottom {
+  @include respond-to-extra-large {
+    margin-bottom: 64px;
+  }
+
+  @include respond-to-medium {
+    margin-bottom: 56px;
+  }
+}

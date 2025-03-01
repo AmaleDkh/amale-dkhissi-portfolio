@@ -9,9 +9,11 @@ function TechnologyItem({ icon, title, technologies }) {
         size="5x"
         className="technologies-list__item__icon"
       />
-      <div className="technologies-list__item__title">{title}</div>
-      <div className="technologies-list__item__technologies">
-        {technologies}
+      <div className="technologies-list__item__texts">
+        <div className="technologies-list__item__title">{title}</div>
+        <div className="technologies-list__item__technologies">
+          {technologies}
+        </div>
       </div>
     </div>
   );

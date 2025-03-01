@@ -12,15 +12,11 @@ import "./index.css";
 // Report Web Vitals
 import reportWebVitals from "./reportWebVitals";
 
-// Component
-// import CustomCursor from "./components/CustomCursor/CustomCursor";
-
 import { LanguageProvider } from "./context/LanguageContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <LanguageProvider>
     <RouterProvider router={router} />
-    {/* <CustomCursor /> */}
   </LanguageProvider>
 );
 

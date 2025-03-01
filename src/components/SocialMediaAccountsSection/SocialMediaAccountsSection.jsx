@@ -1,64 +1,29 @@
-// React elements
-import { useState, useEffect, useCallback } from "react";
-
-// Context
-import { useLanguage } from "../../context/LanguageContext";
+// Components
+import SocialMedia from "../SocialMedia/SocialMedia";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 // Style
 import "./SocialMediaAccountsSection.scss";
 
-// Component
-import SocialMedia from "../SocialMedia/SocialMedia";
-
-function SocialMediaAccounts() {
-  const [isSectionVisible, setIsSectionVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
-
-  const { language } = useLanguage();
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 576);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleScroll = useCallback(() => {
-    const section = document.querySelector(".social-media-accounts");
-    if (section) {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        setIsSectionVisible(true);
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
-
+function SocialMediaAccounts({ contactVersion, pageVersion }) {
   return (
-    <section
-      className={`social-media-accounts ${isSectionVisible ? "visible" : "hidden"}`}
-    >
-      <div className="social-media-accounts__title">
-        {isMobile
-          ? language === "FR"
-            ? "Faisons connaissance !"
-            : "Let's connect!"
-          : language === "FR"
-            ? "Et si nous faisions connaissance ?"
-            : "Let's get to know each other!"}
+    <section className={`social-media-accounts  ${pageVersion}`}>
+      <div className="social-media-accounts__text">
+        <SectionTitle
+          title="FAISONS CONNAISSANCE."
+          className=""
+          margin="large-margin"
+        />
+
+        <p className="social-media-accounts__question">
+          Vous avez des idées ou questions ?
+        </p>
+
+        <p className={`social-media-accounts__answer ${contactVersion}`}>
+          Je serais ravie de discuter avec vous.
+        </p>
       </div>
+
       <SocialMedia version="light" />
     </section>
   );

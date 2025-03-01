@@ -1,15 +1,19 @@
 // Style
 import "./SectionTitle.scss";
 
-// Component
-import HorizontalLine from "../HorizontalLine/HorizontalLine";
-
-function SectionTitle({ title }) {
+function SectionTitle({
+  title,
+  colorVersion,
+  margin,
+  mobileVersion,
+  versionWithMarginTop,
+  versionWithMarginLeft,
+}) {
   return (
-    <div className="section-title">
-      <h2 className="section-title__title">{title}</h2>
-      <HorizontalLine className="horizontal-line__right" />
-    </div>
+    <h2
+      className={`section-title ${colorVersion} ${margin} ${mobileVersion} ${versionWithMarginTop} ${versionWithMarginLeft} `}
+      dangerouslySetInnerHTML={{ __html: title }}
+    />
   );
 }
 

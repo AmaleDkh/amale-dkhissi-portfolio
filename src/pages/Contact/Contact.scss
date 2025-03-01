@@ -1,0 +1,16 @@
+@import "../../assets/styles//mixins/breakpoints.scss";
+
+.contact-page {
+  margin: 96px 104px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include respond-to-extra-large {
+    margin: 64px 40px;
+  }
+
+  @include respond-to-medium {
+    margin: 40px 24px;
+  }
+}
