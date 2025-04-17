@@ -2,21 +2,21 @@
 @import "../../assets/styles/Colors.scss";
 
 .button {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+  width: fit-content;
   align-items: center;
-  height: 56px;
-  border: none;
-  background-color: $light-green-color;
-  color: white;
+  gap: 0.5rem;
   font-weight: 500;
-  padding: 0 24px;
-  cursor: pointer;
-  margin: 0 auto;
   text-decoration: none;
+  background-color: $light-green-color;
+  color: $light-light-beige-color;
+  padding: 12px 24px;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
 
   &:hover {
-    opacity: 0.8;
+    background-color: $beige-color;
+    color: $light-green-color;
   }
 }
 

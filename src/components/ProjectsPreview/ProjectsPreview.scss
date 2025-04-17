@@ -1,0 +1,98 @@
+@import "../../assets/styles/mixins/breakpoints.scss";
+
+.projects-preview {
+  margin: 80px 104px;
+
+  @include respond-to-extra-large {
+    margin: 64px 40px;
+  }
+
+  @include respond-to-medium {
+    margin: 40px 16px;
+  }
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__information {
+      text-align: center;
+      max-width: 768px;
+      margin: 0 auto 4rem;
+      opacity: 0;
+      animation: fade-in 1s forwards;
+
+      h2 {
+        font-size: 1.875rem;
+        margin-bottom: 1.5rem;
+
+        @media (min-width: 768px) {
+          font-size: 2.25rem;
+        }
+      }
+    }
+
+    &__projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      &__card {
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height: 20rem;
+        opacity: 0;
+        animation: fade-in 1s forwards;
+
+        &__bg-image {
+          position: absolute;
+          inset: 0;
+          background-size: cover;
+          background-position: center;
+          transition: transform 0.5s;
+        }
+
+        // &:hover {
+        //   &__bg-image {
+        //     transform: scale(1.05);
+        //   }
+        // }
+
+        &__overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        }
+
+        &__content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 2rem;
+
+          &__title {
+            font-size: 1.25rem;
+            color: #fff;
+            font-family: "Spectral", serif;
+
+            @media (min-width: 768px) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}

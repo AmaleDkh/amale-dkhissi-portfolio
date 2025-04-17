@@ -1,0 +1,10 @@
+@import "../../assets//styles//mixins/breakpoints.scss";
+
+.logo {
+  width: 120px;
+  height: auto;
+
+  @include respond-to-medium {
+    width: 80px;
+  }
+}

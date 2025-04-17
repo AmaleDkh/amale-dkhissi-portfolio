@@ -3,7 +3,7 @@ import { useLanguage } from "../../context/LanguageContext";
 
 // Components
 import SocialMedia from "../SocialMedia/SocialMedia";
-import Name from "../Name/Name";
+import Logo from "../Logo/Logo";
 
 // Style
 import "./Footer.scss";
@@ -16,7 +16,7 @@ function Footer() {
       <>
         <div className="footer__block">
           <div className="footer__main-information">
-            <Name version="black" />
+            <Logo />
             <div className="footer__main-information__date">© 2025</div>
           </div>
 

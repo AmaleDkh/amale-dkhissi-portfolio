@@ -110,6 +110,7 @@
     justify-content: center;
     width: 48px;
     height: 48px;
+    padding: 0;
 
     @include respond-to-large {
       height: 100%;
@@ -127,7 +128,7 @@
   &__nav {
     display: none;
     position: absolute;
-    top: 24px;
+    top: 16px;
     right: 0;
     border-radius: 4px;
     background-color: white;
@@ -140,7 +141,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 40px;
+      gap: 48px;
       background-color: $light-beige-color;
     }
 
@@ -150,7 +151,7 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 48px;
 
       li {
         cursor: pointer;
@@ -181,6 +182,10 @@
       flex-direction: column;
       justify-content: space-around;
       gap: 80px;
+
+      @include respond-to-large {
+        gap: 48px;
+      }
     }
   }
 }

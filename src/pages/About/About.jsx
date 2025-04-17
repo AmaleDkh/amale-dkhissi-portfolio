@@ -36,8 +36,8 @@ function About() {
         image={Me1}
         alt="Photo d'Amale dans un café, devant son ordinateur"
         sectionTitle="Mon parcours"
-        textPadding="image-and-text-block__margin-left image-and-text-block__text-mobile-version"
-        className="image-and-text-block__mobile-version"
+        textPadding="image-and-text-block__margin-left"
+        className=""
       />
 
       <Experiences />

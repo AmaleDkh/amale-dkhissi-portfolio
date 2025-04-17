@@ -6,8 +6,8 @@ import { useLanguage } from "../../context/LanguageContext";
 
 // Components
 import SocialMedia from "../SocialMedia/SocialMedia";
-import Name from "../Name/Name";
 import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
 
 // Style
 import "./Header.scss";
@@ -41,7 +41,7 @@ function Header() {
     >
       {!isHamburgerMenuOpen && (
         <>
-          <Name version="black" />
+          <Logo />
 
           <div className="header__links-block">
             <nav className="header__links__nav">

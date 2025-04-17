@@ -4,17 +4,13 @@ import { useState } from "react";
 // Components
 import Layout from "../../components/Layout/Layout";
 import ContactSection from "../../components/ContactSection/ContactSection";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import ProjectsList from "../../components/ProjectsList/ProjectsList";
-
-// Data
-import projectsList from "../../assets/data/projectsList.json";
+import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 
 // Style
 import "./Projects.scss";
 
 function Projects() {
-  const [index, setIndex] = useState(1);
+  // const [index, setIndex] = useState(1);
 
   // const showPreviousProject = () => {
   //   setIndex((prevIndex) =>
@@ -30,11 +26,8 @@ function Projects() {
 
   return (
     <Layout>
-      <div className="projects-page-container">
-        <PageTitle title="Mes projets" />
+      <ProjectsSection />
 
-        <ProjectsList />
-      </div>
       <ContactSection marginBottomVersion="margin-bottom-version" />
     </Layout>
   );

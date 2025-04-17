@@ -1,7 +1,6 @@
 // Components
 import Layout from "../../components/Layout/Layout";
 import Presentation from "../../components/Presentation/Presentation";
-import ProjectsList from "../../components/ProjectsList/ProjectsList";
 import ImageAndTextBlock from "../../components/ImageAndTextBlock/ImageAndTextBlock";
 import ServicesList from "../../components/ServicesList/ServicesList";
 import ContactSection from "../../components/ContactSection/ContactSection";
@@ -9,6 +8,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import Reviews from "../../components/Reviews/Reviews";
 import Button from "../../components/Button/Button";
 import ValuesList from "../../components/ValuesList/ValuesList";
+import ProjectsPreview from "../../components/ProjectsPreview/ProjectsPreview";
 
 // Style
 import "../../assets/styles/Global.scss";
@@ -35,8 +35,8 @@ function Home() {
         tout en restant aligné avec vos objectifs.`}
         image={Me11}
         sectionTitle={`Une solution sur mesure <br>pour chaque projet`}
-        className="image-and-text-block--background-color-version"
-        textPadding="image-and-text-block__margin-left"
+        className="image-and-text-block--background-color-version image-and-text-block__mobile-version"
+        textPadding="image-and-text-block__margin-left image-and-text-block__text-mobile-version"
         versionWithSubtitle={true}
         alt="Amale assise à la BNF et en train de travailler"
       />
@@ -61,11 +61,7 @@ function Home() {
 
       <Reviews />
 
-      <ProjectsList />
-
-      <div className="projects-list__button">
-        <Button text="Découvrez plus de projets" link="/projects" />
-      </div>
+      <ProjectsPreview />
 
       <ImageAndTextBlock
         text={`Après <span class="words-with-font-weight">7 ans d'expérience en communication</span>, je me suis lancée dans le développement web, où j'allie <span class="words-with-font-weight">organisation et professionnalisme</span> pour créer <span class="words-with-font-weight">des solutions à la fois élégantes et performantes</span>.
