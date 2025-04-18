@@ -13,10 +13,15 @@
   padding: 12px 24px;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     background-color: $beige-color;
     color: $light-green-color;
+  }
+
+  &__center-version {
+    margin: auto;
   }
 }
 

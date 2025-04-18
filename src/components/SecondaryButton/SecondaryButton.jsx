@@ -4,12 +4,9 @@ import { Link } from "react-router-dom";
 // Style
 import "./SecondaryButton.scss";
 
-function SecondaryButton({
-  to = "/projets",
-  label = "Voir tous les projects",
-}) {
+function SecondaryButton({ link, label, centerVersion }) {
   return (
-    <Link to={"/projects"} className="secondary-button">
+    <Link to={link} className={`secondary-button ${centerVersion}`}>
       {label}
     </Link>
   );

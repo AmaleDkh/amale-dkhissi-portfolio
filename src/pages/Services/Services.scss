@@ -1,14 +1,14 @@
 @import "../../assets//styles//mixins/breakpoints.scss";
 
 .services-page {
-  margin: 96px 0 0 0;
+  margin: 200px 0 0 0;
 
   @include respond-to-extra-large {
-    margin: 64px 0 0 0;
+    margin: 200px 0 0 0;
   }
 
   @include respond-to-medium {
-    margin: 40px 0 0 0;
+    margin: 160px 0 0 0;
   }
 
   &__title {

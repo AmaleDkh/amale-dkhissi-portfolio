@@ -2,14 +2,14 @@
 @import "../../assets/styles/mixins/breakpoints.scss";
 
 .projects-section {
-  margin: 80px 104px;
+  margin: 200px 104px 80px 104px;
 
   @include respond-to-extra-large {
-    margin: 152px 40px 64px 40px;
+    margin: 200px 40px 64px 40px;
   }
 
   @include respond-to-medium {
-    margin: 152px 16px 40px 16px;
+    margin: 142px 16px 40px 16px;
   }
 
   &__information {

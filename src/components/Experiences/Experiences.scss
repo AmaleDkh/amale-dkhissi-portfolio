@@ -3,9 +3,6 @@
 
 .experiences-section {
   background-color: $light-beige-color;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 1rem;
   padding: 80px 104px;
 
   @include respond-to-extra-large {

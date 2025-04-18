@@ -37,14 +37,14 @@
 
 .about-page {
   &__title {
-    margin: 96px 120px 0 120px;
+    margin: 200px 120px 0 120px;
 
     @include respond-to-extra-large {
-      margin: 64px 64px 0 64px;
+      margin: 200px 64px 0 64px;
     }
 
     @include respond-to-medium {
-      margin: 40px 16px 0 16px;
+      margin: 160px 16px 0 16px;
     }
   }
 }

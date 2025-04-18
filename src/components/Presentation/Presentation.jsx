@@ -1,49 +1,57 @@
-// Context
-import { useLanguage } from "../../context/LanguageContext";
-
 // Style
 import "./Presentation.scss";
 
 // Images
 import Me2 from "../../assets/images/Me2.webp";
 import Button from "../Button/Button";
+import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
 function Presentation() {
-  const { language } = useLanguage();
-
   return (
-    <section className="presentation-container">
-      <img
-        src={Me2}
-        alt="Portrait professionnel"
-        className="presentation-container__photo-container__photo  image-with-opacity"
-      ></img>
+    <section className="hero-section">
+      <div className="hero-section__wrapper">
+        <div className="hero-section__grid">
+          <div className="hero-section__content animate-fade-in">
+            <div>
+              <h1 className="hero-section__title">
+                Des sites web sur mesure, <br></br>des textes qui captivent.
+              </h1>
+              <p className="hero-section__description">
+                Je conçois des{" "}
+                <span className="words-with-font-weight ">
+                  solutions web sur mesure{" "}
+                </span>{" "}
+                et{" "}
+                <span className="words-with-font-weight ">
+                  des contenus engageants{" "}
+                </span>
+                , qui vous ressemblent et optimisent votre visibilité en ligne.
+              </p>
+              <div className="hero-section__buttons">
+                <Button text="Me contacter" />
 
-      <div className="presentation-container__text">
-        <h1 className="image-block__texts__title">
-          Des sites web sur mesure, <br></br>des textes qui captivent.
-        </h1>
+                <SecondaryButton
+                  link="/services"
+                  label=" Découvrir mes services"
+                  centerVersion=""
+                />
+              </div>
+            </div>
+          </div>
 
-        <div className="presentation-container__text__presentation">
-          <p>
-            {" "}
-            Je conçois des{" "}
-            <span className="words-with-font-weight ">
-              solutions web sur mesure
-            </span>{" "}
-            et
-            <span className="words-with-font-weight ">
-              {" "}
-              des contenus engageants
-            </span>
-            , qui vous ressemblent et optimisent votre visibilité en ligne.
-          </p>
-          <Button
-            text="Découvrez les services"
-            link="/services"
-            marginTopVersion="margin-top-version"
+          <img
+            src={Me2}
+            alt="Portrait professionnel"
+            className="hero-section__image"
           />
         </div>
+
+        {/* <div className="hero-section__scroll animate-fade-in delay-400">
+          <a href="#services" className="hero-section__scroll-link">
+            <span className="hero-section__scroll-text">Découvrir</span>
+            <ArrowDown className="animate-bounce" />
+          </a>
+        </div> */}
       </div>
     </section>
   );

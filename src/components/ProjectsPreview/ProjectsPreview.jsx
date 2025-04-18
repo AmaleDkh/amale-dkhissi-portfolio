@@ -41,7 +41,11 @@ function ProjectsPreview() {
           ))}
         </div>
 
-        <SecondaryButton />
+        <SecondaryButton
+          link="/projects"
+          label=" Découvrir tous les projets"
+          centerVersion="secondary-button__center-version"
+        />
       </div>
     </section>
   );
