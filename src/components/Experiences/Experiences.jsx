@@ -1,5 +1,5 @@
 // Component
-import ExperienceItem from "../ExperienceItem/ExperienceItem";
+// import ExperienceItem from "../ExperienceItem/ExperienceItem";
 
 // Data
 import experiencesList from "../../assets/data/experiencesList.json";
@@ -7,32 +7,30 @@ import experiencesList from "../../assets/data/experiencesList.json";
 // Style
 import "./Experiences.scss";
 
-// Image
-import Me14 from "../../assets/images/Me14.webp";
-
 function Experiences() {
   return (
-    <div className="experiences-list">
-      <img
-        src={Me14}
-        alt="Une personne de dos qui travaille sur un bureau"
-        className="experiences-list__image-container__image image-with-opacity image-with-border-radius"
-      />
+    <section className="experiences-section">
+      <h2 className="experiences-section__title">Expériences</h2>
 
-      <div className="experiences-list__texts">
-        <h3 className="experiences-list__texts__title">Mes expériences</h3>
-        <div className="experiences-list__texts__block">
-          {experiencesList.map((experienceItem, experienceItemIndex) => (
-            <ExperienceItem
-              key={experienceItemIndex}
-              year={experienceItem.year}
-              description={experienceItem.description}
-              experience={experienceItem.experience}
-            />
-          ))}
-        </div>
+      <div className="experiences-section__list">
+        {experiencesList.map((exp, index) => (
+          <div key={index} className="experiences-section__list__item">
+            <div className="experiences-section__list__item__year">
+              {exp.year}
+            </div>
+            <div className="experiences-section__list__item__content">
+              <h3 className="experiences-section__list__item__content__company-name">
+                {exp.experience.company}
+              </h3>
+
+              <p className="experiences-section__list__item__content__description">
+                {exp.experience.position.french}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
 

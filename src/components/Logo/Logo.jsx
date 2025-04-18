@@ -1,13 +1,10 @@
 // Style
 import "./Logo.scss";
 
-// Image
-import LogoImage from "../../assets/images/Logo.webp";
-
-function Logo() {
+function Logo({ logo }) {
   return (
     <a href="/">
-      <img src={LogoImage} alt="Logo" className="logo" />;
+      <img src={logo} alt="Logo" className="logo" />
     </a>
   );
 }

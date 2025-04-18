@@ -1,164 +1,102 @@
 // React elements
-import { useEffect, useState } from "react";
-
-// Context
-import { useLanguage } from "../../context/LanguageContext";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { X, Menu } from "lucide-react";
 
 // Components
-import SocialMedia from "../SocialMedia/SocialMedia";
-import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
+import Button from "../Button/Button";
 
 // Style
 import "./Header.scss";
 
-function Header() {
-  const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+// Logo
+import LogoBlueVersion from "../../assets/images/LogoBlueVersion.webp";
 
-  const { language } = useLanguage();
+const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleHamburgerMenu = () => {
-    setIsHamburgerMenuOpen(!isHamburgerMenuOpen);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  useEffect(() => {
-    if (isHamburgerMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isHamburgerMenuOpen]);
-
   return (
-    <header
-      className={`header  ${
-        isHamburgerMenuOpen ? "header-mobile-version" : ""
-      }`}
-    >
-      {!isHamburgerMenuOpen && (
-        <>
-          <Logo />
+    <header className="header">
+      <nav className="header__nav">
+        <Logo logo={LogoBlueVersion} />
 
-          <div className="header__links-block">
-            <nav className="header__links__nav">
-              <ul>
-                <li>
-                  <a href="/projects">
-                    {language === "FR" ? "PORTFOLIO" : "PROJECTS"}
-                  </a>
-                </li>
-                <li>
-                  <a href="/services">
-                    {language === "FR" ? "SERVICES" : "SERVICES"}
-                  </a>
-                </li>
-                <li>
-                  <a href="/about">
-                    {language === "FR" ? "À PROPOS" : "ABOUT"}
-                  </a>
-                </li>
-                <li>
-                  <a href="/skills">
-                    {language === "FR" ? "COMPÉTENCES" : "SKILLS"}
-                  </a>
-                </li>
-              </ul>
-            </nav>
+        <div className="header__nav__desktop-menu">
+          <Link to="/projects" className="header__nav__desktop-menu__link">
+            Portfolio
+          </Link>
+          <Link to="/services" className="header__nav__desktop-menu__link">
+            Services
+          </Link>
+          <Link to="/about" className="header__nav__desktop-menu__link">
+            Histoire
+          </Link>
+          <Link to="/skills" className="header__nav__desktop-menu__link">
+            Compétences
+          </Link>
 
-            <Button
-              text="Discutons de votre projet"
-              link="/contact"
-              mobileVersion="button-mobile-version"
-            />
+          <Button text="UN PROJET ?" />
+        </div>
 
-            <div className="menu-hamburger">
-              <button
-                className={`menu-hamburger__button ${
-                  isHamburgerMenuOpen ? "open" : ""
-                }`}
-                onClick={toggleHamburgerMenu}
-                aria-expanded={isHamburgerMenuOpen}
-                aria-label="Toggle navigation menu"
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </>
-      )}
+        <button
+          className="header__nav__mobile-toggle"
+          onClick={toggleMobileMenu}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </nav>
 
       <div
-        className={`menu-hamburger__nav ${isHamburgerMenuOpen ? "open" : ""}`}
+        className={`header__nav__mobile-menu ${
+          mobileMenuOpen ? "header__nav__mobile-menu--open" : ""
+        }`}
       >
-        <svg
-          onClick={() => setIsHamburgerMenuOpen(false)}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-6"
+        <button
+          className="header__nav__mobile-menu__mobile-close"
+          onClick={toggleMobileMenu}
+          aria-label="Close menu"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18 18 6M6 6l12 12"
-          />
-        </svg>
+          <X size={24} />
+        </button>
+        <Link
+          to="/projects"
+          className="header__nav__mobile-menu__link"
+          onClick={toggleMobileMenu}
+        >
+          Portfolio
+        </Link>
+        <Link
+          to="/services"
+          className="header__nav__mobile-menu__link"
+          onClick={toggleMobileMenu}
+        >
+          Services
+        </Link>
+        <Link
+          to="/about"
+          className="header__nav__mobile-menu__link"
+          onClick={toggleMobileMenu}
+        >
+          Histoire
+        </Link>
 
-        <div className="menu-hamburger__nav__block ">
-          <nav>
-            <ul>
-              <li
-                onClick={() => {
-                  setIsHamburgerMenuOpen(false);
-                }}
-              >
-                <a href="/projects">
-                  {language === "FR" ? "PORTFOLIO" : "PROJECTS"}
-                </a>
-              </li>
-              <li
-                onClick={() => {
-                  setIsHamburgerMenuOpen(false);
-                }}
-              >
-                <a href="/services">
-                  {language === "FR" ? "SERVICES" : "SERVICES"}
-                </a>
-              </li>
-              <li
-                onClick={() => {
-                  setIsHamburgerMenuOpen(false);
-                }}
-              >
-                <a href="/about">{language === "FR" ? "À PROPOS" : "ABOUT"}</a>
-              </li>
-              <li
-                onClick={() => {
-                  setIsHamburgerMenuOpen(false);
-                }}
-              >
-                <a href="/skills">
-                  {language === "FR" ? "COMPÉTENCES" : "SKILLS"}
-                </a>
-              </li>
-            </ul>
-          </nav>
+        <Link
+          to="/skills"
+          className="header__nav__mobile-menu__link"
+          onClick={toggleMobileMenu}
+        >
+          Compétences
+        </Link>
 
-          <div className="menu-hamburger__nav__links">
-            <SocialMedia version="dark" />
-          </div>
-        </div>
+        <Button text="UN PROJET ?" />
       </div>
     </header>
   );
-}
+};
 
 export default Header;
