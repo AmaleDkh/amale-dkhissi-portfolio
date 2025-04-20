@@ -1,105 +1,62 @@
 // Style
 import "./ServicesList.scss";
 
-// Images
-import MyComputer3 from "../../assets/images/MyComputer3.webp";
-import MyComputer4 from "../../assets/images/MyComputer4.webp";
-import MyComputer7 from "../../assets/images/MyComputer7.webp";
+// Component
+import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
-function ServicesList({ pageVersion }) {
+// Data
+import servicesList from "../../assets/data/servicesList.json";
+
+function ServicesList({ marginVersion, isTitleAndButtonVisible }) {
   return (
-    <section className={`services ${pageVersion}`}>
-      <div className="services__blocks--second-version">
-        <div className="services__block">
-          <img src={MyComputer4} />
-
-          <div className="services__block__item">
-            <h3 className="services__block__title">
-              Développement de solutions web
-            </h3>
-
-            <div className="services__block__text">
-              <p className="services__block__text__first-paragraph">
-                Je crée{" "}
-                <span className="words-with-font-weight">
-                  {" "}
-                  des sites web adaptés
-                </span>{" "}
-                à chaque projet.
-              </p>
-
-              <p className="services__block__text__second-paragraph">
-                Mon objectif est de répondre précisément aux besoins de chaque
-                client, en mettant l’accent sur{" "}
-                <span className="words-with-font-weight">
-                  {" "}
-                  la qualité, l’efficacité et l’évolutivité
-                </span>
-                .
-              </p>
-            </div>
+    <section id="services" className={`services ${marginVersion}`}>
+      <div className="services__container">
+        {isTitleAndButtonVisible ? (
+          <div className="services__header">
+            <h2 className="services__title">Les solutions proposées</h2>
+            <p className="services__subtitle">
+              Des solutions sur mesure pour répondre à vos besoins.
+            </p>
           </div>
-        </div>
-
-        <div className="services__block">
-          <img src={MyComputer3} />
-
-          <div className="services__block__item">
-            <div>
-              <h3 className="services__block__title">Rédaction de contenus</h3>
-            </div>
-
-            <div className="services__block__text">
-              <p className="services__block__text__first-paragraph">
-                Je rédige{" "}
-                <span className="words-with-font-weight">
-                  des contenus sur mesure et adaptés
-                </span>{" "}
-                à chaque projet.
-              </p>
-
-              <p className="services__block__text__second-paragraph">
-                Mon objectif est de rédiger{" "}
-                <span className="words-with-font-weight">
-                  des messages clairs et impactants
-                </span>
-                , avec un ton qui vous correspond.
-              </p>
-            </div>
+        ) : (
+          <div className="projects-section__information">
+            <h1 className="projects-section__information__title">
+              Les solutions proposées
+            </h1>
+            <p className="projects-section__information__description">
+              Des solutions sur mesure pour répondre à vos besoins.
+            </p>
           </div>
-        </div>
+        )}
 
-        <div className="services__block">
-          <img src={MyComputer7} />
-
-          <div className="services__block__item">
-            <div>
-              <h3 className="services__block__title">
-                Optimisation du référencement
-              </h3>
+        <div className="services__grid">
+          {servicesList.map((service, index) => (
+            <div key={index} className="services__card">
+              <div className="services__image-wrapper">
+                <img
+                  src={service.image}
+                  alt={service.imageAlt}
+                  className="services__image"
+                />
+              </div>
+              <div className="services__card-content">
+                <h3 className="services__card-title">{service.title}</h3>
+                <p className="services__card-description">
+                  {service.description}
+                </p>
+              </div>
             </div>
-
-            <div className="services__block__text">
-              <p className="services__block__text__first-paragraph">
-                Je vous aide à{" "}
-                <span className="words-with-font-weight">
-                  améliorer votre positionnement{" "}
-                </span>
-                sur les moteurs de recherche.
-              </p>
-
-              <p className="services__block__text__second-paragraph">
-                Mon objectif est de rendre votre site plus visible, en
-                améliorant{" "}
-                <span className="words-with-font-weight">
-                  sa pertinence et son accessibilité
-                </span>
-                .
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      {isTitleAndButtonVisible === true && (
+        <SecondaryButton
+          link="/services"
+          label=" Découvrir tous les services"
+          centerVersion="secondary-button__center-version"
+        />
+      )}
     </section>
   );
 }

@@ -1,14 +1,12 @@
 // Components
 import Layout from "../../components/Layout/Layout";
 import Presentation from "../../components/Presentation/Presentation";
-import ImageAndTextBlock from "../../components/ImageAndTextBlock/ImageAndTextBlock";
 import ServicesList from "../../components/ServicesList/ServicesList";
 import ContactSection from "../../components/ContactSection/ContactSection";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import Reviews from "../../components/Reviews/Reviews";
-import Button from "../../components/Button/Button";
-import ValuesList from "../../components/ValuesList/ValuesList";
+// import ValuesList from "../../components/ValuesList/ValuesList";
 import ProjectsPreview from "../../components/ProjectsPreview/ProjectsPreview";
+import TwoImagesAndTextSection from "../../components/TwoImagesAndTextSection/TwoImagesAndTextSection";
 
 // Style
 import "../../assets/styles/Global.scss";
@@ -16,68 +14,48 @@ import "./../../assets/styles/Fonts.scss";
 import "../Home/Home.scss";
 
 // Images
-import Me5 from "../../assets/images/Me5.webp";
-import Me11 from "../../assets/images/Me11.webp";
+import Me15 from "../../assets/images/Me15.webp";
+import Me17 from "../../assets/images/Me17.webp";
+import CoffeeAndComputer from "../../assets/images/CoffeeAndComputer.webp";
+import MyComputer9 from "../../assets/images/MyComputer9.webp";
 
 function Home() {
   return (
     <Layout>
       <Presentation />
 
-      <div className="values-list-section">
+      {/* <div className="values-list-section">
         <ValuesList />
-      </div>
+      </div> */}
 
-      <ImageAndTextBlock
-        text={`Que vous ayez besoin d'un site codé sur mesure ou d'une solution no-code, 
-        je m'adapte et vous propose  <span class="words-with-font-weight">des solutions personnalisées et évolutives</span>. <br></br>
-        Mon objectif est de vous fournir <span class="words-with-font-weight">un site performant et facile à prendre en main</span>, 
-        tout en restant aligné avec vos objectifs.`}
-        image={Me11}
-        sectionTitle={`Une solution sur mesure <br>pour chaque projet`}
-        className="image-and-text-block--background-color-version image-and-text-block__mobile-version"
-        textPadding="image-and-text-block__margin-left image-and-text-block__text-mobile-version"
-        versionWithSubtitle={true}
-        alt="Amale assise à la BNF et en train de travailler"
+      <TwoImagesAndTextSection
+        title="Une solution sur mesure pour chaque projet"
+        text="Que vous ayez besoin d'un site codé sur mesure ou d'une solution no-code, je m'adapte et vous propose des solutions personnalisées et évolutives. Mon objectif est de vous fournir un site performant et facile à prendre en main, tout en restant aligné avec vos objectifs."
+        firstImage={CoffeeAndComputer}
+        secondImage={Me15}
+        reverseVersion="two-images-section__content--images-first"
       />
 
-      <div className="services-list">
-        <div className="home-page__title-section">
-          <SectionTitle
-            title="Les solutions proposés"
-            className=""
-            margin="large-margin"
-            mobileVersion="version-with-text-align"
-            versionWithMarginTop="version-with-margin-top"
-          />
-        </div>
-
-        <ServicesList />
-
-        <div className="homepage-button">
-          <Button link="/services" text="Découvrez les solutions sur mesure" />
-        </div>
-      </div>
+      <ServicesList
+        isTitleAndButtonVisible={true}
+        marginVersion="services__padding-rem-version"
+      />
 
       <Reviews />
 
       <ProjectsPreview />
 
-      <ImageAndTextBlock
+      <TwoImagesAndTextSection
+        title="Mon histoire"
         text={`Après <span class="words-with-font-weight">7 ans d'expérience en communication</span>, je me suis lancée dans le développement web, où j'allie <span class="words-with-font-weight">organisation et professionnalisme</span> pour créer <span class="words-with-font-weight">des solutions à la fois élégantes et performantes</span>.
         <br></br> Passionnée par <span class="words-with-font-weight">la littérature</span> depuis mon plus jeune âge, j'aime concevoir des solutions web qui allient <span class="words-with-font-weight">narration et performance</span>, tout en répondant aux attentes techniques et esthétiques.`}
-        image={Me5}
-        alt="Photo d'Amale à la terrasse d'un café en hiver"
-        className="row-reverse-version"
-        sectionTitle="Mon histoire"
-        textPadding="image-and-text-block__margin-right"
-        versionWithButton={true}
-        textButton="À propos de moi"
-        linkButton="/about"
-        versionWithSubtitle={false}
+        firstImage={MyComputer9}
+        secondImage={Me17}
+        reverseVersion="two-images-section__content--text-first"
+        withButton={true}
       />
 
-      <ContactSection marginBottomVersion="margin-bottom-version" />
+      <ContactSection marginBottomVersion="-bottom-version" />
     </Layout>
   );
 }

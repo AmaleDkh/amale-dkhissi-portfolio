@@ -35,9 +35,9 @@ const Header = () => {
           <Link to="/about" className="header__nav__desktop-menu__link">
             Histoire
           </Link>
-          <Link to="/skills" className="header__nav__desktop-menu__link">
+          {/* <Link to="/skills" className="header__nav__desktop-menu__link">
             Compétences
-          </Link>
+          </Link> */}
 
           <Button text="UN PROJET ?" />
         </div>
@@ -85,13 +85,13 @@ const Header = () => {
           Histoire
         </Link>
 
-        <Link
+        {/* <Link
           to="/skills"
           className="header__nav__mobile-menu__link"
           onClick={toggleMobileMenu}
         >
           Compétences
-        </Link>
+        </Link> */}
 
         <Button text="UN PROJET ?" />
       </div>

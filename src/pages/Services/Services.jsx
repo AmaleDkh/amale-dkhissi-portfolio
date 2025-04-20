@@ -1,7 +1,8 @@
 // Components
 import Layout from "./../../components/Layout/Layout";
-import PageTitle from "../../components/PageTitle/PageTitle";
 import ServicesList from "./../../components/ServicesList/ServicesList";
+import ProjectsPreview from "../../components/ProjectsPreview/ProjectsPreview";
+import Reviews from "../../components/Reviews/Reviews";
 import ContactSection from "../../components/ContactSection/ContactSection";
 
 // Style
@@ -10,13 +11,15 @@ import "./Services.scss";
 function Services() {
   return (
     <Layout>
-      <div className="services-page">
-        <div className="services-page__title">
-          <PageTitle title="Les solutions proposées" />
-        </div>
+      <ServicesList
+        isTitleAndButtonVisible={false}
+        marginVersion="services__margin-top-version"
+      />
 
-        <ServicesList pageVersion="services-list__page-version" />
-      </div>
+      <Reviews />
+
+      <ProjectsPreview />
+
       <ContactSection marginBottomVersion="margin-bottom-version" />
     </Layout>
   );

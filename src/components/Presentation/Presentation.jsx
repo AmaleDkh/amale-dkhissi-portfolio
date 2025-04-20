@@ -1,10 +1,12 @@
+// Components
+import Button from "../Button/Button";
+import SecondaryButton from "../SecondaryButton/SecondaryButton";
+
 // Style
 import "./Presentation.scss";
 
-// Images
-import Me2 from "../../assets/images/Me2.webp";
-import Button from "../Button/Button";
-import SecondaryButton from "../SecondaryButton/SecondaryButton";
+// Image
+import Me18 from "../../assets/images/Me18.webp";
 
 function Presentation() {
   return (
@@ -40,7 +42,7 @@ function Presentation() {
           </div>
 
           <img
-            src={Me2}
+            src={Me18}
             alt="Portrait professionnel"
             className="hero-section__image"
           />

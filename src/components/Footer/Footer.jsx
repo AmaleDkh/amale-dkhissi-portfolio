@@ -34,9 +34,11 @@ const Footer = () => {
             <li className="footer__link-list-item">
               <Link to="/services#dev">Développement web</Link>
             </li>
+
             <li className="footer__link-list-item">
               <Link to="/services#seo">SEO</Link>
             </li>
+
             <li className="footer__link-list-item">
               <Link to="/services#content">Rédaction web</Link>
             </li>
@@ -47,17 +49,19 @@ const Footer = () => {
           <h3 className="footer__section-title">Plan du site</h3>
           <ul className="footer__link-list">
             <li className="footer__link-list-item">
-              <Link to="/services">Services</Link>
-            </li>
-            <li className="footer__link-list-item">
               <Link to="/projects">Portfolio</Link>
             </li>
+
+            <li className="footer__link-list-item">
+              <Link to="/services">Services</Link>
+            </li>
+
             <li className="footer__link-list-item">
               <Link to="/about">Histoire</Link>
             </li>
-            <li className="footer__link-list-item">
+            {/* <li className="footer__link-list-item">
               <Link to="/skills">Compétences</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 

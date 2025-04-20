@@ -1,3 +1,6 @@
+// React element
+import { Link } from "react-router-dom";
+
 // Component
 import SecondTitleForSection from "../SecondTitleForSection/SecondTitleForSection";
 
@@ -27,17 +30,26 @@ function ProjectsSection() {
               ></div>
             </div>
             <div className="projects-section__grid__card-content">
-              <SecondTitleForSection title={project.title.french} />
+              <SecondTitleForSection title={project.title} />
 
               <p className="projects-section__grid__card-content__description">
-                {project.description.french}
+                {project.description}
               </p>
 
-              <div className="projects-section__grid__card-content__details-button">
+              <Link
+                to={`/project/${projectsList[index].id}`}
+                className="projects-section__grid__card-content__details-button"
+              >
                 <span className="projects-section__grid__card-content__details-button-text">
                   Découvrir
                 </span>
-              </div>
+              </Link>
+
+              {/* <div className="projects-section__grid__card-content__details-button">
+                <span className="projects-section__grid__card-content__details-button-text">
+                  Découvrir
+                </span>
+              </div> */}
             </div>
           </div>
         ))}

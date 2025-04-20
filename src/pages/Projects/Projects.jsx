@@ -1,32 +1,24 @@
-// React element
-import { useState } from "react";
-
 // Components
 import Layout from "../../components/Layout/Layout";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
+import Reviews from "../../components/Reviews/Reviews";
+import ServicesList from "../../components/ServicesList/ServicesList";
 
 // Style
 import "./Projects.scss";
 
 function Projects() {
-  // const [index, setIndex] = useState(1);
-
-  // const showPreviousProject = () => {
-  //   setIndex((prevIndex) =>
-  //     prevIndex === 0 ? projectsList.length - 1 : prevIndex - 1
-  //   );
-  // };
-
-  // const showNextProject = () => {
-  //   setIndex((nextIndex) =>
-  //     nextIndex === projectsList.length - 1 ? 0 : nextIndex + 1
-  //   );
-  // };
-
   return (
     <Layout>
       <ProjectsSection />
+
+      <Reviews marginVersion="reviews-section--no-margin-bottom" />
+
+      <ServicesList
+        isTitleAndButtonVisible={true}
+        marginVersion="services__padding-bottom-version"
+      />
 
       <ContactSection marginBottomVersion="margin-bottom-version" />
     </Layout>

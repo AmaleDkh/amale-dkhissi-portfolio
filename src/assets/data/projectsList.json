@@ -1,15 +1,9 @@
 [
   {
     "id": "1",
-    "title": {
-      "french": "Véronique Guillemin - Relaxologue & Psychopraticienne",
-      "english": ""
-    },
+    "title": "Véronique Guillemin - Relaxologue & Psychopraticienne",
     "image": "/MyComputer2.webp",
-    "description": {
-      "french": "Développement d'un site personnalisé pour une Relaxologue-Psychopraticienne, mettant en valeur ses services.",
-      "english": ""
-    },
+    "description": "Développement d'un site personnalisé pour une Relaxologue-Psychopraticienne, mettant en valeur ses services.",
     "technologies": [
       {
         "technology": "React",
@@ -37,15 +31,10 @@
   },
   {
     "id": "2",
-    "title": {
-      "french": "Marie Sanchez - Psychologue & Clinicienne",
-      "english": "Marie Sanchez - Psychologist"
-    },
+    "title": "Marie Sanchez - Psychologue & Clinicienne",
+
     "image": "/MyComputer1.webp",
-    "description": {
-      "french": "Développement d'un site personnalisé pour une Psychologue-Clinicienne, mettant en valeur ses services.",
-      "english": "Development of a personalized website for a Psychologist-Clinician, highlighting her services."
-    },
+    "description": "Développement d'un site personnalisé pour une Psychologue-Clinicienne, mettant en valeur ses services.",
     "technologies": [
       {
         "technology": "React",
@@ -68,15 +57,10 @@
   },
   {
     "id": "3",
-    "title": {
-      "french": "Julie Chaillou - Vidéaste",
-      "english": "Marie Sanchez - Video maker"
-    },
+    "title": "Julie Chaillou - Vidéaste",
     "image": "/MyComputer3.webp",
-    "description": {
-      "french": "Développement d'un portfolio en ligne pour une vidéaste, optimisé pour la présentation visuelle de ses œuvres.",
-      "english": "Development of an online portfolio for a video artist, optimized for the visual presentation of her work."
-    },
+    "description": "Développement d'un portfolio en ligne pour une vidéaste, optimisé pour la présentation visuelle de ses œuvres.",
+
     "technologies": [
       {
         "technology": "React",
@@ -99,15 +83,10 @@
   },
   {
     "id": "4",
-    "title": {
-      "french": "Channe Len - Praticienne en voyance, méditation et soins énergétiques",
-      "english": ""
-    },
+    "title": "Channe Len - Praticienne en voyance, méditation et soins énergétiques",
+
     "image": "/MyComputer4.webp",
-    "description": {
-      "french": "Développement d'un site personnalisé pour une Praticienne en voyance, méditation et soins énergétiques, mettant en valeur ses services.",
-      "english": ""
-    },
+    "description": "Développement d'un site personnalisé pour une Praticienne en voyance, méditation et soins énergétiques, mettant en valeur ses services.",
     "technologies": [
       {
         "technology": "React",

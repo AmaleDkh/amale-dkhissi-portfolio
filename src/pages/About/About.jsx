@@ -1,17 +1,20 @@
 // Components
 import Layout from "../../components/Layout/Layout";
 import ContactSection from "../../components/ContactSection/ContactSection";
-import Experiences from "../../components/Experiences/Experiences";
 import ImageAndTextBlock from "../../components/ImageAndTextBlock/ImageAndTextBlock";
-import TextSection from "../../components/TextSection/TextSection";
 import PageTitle from "../../components/PageTitle/PageTitle";
+import TwoImagesAndTextSection from "../../components/TwoImagesAndTextSection/TwoImagesAndTextSection";
 
 // Style
 import "./About.scss";
 
 // Images
 import Me1 from "../../assets/images/Me1.webp";
-import Me4 from "../../assets/images/Me4.webp";
+import Me16 from "../../assets/images/Me16.webp";
+import Me19 from "../../assets/images/Me19.webp";
+import MyComputer10 from "../../assets/images/MyComputer10.webp";
+import MyComputer11 from "../../assets/images/MyComputer11.webp";
+import Reading from "../../assets/images/Reading.webp";
 
 function About() {
   return (
@@ -21,6 +24,7 @@ function About() {
       </div>
 
       <ImageAndTextBlock
+        sectionTitle="Mon parcours"
         text={`Mon parcours en communication m'a appris à  
         <span class="words-with-font-weight">comprendre les besoins
         des clients</span>, à structurer des projets et à travailler avec des
@@ -34,15 +38,18 @@ function About() {
         fonctionnelles et esthétiques</span>, pour une expérience utilisateur
         optimale. `}
         image={Me1}
-        alt="Photo d'Amale dans un café, devant son ordinateur"
-        sectionTitle="Mon parcours"
-        textPadding="image-and-text-block__margin-left"
-        className=""
+        reverseVersion="image-and-text-block__grid--text-first"
       />
 
-      <Experiences />
+      <TwoImagesAndTextSection
+        title="Une solution sur mesure pour chaque projet"
+        text="Que vous ayez besoin d'un site codé sur mesure ou d'une solution no-code, je m'adapte et vous propose des solutions personnalisées et évolutives. Mon objectif est de vous fournir un site performant et facile à prendre en main, tout en restant aligné avec vos objectifs."
+        firstImage={MyComputer10}
+        secondImage={Me16}
+        reverseVersion="two-images-section__content--text-first"
+      />
 
-      <TextSection
+      <ImageAndTextBlock
         sectionTitle="Pourquoi le développement web ?"
         text={`Le développement web n’est pas qu’une technique pour moi, c’est <span class="words-with-font-weight">une
           nouvelle façon de penser et de résoudre des problèmes</span>. <br> </br> Ce qui me passionne, c'est la possibilité de  
@@ -50,9 +57,12 @@ function About() {
           transformer en interfaces utiles et engageantes.  <br> </br> J’aime voir un projet se concrétiser, 
           de la conception à la mise en ligne, et savoir qu'il apportera  <span class="words-with-font-weight">une véritable valeur ajoutée</span> 
           à ceux qui l’utilisent. `}
+        image={MyComputer11}
+        reverseVersion="image-and-text-block__grid--text-first"
       />
 
-      <ImageAndTextBlock
+      <TwoImagesAndTextSection
+        title="Mes passions"
         text={`Depuis toujours, <span class="words-with-font-weight">les mots et la littérature occupent une place
         importante</span> dans ma vie. <br></br> Cette passion se reflète aussi dans mon
         approche du web : je crois que <span class="words-with-font-weight">chaque site, chaque application
@@ -61,10 +71,9 @@ function About() {
         écran à coder, <span class="words-with-font-weight">il n’est pas rare que je sois en train de lire ou
         d’écrire</span>, toujours à la recherche <span class="words-with-font-weight">de nouvelles façons d'allier
         créativité et performance</span>.`}
-        image={Me4}
-        alt="Photo d'Amale à la BNF, avec des livres en fond"
-        sectionTitle="Mes passions"
-        textPadding="image-and-text-block__margin-left"
+        firstImage={Reading}
+        secondImage={Me19}
+        reverseVersion="two-images-section__content--text-first"
       />
 
       <ContactSection

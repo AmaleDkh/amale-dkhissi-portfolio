@@ -1,6 +1,3 @@
-// React element
-import React from "react";
-
 // Component
 import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
@@ -34,7 +31,7 @@ function ProjectsPreview() {
               <div className="projects-preview__content__projects-grid__card__overlay"></div>
               <div className="projects-preview__content__projects-grid__card__content">
                 <h3 className="projects-preview__content__projects-grid__card__content__title">
-                  {project.title.french}
+                  {project.title}
                 </h3>
               </div>
             </div>

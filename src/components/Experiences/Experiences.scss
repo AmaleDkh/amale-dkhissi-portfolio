@@ -2,7 +2,6 @@
 @import "../../assets/styles/mixins/breakpoints.scss";
 
 .experiences-section {
-  background-color: $light-beige-color;
   padding: 80px 104px;
 
   @include respond-to-extra-large {
@@ -14,7 +13,6 @@
   }
 
   &__title {
-    margin-bottom: 3rem;
     text-align: center;
   }
 

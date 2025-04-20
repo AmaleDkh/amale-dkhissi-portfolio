@@ -6,14 +6,14 @@
   background-color: $light-beige-color;
   display: flex;
   align-items: center;
-  padding: 58px 104px 80px 104px;
+  padding: 1rem 104px 4rem 104px;
 
   @include respond-to-extra-large {
-    padding: 58px 40px 0 40px;
+    padding: 4rem 40px;
   }
 
   @include respond-to-medium {
-    padding: 58px 16px 0 16px;
+    padding: 1rem 16px 2rem 16px;
   }
 
   &__wrapper {
@@ -43,22 +43,8 @@
       animation: fadeIn 1s ease forwards;
     }
 
-    @include respond-to-large {
+    @include respond-to-extra-large {
       align-items: flex-start;
-    }
-  }
-
-  &__title {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-
-    @media (min-width: 768px) {
-      font-size: 3rem;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 4rem;
     }
   }
 
@@ -66,6 +52,10 @@
     font-size: 1.125rem;
     max-width: 40rem;
     margin-top: 1.5rem;
+
+    @include respond-to-extra-large {
+      max-width: fit-content;
+    }
   }
 
   &__buttons {
@@ -84,6 +74,10 @@
 
     @include respond-to-extra-extra-large {
       height: 700px;
+    }
+
+    @include respond-to-medium {
+      height: 500px;
     }
   }
 

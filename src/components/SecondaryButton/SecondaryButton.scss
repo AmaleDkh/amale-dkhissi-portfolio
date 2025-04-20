@@ -8,14 +8,14 @@
   font-weight: 500;
   text-decoration: none;
   background-color: $beige-color;
-  color: $blue-color;
+  color: $link-text-color;
   padding: 12px 24px;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
 
   &:hover {
     background-color: $blue-color;
-    color: white;
+    color: $light-light-beige-color;
   }
 
   &__center-version {

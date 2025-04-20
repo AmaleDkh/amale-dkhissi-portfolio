@@ -16,11 +16,6 @@
     text-align: center;
     margin-bottom: 4rem;
 
-    &__title {
-      font-size: 56px;
-      margin-bottom: 1.5rem;
-    }
-
     &__description {
       font-size: 1.125rem;
       color: #666;
@@ -100,8 +95,7 @@
       }
 
       &__details-button {
-        display: flex;
-        justify-content: flex-start;
+        text-decoration: none;
 
         &-text {
           font-size: 1rem;
