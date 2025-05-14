@@ -1,6 +1,3 @@
-// React element
-import { useLocation } from "react-router-dom";
-
 // Style
 import "./ImageAndTextBlock.scss";
 
@@ -9,13 +6,11 @@ function ImageAndTextBlock({
   text,
   image,
   alt,
-
   reverseVersion,
+  marginVersion,
 }) {
-  const location = useLocation();
-
   return (
-    <section className="image-and-text-block">
+    <section className={`image-and-text-block ${marginVersion}`}>
       <div className={`image-and-text-block__grid ${reverseVersion}`}>
         <div className="image-and-text-block__content animate-fade-in">
           <div>

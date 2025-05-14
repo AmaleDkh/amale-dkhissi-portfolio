@@ -80,36 +80,5 @@
     ],
 
     "source": "https://github.com/AmaleDkh/julie-chaillou-portfolio.git"
-  },
-  {
-    "id": "4",
-    "title": "Channe Len - Praticienne en voyance, méditation et soins énergétiques",
-
-    "image": "/MyComputer4.webp",
-    "description": "Développement d'un site personnalisé pour une Praticienne en voyance, méditation et soins énergétiques, mettant en valeur ses services.",
-    "technologies": [
-      {
-        "technology": "React",
-        "icon": "devicon-react-original",
-        "size": "devicon-2x"
-      },
-      {
-        "technology": "Nextjs",
-        "icon": "devicon-nextjs-original-wordmark",
-        "size": "devicon-3x"
-      },
-      {
-        "technology": "WordPress",
-        "icon": "devicon-wordpress-plain",
-        "size": "devicon-2x"
-      },
-      {
-        "technology": "Sass",
-        "icon": "devicon-sass-original",
-        "size": "devicon-2x"
-      }
-    ],
-
-    "source": "https://github.com/AmaleDkh/channe-voyance-website.git"
   }
 ]

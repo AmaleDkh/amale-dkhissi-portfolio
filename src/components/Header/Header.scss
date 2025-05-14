@@ -1,4 +1,4 @@
-@import "../../assets//styles//mixins/breakpoints.scss";
+@import "../../assets/styles/mixins/breakpoints.scss";
 @import "../../assets/styles/Colors.scss";
 
 .header {
@@ -69,8 +69,9 @@
 
       &__mobile-close {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 36px;
+        right: 16px;
+        padding: 0;
         background: none;
         border: none;
         color: $blue-color;

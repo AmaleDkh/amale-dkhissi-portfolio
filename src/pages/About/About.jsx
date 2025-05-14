@@ -20,57 +20,60 @@ function About() {
   return (
     <Layout>
       <div className="about-page__title">
-        <PageTitle title="Mon histoire" />
+        <PageTitle
+          title="Mon histoire"
+          paragraph="Une histoire de passion, de discrétion et de détermination."
+        />
       </div>
 
       <ImageAndTextBlock
-        sectionTitle="Mon parcours"
-        text={`Mon parcours en communication m'a appris à  
-        <span class="words-with-font-weight">comprendre les besoins
-        des clients</span>, à structurer des projets et à travailler avec des
-        équipes multidisciplinaires. <br> </br> Au fil des années, j’ai acquis 
-        <span class="words-with-font-weight">une expertise solide en gestion de projets</span>
-        tout en cultivant un esprit créatif. <br> </br> C’est cette capacité à allier 
-        <span class="words-with-font-weight">organisation et créativité</span>
-        qui m’a poussée à me tourner vers le développement web. <br> </br> J'y ai vu un
-        moyen d’avoir un <span class="words-with-font-weight">impact direct</span>, 
-        en créant <span class="words-with-font-weight">des interfaces à la fois
-        fonctionnelles et esthétiques</span>, pour une expérience utilisateur
-        optimale. `}
+        sectionTitle="L’art des mots et de la rigueur"
+        text={`Mon expérience en maisons d’édition, médias (France Inter, CANAL+) et chez L’Oréal m’a formée à la maîtrise des mots.
+        <br></br>
+        Véritables écoles de rigueur et d’excellence, ces environnements exigeants m’ont apporté une expertise solide pour piloter un projet de A à Z. `}
         image={Me1}
         reverseVersion="image-and-text-block__grid--text-first"
+        marginVersion="image-and-text-block--no-padding-top"
       />
 
       <TwoImagesAndTextSection
-        title="Une solution sur mesure pour chaque projet"
-        text="Que vous ayez besoin d'un site codé sur mesure ou d'une solution no-code, je m'adapte et vous propose des solutions personnalisées et évolutives. Mon objectif est de vous fournir un site performant et facile à prendre en main, tout en restant aligné avec vos objectifs."
+        title="Une approche bienveillante"
+        text={`Mon approche repose sur trois valeurs essentielles. 
+        <br></br> 
+        <span class="words-with-font-weight">Écoute</span> <br> Une collaboration basée sur l’écoute et la compréhension mutuelle.
+        <br></br>
+        <span class="words-with-font-weight">Engagement</span> <br> Chaque projet compte et mérite toute mon attention.
+        <br></br>
+        <span class="words-with-font-weight">Qualité</span> <br> Une rigueur constante pour un résultat aligné avec vos objectifs.
+        <br></br>
+        Mon entourage me décrit souvent comme une force tranquille et déterminée. Ces qualités, je les applique naturellement dans ma façon de gérer les projets.
+        `}
         firstImage={MyComputer10}
         secondImage={Me16}
         reverseVersion="two-images-section__content--text-first"
       />
 
       <ImageAndTextBlock
-        sectionTitle="Pourquoi le développement web ?"
-        text={`Le développement web n’est pas qu’une technique pour moi, c’est <span class="words-with-font-weight">une
-          nouvelle façon de penser et de résoudre des problèmes</span>. <br> </br> Ce qui me passionne, c'est la possibilité de  
-          <span class="words-with-font-weight">donner vie à des idées</span>, de les
-          transformer en interfaces utiles et engageantes.  <br> </br> J’aime voir un projet se concrétiser, 
-          de la conception à la mise en ligne, et savoir qu'il apportera  <span class="words-with-font-weight">une véritable valeur ajoutée</span> 
-          à ceux qui l’utilisent. `}
+        sectionTitle="Un intérêt naturel pour le développement web"
+        text={`Pendant longtemps, j’ai eu le développement web dans un coin de ma tête. 
+        <br></br>
+        L’envie de me former n’a cessé de grandir en moi. Alors je me suis écoutée. 
+        <br></br>
+        Il a fallu de la discipline, des réveils à l’aube, des nuits raccourcies et beaucoup d’endurance. Mais j’y suis arrivée.
+        <br></br>
+        Le développement web est pour moi une nouvelle façon d’écrire des solutions qui ont du sens.`}
         image={MyComputer11}
         reverseVersion="image-and-text-block__grid--text-first"
+        marginVersion="image-and-text-block--with-padding-top"
       />
 
       <TwoImagesAndTextSection
-        title="Mes passions"
-        text={`Depuis toujours, <span class="words-with-font-weight">les mots et la littérature occupent une place
-        importante</span> dans ma vie. <br></br> Cette passion se reflète aussi dans mon
-        approche du web : je crois que <span class="words-with-font-weight">chaque site, chaque application
-        raconte une histoire</span>, et j'aime être l'artisane qui crée cette
-        narration digitale. <br></br> Lorsque je ne suis pas devant un
-        écran à coder, <span class="words-with-font-weight">il n’est pas rare que je sois en train de lire ou
-        d’écrire</span>, toujours à la recherche <span class="words-with-font-weight">de nouvelles façons d'allier
-        créativité et performance</span>.`}
+        title="Les livres comme inspiration"
+        text={`Depuis toujours, la littérature occupent une place importante dans ma vie.
+        <br></br>
+        Cette passion se reflète aussi dans mon approche du web. Je crois que chaque site raconte une histoire. J'aime être la développeuse qui la crée.
+        <br></br>
+        Lorsque je ne suis pas devant un écran à coder, je suis à coup sûr en train de lire ou d’écrire.`}
         firstImage={Reading}
         secondImage={Me19}
         reverseVersion="two-images-section__content--text-first"

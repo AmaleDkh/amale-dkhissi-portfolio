@@ -44,7 +44,8 @@
     }
 
     @include respond-to-medium {
-      margin: 160px 16px 0 16px;
+      // margin: 160px 16px 0 16px;
+      margin: 120px 16px 0 16px;
     }
   }
 }

@@ -3,7 +3,7 @@
 @import "./Fonts.scss";
 
 body {
-  background-color: $light-light-beige-color;
+  background-color: $light-beige-color;
   color: $text-color;
 }
 
@@ -30,7 +30,7 @@ h3 {
 h1 {
   color: $dark-blue-color;
   // font-size: 56px;
-  margin: 0 0 40px 0;
+  // margin: 0 0 40px 0;
 
   // @include respond-to-medium {
   //   font-size: 32px;
@@ -92,6 +92,11 @@ main {
 
   @include respond-to-extra-large {
     margin-top: 102px;
+  }
+
+  @include respond-to-medium {
+    // margin-top: 2rem;
+    margin-top: 0;
   }
 }
 

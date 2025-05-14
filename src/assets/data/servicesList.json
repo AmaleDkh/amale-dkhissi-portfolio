@@ -1,17 +1,23 @@
 [
   {
+    "id": "dev",
     "title": "Développement de solutions web",
     "description": "Je crée des sites web adaptés à chaque projet.",
-    "image": "/MyComputer4.webp"
+    "image": "/MyComputer4.webp",
+    "imageAlt": "Développement web"
   },
   {
+    "id": "content",
     "title": "Rédaction de contenus",
     "description": "Je rédige des contenus sur mesure et adaptés à chaque projet.",
-    "image": "/MyComputer3.webp"
+    "image": "/MyComputer3.webp",
+    "imageAlt": "Rédaction web"
   },
   {
+    "id": "seo",
     "title": "Optimisation du référencement",
     "description": "Je vous aide à améliorer votre positionnement sur les moteurs de recherche.",
-    "image": "/MyComputer7.webp"
+    "image": "/MyComputer7.webp",
+    "imageAlt": "SEO"
   }
 ]

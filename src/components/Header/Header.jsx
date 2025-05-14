@@ -39,7 +39,7 @@ const Header = () => {
             Compétences
           </Link> */}
 
-          <Button text="UN PROJET ?" />
+          <Button link="/contact" text="UN PROJET ?" />
         </div>
 
         <button
@@ -93,7 +93,7 @@ const Header = () => {
           Compétences
         </Link> */}
 
-        <Button text="UN PROJET ?" />
+        <Button text="UN PROJET ?" link="/contact" />
       </div>
     </header>
   );

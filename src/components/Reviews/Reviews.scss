@@ -10,7 +10,7 @@
   }
 
   @include respond-to-medium {
-    margin: 4rem 16px;
+    margin: 2rem 16px;
   }
 
   &__title {
@@ -31,13 +31,13 @@
     }
 
     @include respond-to-medium {
-      margin: 4rem 16px 0 16px;
+      margin: 2rem 16px 0 16px;
     }
   }
 }
 
 .review-card {
-  background-color: $light-beige-color;
+  background-color: $light-light-beige-color;
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);

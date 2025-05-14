@@ -6,14 +6,29 @@
   background-color: $light-beige-color;
   display: flex;
   align-items: center;
-  padding: 4rem 104px 80px 104px;
 
-  @include respond-to-extra-large {
-    padding: 4rem 40px;
+  &--with-padding-top {
+    padding: 4rem 104px;
+
+    @include respond-to-extra-large {
+      padding: 4rem 40px;
+    }
+
+    @include respond-to-medium {
+      padding: 2rem 16px;
+    }
   }
 
-  @include respond-to-medium {
-    padding: 4rem 16px;
+  &--no-padding-top {
+    padding: 0 104px 4rem 104px;
+
+    @include respond-to-extra-large {
+      padding: 0 40px 4rem 40px;
+    }
+
+    @include respond-to-medium {
+      padding: 0 16px 2rem 16px;
+    }
   }
 
   &__grid {

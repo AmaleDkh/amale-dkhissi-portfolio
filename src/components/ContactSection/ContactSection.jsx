@@ -14,7 +14,11 @@ function ContactSection() {
         solutions.
       </p>
 
-      <Button text="Prenons contact" centerVersion="button__center-version " />
+      <Button
+        text="Prenons contact"
+        link="/contact"
+        centerVersion="button__center-version"
+      />
     </section>
   );
 }

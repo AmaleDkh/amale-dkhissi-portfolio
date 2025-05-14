@@ -7,9 +7,9 @@ import "./ProjectsPreview.scss";
 // Data
 import projectsList from "../../assets/data/projectsList.json";
 
-function ProjectsPreview() {
+function ProjectsPreview({ marginVersion }) {
   return (
-    <section className="projects-preview">
+    <section className={`projects-preview ${marginVersion}`}>
       <div className="projects-preview__content">
         <div className="projects-preview__content__information">
           <h2>Une sélection de quelques projets</h2>
@@ -18,7 +18,7 @@ function ProjectsPreview() {
         </div>
 
         <div className="projects-preview__content__projects-grid">
-          {projectsList.slice(2, 4).map((project, index) => (
+          {projectsList.slice(1, 3).map((project, index) => (
             <div
               key={index}
               className="projects-preview__content__projects-grid__card"

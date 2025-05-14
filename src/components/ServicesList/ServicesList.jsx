@@ -1,15 +1,23 @@
 // Style
 import "./ServicesList.scss";
 
-// Component
+// Components
+import PageTitle from "../../components/PageTitle/PageTitle";
 import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
 // Data
 import servicesList from "../../assets/data/servicesList.json";
 
-function ServicesList({ marginVersion, isTitleAndButtonVisible }) {
+function ServicesList({
+  marginVersion,
+  backgroundColorVersion,
+  isTitleAndButtonVisible,
+}) {
   return (
-    <section id="services" className={`services ${marginVersion}`}>
+    <section
+      id="services"
+      className={`services ${marginVersion}  ${backgroundColorVersion}`}
+    >
       <div className="services__container">
         {isTitleAndButtonVisible ? (
           <div className="services__header">
@@ -20,18 +28,16 @@ function ServicesList({ marginVersion, isTitleAndButtonVisible }) {
           </div>
         ) : (
           <div className="projects-section__information">
-            <h1 className="projects-section__information__title">
-              Les solutions proposées
-            </h1>
-            <p className="projects-section__information__description">
-              Des solutions sur mesure pour répondre à vos besoins.
-            </p>
+            <PageTitle
+              title="Les solutions proposées"
+              paragraph="Des solutions sur mesure pour répondre à vos besoins."
+            />
           </div>
         )}
 
         <div className="services__grid">
           {servicesList.map((service, index) => (
-            <div key={index} className="services__card">
+            <div key={index} className="services__card" id={service.id}>
               <div className="services__image-wrapper">
                 <img
                   src={service.image}

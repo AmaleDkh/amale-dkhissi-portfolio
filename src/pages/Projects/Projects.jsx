@@ -17,7 +17,8 @@ function Projects() {
 
       <ServicesList
         isTitleAndButtonVisible={true}
-        marginVersion="services__padding-bottom-version"
+        marginVersion="services--with-padding-bottom-version"
+        backgroundColorVersion="services--light-light-beige-color-version services--margin-top-version"
       />
 
       <ContactSection marginBottomVersion="margin-bottom-version" />

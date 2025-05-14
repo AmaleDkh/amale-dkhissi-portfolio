@@ -16,7 +16,7 @@ function Presentation() {
           <div className="hero-section__content animate-fade-in">
             <div>
               <h1 className="hero-section__title">
-                Des sites web sur mesure, <br></br>des textes qui captivent.
+                Des solutions web simples et efficaces
               </h1>
               <p className="hero-section__description">
                 Je conçois des{" "}
@@ -30,7 +30,7 @@ function Presentation() {
                 , qui vous ressemblent et optimisent votre visibilité en ligne.
               </p>
               <div className="hero-section__buttons">
-                <Button text="Me contacter" />
+                <Button link="/contact" text="Me contacter" />
 
                 <SecondaryButton
                   link="/services"

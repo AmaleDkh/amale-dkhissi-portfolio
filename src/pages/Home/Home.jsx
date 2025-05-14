@@ -30,7 +30,7 @@ function Home() {
 
       <TwoImagesAndTextSection
         title="Une solution sur mesure pour chaque projet"
-        text="Que vous ayez besoin d'un site codé sur mesure ou d'une solution no-code, je m'adapte et vous propose des solutions personnalisées et évolutives. Mon objectif est de vous fournir un site performant et facile à prendre en main, tout en restant aligné avec vos objectifs."
+        text="Que vous ayez besoin d'un site codé sur mesure ou d'une solution no-code, je m'adapte et vous propose des solutions personnalisées et évolutives. <br></br> Mon objectif est de vous fournir un site performant et facile à prendre en main, tout en restant aligné avec vos objectifs."
         firstImage={CoffeeAndComputer}
         secondImage={Me15}
         reverseVersion="two-images-section__content--images-first"
@@ -38,12 +38,13 @@ function Home() {
 
       <ServicesList
         isTitleAndButtonVisible={true}
-        marginVersion="services__padding-rem-version"
+        marginVersion="services--no-padding-bottom-version"
+        backgroundColorVersion="services__light-light-beige-color-version"
       />
 
       <Reviews />
 
-      <ProjectsPreview />
+      <ProjectsPreview marginVersion="projects-preview--with-margin-bottom-version" />
 
       <TwoImagesAndTextSection
         title="Mon histoire"

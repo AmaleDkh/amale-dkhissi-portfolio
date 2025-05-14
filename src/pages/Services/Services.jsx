@@ -13,12 +13,12 @@ function Services() {
     <Layout>
       <ServicesList
         isTitleAndButtonVisible={false}
-        marginVersion="services__margin-top-version"
+        marginVersion="services--page-no-padding-bottom-version"
       />
 
       <Reviews />
 
-      <ProjectsPreview />
+      <ProjectsPreview marginVersion="projects-preview--no-margin-bottom-version" />
 
       <ContactSection marginBottomVersion="margin-bottom-version" />
     </Layout>

@@ -1,7 +1,8 @@
 // React element
 import { Link } from "react-router-dom";
 
-// Component
+// Components
+import PageTitle from "../../components/PageTitle/PageTitle";
 import SecondTitleForSection from "../SecondTitleForSection/SecondTitleForSection";
 
 // Style
@@ -13,12 +14,10 @@ import projectsList from "../../assets/data/projectsList.json";
 function ProjectsSection() {
   return (
     <section className="projects-section">
-      <div className="projects-section__information">
-        <h1 className="projects-section__information__title">Mes projets</h1>
-        <p className="projects-section__information__description">
-          Découvrez mes projets, où la simplicité rencontre l’efficacité.
-        </p>
-      </div>
+      <PageTitle
+        title="Mes projets"
+        paragraph="  Découvrez mes projets, où la simplicité rencontre l’efficacité."
+      />
 
       <div className="projects-section__grid">
         {projectsList.map((project, index) => (
