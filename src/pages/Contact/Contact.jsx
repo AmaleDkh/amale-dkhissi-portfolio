@@ -55,7 +55,9 @@ function Contact() {
               </div>
               <div className="contact__card-content">
                 <div className="contact__card-label">Localisation</div>
-                <span className="contact__card-value">Paris, France</span>
+                <span className="contact__card-value">
+                  Haute-Savoie, France
+                </span>
               </div>
             </div>
 
